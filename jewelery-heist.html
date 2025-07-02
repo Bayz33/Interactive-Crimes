@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Crimes – Jewelry Store Heist</title>
+  <style>
+    body {
+      background-color: #111827;
+      color: #e0f7fa;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1a202c;
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 2px solid #00bcd4;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #00bcd4;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 12px;
+      color: #e0f7fa;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+    nav a:hover {
+      border-color: #00bcd4;
+    }
+    section {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #00bcd4;
+      border-bottom: 1px solid #00bcd4;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    .evidence {
+      background-color: #1f2937;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 6px solid #00bcd4;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .evidence p {
+      margin: 10px 0;
+    }
+    .submit-box {
+      background: #1f2937;
+      padding: 25px;
+      margin-top: 40px;
+      border: 1px solid #00bcd4;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      background-color: #2d3748;
+      border: 1px solid #555;
+      color: #e0f7fa;
+      font-family: inherit;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #88c9cf;
+    }
+    button {
+      background-color: #00bcd4;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #26c6da;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interactive Crimes</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <section id="overview">
+    <h2>Case 2: The Jewelry Store Heist</h2>
+    <p>On September 12th, the upscale Midtown Jewelers was robbed just before closing. The owner was tied up in the back and a tray of rare diamonds was stolen. Investigators found no sign of forced entry. Four employees were working that night. One of them planned it.</p>
+    <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
+    <ul>
+      <li>Who planned the heist?</li>
+      <li>What was their motive?</li>
+      <li>What key piece of evidence proves it?</li>
+    </ul>
+  </section>
+
+  <section id="crime-scene">
+    <h2>Crime Scene Report</h2>
+    <div class="evidence">
+      <p><strong>Location:</strong> Midtown Jewelers – luxury retail store downtown.</p>
+      <p><strong>Entry:</strong> Front door, no forced entry. Alarm was disarmed.</p>
+      <p><strong>Time of Robbery:</strong> Estimated between 8:45–8:55 p.m.</p>
+      <p><strong>Owner Statement:</strong> Tied up with zip ties in the back. Heard one voice giving orders.</p>
+      <p><strong>Investigator’s Note:</strong> "Alarm code was used correctly. Likely an inside job. No fingerprints on the diamond tray, suggesting gloves."</p>
+    </div>
+  </section>
+
+  <section id="witnesses">
+    <h2>Witness Statements</h2>
+    <div class="evidence">
+      <p><strong>Amy Chen (Sales Associate):</strong> “We were about to close. I was in the back grabbing cleaning supplies. Heard the commotion and hid.”</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Carlos Rivera (Security Guard):</strong> “Patrolled as normal. Cameras went out for 5 minutes. When they came back, everyone was gone.”</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Lena Price (Manager):</strong> “I was counting the register. Carlos came to check in. Everything was fine. Then suddenly it went dark.”</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Derek Moore (Jeweler):</strong> “I stayed late to finish setting a ring. I heard shouting. I bolted. I didn't see anything.”</p>
+    </div>
+  </section>
+
+  <section id="evidence">
+    <h2>Evidence Locker</h2>
+    <div class="evidence">
+      <p><strong>Alarm Log:</strong> Disarmed at 8:42 p.m. using *Lena’s* unique code.</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Security Footage:</strong> Shows Carlos at his desk. System cuts out at 8:43 p.m.</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Recovered Note:</strong> Crumpled note in the trash: "Meet after close. Split 50/50."</p>
+    </div>
+  </section>
+
+  <section id="solve">
+    <h2>Submit Your Solution</h2>
+    <div class="submit-box">
+      <label>Who planned the heist?</label>
+      <input type="text" id="suspect" placeholder="Type suspect's name" />
+      <label>What was their motive?</label>
+      <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
+      <label>What key evidence proves it?</label>
+      <input type="text" id="evidence" placeholder="Name the item or detail" />
+      <button onclick="checkAnswers()">Submit Answers</button>
+      <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+    </div>
+  </section>
+
+  <script>
+    function checkAnswers() {
+      const suspect = document.getElementById('suspect').value.trim().toLowerCase();
+      const motive = document.getElementById('motive').value.trim().toLowerCase();
+      const evidence = document.getElementById('evidence').value.trim().toLowerCase();
+      const result = document.getElementById('result');
+
+      let correctSuspect = suspect.includes('lena price');
+      let correctMotive = motive.includes('split') || motive.includes('money') || motive.includes('50/50');
+      let correctEvidence = evidence.includes('note');
+
+      if (correctSuspect && correctMotive && correctEvidence) {
+        result.textContent = "✅ Correct! You solved the case.";
+        result.style.color = "#00e676";
+      } else {
+        result.textContent = "❌ Try again. Check your clues carefully.";
+        result.style.color = "#ff5252";
+      }
+    }
+  </script>
+</body>
+</html>
