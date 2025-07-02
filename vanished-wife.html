@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Crimes – The Vanished Wife</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 2px solid #c62828;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #c62828;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 12px;
+      color: #f0f0f0;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+    nav a:hover {
+      border-color: #c62828;
+    }
+    section {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #c62828;
+      border-bottom: 1px solid #c62828;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    .evidence {
+      background-color: #1e1e1e;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 6px solid #c62828;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .evidence p {
+      margin: 10px 0;
+    }
+    .submit-box {
+      background: #1e1e1e;
+      padding: 25px;
+      margin-top: 40px;
+      border: 1px solid #c62828;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      background-color: #2a2a2a;
+      border: 1px solid #555;
+      color: #f0f0f0;
+      font-family: inherit;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #aaa;
+    }
+    button {
+      background-color: #c62828;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #e53935;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interactive Crimes</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <section id="overview">
+    <h2>Case 3: The Vanished Wife</h2>
+    <p>On a quiet suburban street, Jenna Morris vanished from her home one evening without a trace. No signs of forced entry. No witnesses saw her leave. Police suspect foul play. Her husband insists he found the door ajar when he returned.</p>
+    <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
+    <ul>
+      <li>Who planned the abduction?</li>
+      <li>What was their motive?</li>
+      <li>What key piece of evidence proves it?</li>
+    </ul>
+  </section>
+
+  <section id="crime-scene">
+    <h2>Crime Scene Report</h2>
+    <div class="evidence">
+      <p><strong>Location:</strong> 218 Willow Lane – single-family home.</p>
+      <p><strong>Time of Disappearance:</strong> Between 8:00 p.m. and 9:00 p.m.</p>
+      <p><strong>Entry:</strong> No forced entry; door found slightly open.</p>
+      <p><strong>House Status:</strong> Clean except for knocked-over lamp.</p>
+      <p><strong>Investigator’s Note:</strong> "No forced entry suggests victim knew the abductor. Minor signs of struggle indicate it was quick."</p>
+    </div>
+  </section>
+
+  <section id="witnesses">
+    <h2>Witness Statements</h2>
+    <div class="evidence">
+      <p><strong>Greg Morris (Husband):</strong> “I came home late from work. Door was open. Jenna was gone. Lamp was on the floor.”</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Emily Fields (Neighbor):</strong> “I heard shouting around 8. It sounded like Jenna. I didn’t see anything.”</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Marcus Grant (Friend):</strong> “Greg was venting to me about money troubles. But he said they were working it out.”</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Detective Rhodes:</strong> “Greg kept changing his story. First said he left at 7, then 7:30.”</p>
+    </div>
+  </section>
+
+  <section id="evidence">
+    <h2>Evidence Locker</h2>
+    <div class="evidence">
+      <p><strong>Phone Call Log:</strong> Greg called Jenna three times between 8:00–8:10 p.m. despite saying he was "driving."</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Life Insurance Policy:</strong> Recently increased to $500,000.</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Jenna’s Diary Entry:</strong> “He’s been so angry lately. I’m scared of what he might do.”</p>
+    </div>
+  </section>
+
+  <section id="solve">
+    <h2>Submit Your Solution</h2>
+    <div class="submit-box">
+      <label>Who planned the abduction?</label>
+      <input type="text" id="suspect" placeholder="Type suspect's name" />
+      <label>What was their motive?</label>
+      <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
+      <label>What key evidence proves it?</label>
+      <input type="text" id="evidence" placeholder="Name the item or detail" />
+      <button onclick="checkAnswers()">Submit Answers</button>
+      <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+    </div>
+  </section>
+
+  <script>
+    function checkAnswers() {
+      const suspect = document.getElementById('suspect').value.trim().toLowerCase();
+      const motive = document.getElementById('motive').value.trim().toLowerCase();
+      const evidence = document.getElementById('evidence').value.trim().toLowerCase();
+      const result = document.getElementById('result');
+
+      let correctSuspect = suspect.includes('greg morris');
+      let correctMotive = motive.includes('insurance') || motive.includes('money');
+      let correctEvidence = evidence.includes('insurance') || evidence.includes('diary');
+
+      if (correctSuspect && correctMotive && correctEvidence) {
+        result.textContent = "✅ Correct! You solved the case.";
+        result.style.color = "#00e676";
+      } else {
+        result.textContent = "❌ Try again. Check your clues carefully.";
+        result.style.color = "#ff5252";
+      }
+    }
+  </script>
+</body>
+</html>
