@@ -166,7 +166,7 @@
       <label>What was their motive?</label>
       <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
       <label>What key evidence proves it?</label>
-      <input type="text" id="evidence" placeholder="Name the item or detail" />
+      <input type="text" id="evidenceInput" placeholder="Name the item or detail" />
       <button onclick="checkAnswers()">Submit Answers</button>
       <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
     </div>
@@ -176,14 +176,15 @@
     function checkAnswers() {
       const suspect = document.getElementById('suspect').value.trim().toLowerCase();
       const motive = document.getElementById('motive').value.trim().toLowerCase();
-      const evidence = document.getElementById('evidence').value.trim().toLowerCase();
+      const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
       const result = document.getElementById('result');
 
-      let correctSuspect = suspect.includes('lena price');
-      let correctMotive = motive.includes('split') || motive.includes('money') || motive.includes('50/50');
-      let correctEvidence = evidence.includes('note');
+      // More flexible matching
+      const suspectCorrect = suspect.includes('lena') && suspect.includes('price');
+      const motiveCorrect = motive.includes('split') || motive.includes('money') || motive.includes('50/50') || motive.includes('deal') || motive.includes('share');
+      const evidenceCorrect = evidence.includes('note') || evidence.includes('message') || evidence.includes('crumpled');
 
-      if (correctSuspect && correctMotive && correctEvidence) {
+      if (suspectCorrect && motiveCorrect && evidenceCorrect) {
         result.textContent = "✅ Correct! You solved the case.";
         result.style.color = "#00e676";
       } else {
