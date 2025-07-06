@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -107,6 +107,11 @@
     </nav>
   </header>
 
+  <img 
+    src="images/images/case-2-promo-image.jpg" 
+    alt="Jewelry Store Heist Cover" 
+    style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 20px;" />
+
   <section id="overview">
     <h2>Case 2: The Jewelry Store Heist</h2>
     <p>On September 12th, the upscale Midtown Jewelers was robbed just before closing. The owner was tied up in the back and a tray of rare diamonds was stolen. Investigators found no sign of forced entry. Four employees were working that night. One of them planned it.</p>
@@ -179,7 +184,6 @@
       const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
       const result = document.getElementById('result');
 
-      // More flexible matching
       const suspectCorrect = suspect.includes('lena') && suspect.includes('price');
       const motiveCorrect = motive.includes('split') || motive.includes('money') || motive.includes('50/50') || motive.includes('deal') || motive.includes('share');
       const evidenceCorrect = evidence.includes('note') || evidence.includes('message') || evidence.includes('crumpled');
