@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Crimes – Home</title>
+  <title>Interactive Crime – Home</title>
   <style>
     body {
       background-color: #1b1b1b;
@@ -12,68 +12,128 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #222;
       padding: 25px 20px;
       text-align: center;
-      border-bottom: 2px solid #c0a060;
+      border-bottom: 2px solid #e25822;
     }
+
     header h1 {
       margin: 0;
-      font-size: 2.2em;
-      color: #c0a060;
+      font-size: 2.5em;
+      color: #e25822;
       letter-spacing: 2px;
     }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #f0f0f0;
+    }
+
     section {
-      padding: 30px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+      padding: 30px 20px;
       line-height: 1.7;
     }
-    h2 {
-      color: #c0a060;
-      border-bottom: 1px solid #c0a060;
+
+    h2.section-title {
+      color: #e25822;
+      border-bottom: 1px solid #e25822;
       padding-bottom: 5px;
-      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
     }
-    p {
-      margin-top: 20px;
+
+    .cases {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
+
+    .case-card {
+      background-color: #262626;
+      padding: 20px;
+      border-left: 6px solid #e25822;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
     }
-    li {
-      margin: 15px 0;
+
+    .case-card:hover {
+      transform: scale(1.02);
     }
-    a.case-link {
-      color: #c0a060;
+
+    .case-card h2 {
+      margin-top: 0;
+      color: #e25822;
+      font-size: 1.5em;
+    }
+
+    .case-card p {
+      margin-top: 10px;
+      color: #f0f0f0;
+    }
+
+    .case-card a {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #e25822;
+      color: #fff;
+      padding: 10px 20px;
       text-decoration: none;
       font-weight: bold;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s;
+      border: none;
+      transition: background-color 0.3s;
     }
-    a.case-link:hover {
-      border-color: #c0a060;
+
+    .case-card a:hover {
+      background-color: #ff6f3d;
+    }
+
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #e25822;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Interactive Crimes</h1>
+    <h1>Interactive Crime</h1>
+    <p>Dark mysteries. Twisted motives. Solve them all.</p>
   </header>
 
   <section>
-    <h2>Welcome Detective</h2>
-    <p>Step into the world of <strong>Interactive Crimes</strong>—an immersive online murder mystery experience. Each case challenges you to read the evidence, analyze witness statements, and uncover the truth.</p>
-    <p>Think you can solve them all? Choose a case below to begin your investigation.</p>
-
-    <h2>Available Cases</h2>
-    <ul>
-      <li><a class="case-link" href="ember-lounge.html">Case 1: The Ember Lounge Arson</a></li>
-      <li><a class="case-link" href="https://interactivecrime.gumroad.com/l/tvqqx" target="_blank">Case 2: The Jewelry Store Heist (Buy on Gumroad)</a></li>
-      <li><a class="case-link" href="vanished-wife.html">Case 3: The Vanished Wife</a></li>
-    </ul>
+    <h2 class="section-title">Available Cases</h2>
+    <div class="cases">
+      <div class="case-card">
+        <h2>Case 1: The Ember Lounge Arson</h2>
+        <p>Fire, betrayal, secrets. Uncover the truth behind the flames. Analyze the evidence, question the witnesses, and find the arsonist.</p>
+        <a href="ember-lounge.html">Investigate Now</a>
+      </div>
+      
+      <div class="case-card">
+        <h2>Case 2: The Jewelry Store Heist</h2>
+        <p>Diamonds are missing. No forced entry. Four suspects. Who planned the perfect crime—and what evidence proves it?</p>
+        <a href="jewelry-heist.html">Investigate Now</a>
+      </div>
+      
+      <div class="case-card">
+        <h2>Case 3: The Vanished Wife</h2>
+        <p>An abandoned car. A missing wife. A husband who seems too calm. Was it an abduction—or something far worse?</p>
+        <a href="https://interactivecrime.gumroad.com/l/krifwx" target="_blank">Buy Now on Gumroad</a>
+      </div>
+    </div>
   </section>
+
+  <footer>
+    © 2024 Interactive Crime. All rights reserved.
+  </footer>
 </body>
 </html>
