@@ -29,7 +29,7 @@
 
     header p {
       margin-top: 10px;
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #f0f0f0;
     }
 
@@ -40,25 +40,22 @@
       line-height: 1.7;
     }
 
-    .intro {
-      background-color: #262626;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-left: 6px solid #e25822;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-
-    .intro h2 {
-      margin-top: 0;
-      color: #e25822;
-    }
-
     h2.section-title {
       color: #e25822;
       border-bottom: 1px solid #e25822;
       padding-bottom: 5px;
       margin-bottom: 20px;
       text-align: center;
+    }
+
+    .intro {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: 10px auto;
     }
 
     .cases {
@@ -83,6 +80,12 @@
       margin-top: 0;
       color: #e25822;
       font-size: 1.5em;
+    }
+
+    .difficulty {
+      color: #ffb347;
+      font-weight: bold;
+      margin-top: 5px;
     }
 
     .case-card p {
@@ -119,31 +122,34 @@
 <body>
   <header>
     <h1>Interactive Crime</h1>
-    <p>Dark mysteries. Twisted motives. Solve them all.</p>
+    <p>Dark mysteries. Twisted motives. Your detective journey starts here.</p>
   </header>
 
-  <section class="intro">
-    <h2>Welcome to Interactive Crime</h2>
-    <p>Step into the role of investigator. Each case is a self-contained, immersive mystery filled with crime scene details, conflicting witness statements, and cryptic evidence. Your mission is to uncover the truth, identify the real suspect, and prove your case. Choose from a growing library of dark, challenging cases—each one designed to test your deduction and observation skills.</p>
-  </section>
-
   <section>
+    <div class="intro">
+      <p><strong>What is Interactive Crime?</strong></p>
+      <p>Interactive Crime is an immersive online detective experience where you buy self-contained mystery cases, read real clues, and solve them on your own. Step into the role of detective, analyze the evidence, question the suspects, and uncover the truth.</p>
+    </div>
+
     <h2 class="section-title">Available Cases</h2>
     <div class="cases">
       <div class="case-card">
         <h2>Case 1: The Ember Lounge Arson</h2>
+        <div class="difficulty">Difficulty: Rookie Detective (Easy)</div>
         <p>Fire, betrayal, secrets. Uncover the truth behind the flames. Analyze the evidence, question the witnesses, and find the arsonist.</p>
         <a href="ember-lounge.html">Investigate Now</a>
       </div>
       
       <div class="case-card">
         <h2>Case 2: The Jewelry Store Heist</h2>
+        <div class="difficulty">Difficulty: Seasoned Investigator (Intermediate)</div>
         <p>Diamonds are missing. No forced entry. Four suspects. Who planned the perfect crime—and what evidence proves it?</p>
         <a href="https://interactivecrime.gumroad.com/l/tvqqx" target="_blank">Buy Now on Gumroad</a>
       </div>
       
       <div class="case-card">
         <h2>Case 3: The Vanished Wife</h2>
+        <div class="difficulty">Difficulty: Seasoned Investigator (Intermediate)</div>
         <p>An abandoned car. A missing wife. A husband who seems too calm. Was it an abduction—or something far worse?</p>
         <a href="https://interactivecrime.gumroad.com/l/krifwx" target="_blank">Buy Now on Gumroad</a>
       </div>
