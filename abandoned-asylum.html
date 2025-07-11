@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case 4 – The Abandoned Asylum Files</title>
+  <style>
+    body {
+      background-color: #111827;
+      color: #e0f7fa;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1a202c;
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 2px solid #42a5f5;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #42a5f5;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #e0f7fa;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    nav a:hover {
+      border-color: #42a5f5;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: #42a5f5;
+      border-bottom: 1px solid #42a5f5;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    .evidence {
+      background-color: #1f2937;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 6px solid #42a5f5;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .submit-box {
+      background: #1f2937;
+      padding: 25px;
+      margin-top: 40px;
+      border: 1px solid #42a5f5;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      background-color: #2d3748;
+      border: 1px solid #555;
+      color: #e0f7fa;
+    }
+
+    button {
+      background-color: #42a5f5;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #64b5f6;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Interactive Crime</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+    <p>The Abandoned Asylum Files – Veteran Detective (Hard)</p>
+  </header>
+
+  <section id="overview">
+    <h2>Case 4: The Abandoned Asylum Files</h2>
+    <p>An old asylum sits rotting on the edge of town. Police abandoned the investigation decades ago. Now a new lead emerges, suggesting the deaths weren’t suicides—but murders covered up by someone on staff. Can you prove it?</p>
+    <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
+    <ul>
+      <li>Who committed the crimes?</li>
+      <li>What was their motive?</li>
+      <li>What key piece of evidence proves it?</li>
+    </ul>
+  </section>
+
+  <section id="crime-scene">
+    <h2>Crime Scene Report</h2>
+    <div class="evidence">
+      <p><strong>Location:</strong> Old Fairview Asylum – abandoned psychiatric facility.</p>
+      <p><strong>Discovery:</strong> Human remains in basement cells. Records show multiple deaths listed as suicides.</p>
+      <p><strong>Investigator Note:</strong> "Strangely consistent hanging method. Suspicious injuries suggest restraint before death."</p>
+    </div>
+  </section>
+
+  <section id="witnesses">
+    <h2>Archived Statements</h2>
+    <div class="evidence">
+      <p><strong>Nurse Caroline:</strong> “Dr. Morse said these patients were violent. Said restraints and isolation were for everyone’s safety.”</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Janitor Ed:</strong> “Heard screams at night. Morse would stay late alone. He paid me to forget what I heard.”</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Former Patient (letter):</strong> “She lied on my diagnosis to keep me locked up. I’m not insane. She wanted us for experiments.”</p>
+    </div>
+  </section>
+
+  <section id="evidence">
+    <h2>Evidence Locker</h2>
+    <div class="evidence">
+      <p><strong>Forged Patient File:</strong> Diagnosis altered to read "dangerously psychotic." Real notes underneath indicate stable mental health.</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Recovered Confession Note:</strong> Found in Morse’s office after her disappearance. “I did what had to be done. No one will understand.”</p>
+    </div>
+  </section>
+
+  <section id="solve">
+    <h2>Submit Your Solution</h2>
+    <div class="submit-box">
+      <label>Who committed the crimes?</label>
+      <input type="text" id="suspect" placeholder="Type suspect's name" />
+      <label>What was their motive?</label>
+      <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
+      <label>What key evidence proves it?</label>
+      <input type="text" id="evidenceInput" placeholder="Name the item or detail" />
+      <button onclick="checkAnswers()">Submit Answers</button>
+      <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+    </div>
+  </section>
+
+  <script>
+    function checkAnswers() {
+      const suspect = document.getElementById('suspect').value.trim().toLowerCase();
+      const motive = document.getElementById('motive').value.trim().toLowerCase();
+      const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
+      const result = document.getElementById('result');
+
+      const suspectCorrect = suspect.includes('evelyn') && suspect.includes('morse');
+      const motiveCorrect = motive.includes('experiment') || motive.includes('cover-up') || motive.includes('coverup');
+      const evidenceCorrect = evidence.includes('forged') || evidence.includes('confession');
+
+      if (suspectCorrect && motiveCorrect && evidenceCorrect) {
+        result.textContent = "✅ Correct! You solved the case.";
+        result.style.color = "#00e676";
+      } else {
+        result.textContent = "❌ Try again. Review the evidence carefully.";
+        result.style.color = "#ff5252";
+      }
+    }
+  </script>
+</body>
+</html>
