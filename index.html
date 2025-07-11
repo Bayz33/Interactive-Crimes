@@ -9,20 +9,6 @@
   <meta name="description" content="Interactive Crime offers immersive online detective cases. Buy, read real clues, analyze evidence, and solve dark mysteries at your own pace." />
   <meta name="keywords" content="murder mystery, online detective game, interactive crime, solve cases, true crime, evidence analysis, buy mystery cases" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://interactivecrime.com/" />
-  <meta property="og:title" content="Interactive Crime – Immersive Online Detective Cases" />
-  <meta property="og:description" content="Buy self-contained detective cases online. Read clues, analyze evidence, and solve dark mysteries at your own pace." />
-  <meta property="og:image" content="https://interactivecrime.com/images/og-cover.jpg" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://interactivecrime.com/" />
-  <meta property="twitter:title" content="Interactive Crime – Immersive Online Detective Cases" />
-  <meta property="twitter:description" content="Buy self-contained detective cases online. Read clues, analyze evidence, and solve dark mysteries at your own pace." />
-  <meta property="twitter:image" content="https://interactivecrime.com/images/og-cover.jpg" />
-
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
@@ -100,9 +86,7 @@
       padding: 12px 25px;
       text-decoration: none;
       font-weight: bold;
-      border: none;
       transition: background-color 0.3s;
-      font-size: 1em;
     }
 
     .cta-button:hover {
@@ -138,10 +122,25 @@
     }
 
     .difficulty {
-      color: #ffb347;
       font-weight: bold;
       margin-top: 5px;
       font-size: 0.95em;
+    }
+
+    .easy { color: #66bb6a; }
+    .intermediate { color: #ffb347; }
+    .hard { color: #42a5f5; }
+    .very-hard { color: #ef5350; }
+
+    .free-banner {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 8px;
+      background-color: #00e676;
+      color: #000;
+      font-weight: bold;
+      font-size: 0.9em;
+      border-radius: 4px;
     }
 
     .case-card p {
@@ -158,9 +157,7 @@
       padding: 10px 20px;
       text-decoration: none;
       font-weight: bold;
-      border: none;
       transition: background-color 0.3s;
-      font-size: 1em;
     }
 
     .case-card a:hover {
@@ -190,44 +187,6 @@
       font-size: 0.9em;
       color: #aaa;
     }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8em;
-      }
-
-      nav a {
-        margin: 0 8px;
-        font-size: 0.95em;
-      }
-
-      h2.section-title {
-        font-size: 1.5em;
-      }
-
-      .case-card {
-        max-width: 100%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.6em;
-      }
-
-      nav a {
-        margin: 0 6px;
-        font-size: 0.9em;
-      }
-
-      .intro p {
-        font-size: 0.95em;
-      }
-
-      .case-card h2 {
-        font-size: 1.2em;
-      }
-    }
   </style>
 </head>
 
@@ -246,7 +205,7 @@
   <section>
     <div class="intro">
       <p><strong>What is Interactive Crime?</strong></p>
-      <p>Interactive Crime is your gateway to immersive online detective experiences. Buy our self-contained mystery cases and dive into real clues, witness statements, and evidence. Perfect for true crime fans who want to test their skills and solve dark, twisted mysteries on their own.</p>
+      <p>Interactive Crime is your gateway to immersive online detective experiences. Buy self-contained mystery cases and dive into real clues, witness statements, and evidence. Perfect for true crime fans who want to test their skills and solve dark, twisted mysteries on their own.</p>
       <a class="cta-button" href="#cases">Start Investigating Now</a>
     </div>
 
@@ -254,23 +213,38 @@
     <div class="cases">
       <div class="case-card">
         <h2>Case 1: The Ember Lounge Arson</h2>
-        <div class="difficulty">Difficulty: Rookie Detective (Easy)</div>
+        <div class="difficulty easy">Difficulty: Rookie Detective (Easy)</div>
         <p>Fire, betrayal, secrets. Uncover the truth behind the flames. Analyze the evidence, question the witnesses, and find the arsonist.</p>
         <a href="ember-lounge.html">Investigate Now</a>
       </div>
       
       <div class="case-card">
         <h2>Case 2: The Jewelry Store Heist</h2>
-        <div class="difficulty">Difficulty: Seasoned Investigator (Intermediate)</div>
+        <div class="difficulty intermediate">Difficulty: Seasoned Investigator (Intermediate)</div>
         <p>Diamonds are missing. No forced entry. Four suspects. Who planned the perfect crime—and what evidence proves it?</p>
         <a href="https://interactivecrime.gumroad.com/l/tvqqx" target="_blank">Buy Now on Gumroad</a>
       </div>
       
       <div class="case-card">
         <h2>Case 3: The Vanished Wife</h2>
-        <div class="difficulty">Difficulty: Seasoned Investigator (Intermediate)</div>
+        <div class="difficulty intermediate">Difficulty: Seasoned Investigator (Intermediate)</div>
         <p>An abandoned car. A missing wife. A husband who seems too calm. Was it an abduction—or something far worse?</p>
         <a href="https://interactivecrime.gumroad.com/l/krifwx" target="_blank">Buy Now on Gumroad</a>
+      </div>
+
+      <div class="case-card">
+        <h2>Case 4: The Abandoned Asylum Files</h2>
+        <div class="difficulty hard">Difficulty: Veteran Detective (Hard)</div>
+        <span class="free-banner">FREE for a limited time</span>
+        <p>An abandoned asylum. Scattered patient records. A cold case that was never solved. Can you uncover the truth buried in madness and lies?</p>
+        <a href="asylum-files.html">Investigate Free</a>
+      </div>
+
+      <div class="case-card">
+        <h2>Case 5: The Wrongly Accused</h2>
+        <div class="difficulty very-hard">Difficulty: Master Investigator (Very Hard)</div>
+        <p>A homeless man convicted of murder. The case seemed airtight—until you took it. Can you prove his innocence and unmask the real killer?</p>
+        <a href="wrongly-accused.html">Investigate Now</a>
       </div>
     </div>
 
