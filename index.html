@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Crime – Home</title>
+
+  <title>Interactive Crime – Immersive Online Detective Cases</title>
+
+  <meta name="description" content="Interactive Crime offers immersive online detective cases. Buy, read real clues, analyze evidence, and solve dark mysteries at your own pace." />
+  <meta name="keywords" content="murder mystery, online detective game, interactive crime, solve cases, true crime, evidence analysis, buy mystery cases" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://interactivecrime.com/" />
+  <meta property="og:title" content="Interactive Crime – Immersive Online Detective Cases" />
+  <meta property="og:description" content="Buy self-contained detective cases online. Read clues, analyze evidence, and solve dark mysteries at your own pace." />
+  <meta property="og:image" content="https://interactivecrime.com/images/og-cover.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://interactivecrime.com/" />
+  <meta property="twitter:title" content="Interactive Crime – Immersive Online Detective Cases" />
+  <meta property="twitter:description" content="Buy self-contained detective cases online. Read clues, analyze evidence, and solve dark mysteries at your own pace." />
+  <meta property="twitter:image" content="https://interactivecrime.com/images/og-cover.jpg" />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <style>
     body {
       background-color: #1b1b1b;
@@ -15,26 +36,37 @@
 
     header {
       background-color: #222;
-      padding: 25px 20px;
-      text-align: center;
+      padding: 20px;
       border-bottom: 2px solid #e25822;
+      text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.2em;
       color: #e25822;
       letter-spacing: 2px;
     }
 
-    header p {
+    nav {
       margin-top: 10px;
-      font-size: 1.1em;
+    }
+
+    nav a {
       color: #f0f0f0;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    nav a:hover {
+      border-color: #e25822;
     }
 
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 30px 20px;
       line-height: 1.7;
@@ -46,6 +78,7 @@
       padding-bottom: 5px;
       margin-bottom: 20px;
       text-align: center;
+      font-size: 1.8em;
     }
 
     .intro {
@@ -56,11 +89,30 @@
     .intro p {
       max-width: 800px;
       margin: 10px auto;
+      font-size: 1.1em;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #e25822;
+      color: #fff;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      transition: background-color 0.3s;
+      font-size: 1em;
+    }
+
+    .cta-button:hover {
+      background-color: #ff6f3d;
     }
 
     .cases {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
     }
 
@@ -70,6 +122,9 @@
       border-left: 6px solid #e25822;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       transition: transform 0.3s;
+      flex: 1 1 300px;
+      max-width: 320px;
+      box-sizing: border-box;
     }
 
     .case-card:hover {
@@ -79,18 +134,20 @@
     .case-card h2 {
       margin-top: 0;
       color: #e25822;
-      font-size: 1.5em;
+      font-size: 1.4em;
     }
 
     .difficulty {
       color: #ffb347;
       font-weight: bold;
       margin-top: 5px;
+      font-size: 0.95em;
     }
 
     .case-card p {
       margin-top: 10px;
       color: #f0f0f0;
+      font-size: 1em;
     }
 
     .case-card a {
@@ -103,35 +160,97 @@
       font-weight: bold;
       border: none;
       transition: background-color 0.3s;
+      font-size: 1em;
     }
 
     .case-card a:hover {
       background-color: #ff6f3d;
     }
 
+    .about-contact {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+      color: #ccc;
+      font-size: 0.95em;
+      text-align: center;
+    }
+
+    .about-contact h3 {
+      color: #e25822;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
     footer {
       background-color: #222;
-      padding: 20px;
+      padding: 20px 15px;
       text-align: center;
       border-top: 2px solid #e25822;
       font-size: 0.9em;
       color: #aaa;
     }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 0.95em;
+      }
+
+      h2.section-title {
+        font-size: 1.5em;
+      }
+
+      .case-card {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 0.9em;
+      }
+
+      .intro p {
+        font-size: 0.95em;
+      }
+
+      .case-card h2 {
+        font-size: 1.2em;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Interactive Crime</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#cases">Cases</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <p>Dark mysteries. Twisted motives. Your detective journey starts here.</p>
   </header>
 
   <section>
     <div class="intro">
       <p><strong>What is Interactive Crime?</strong></p>
-      <p>Interactive Crime is an immersive online detective experience where you buy self-contained mystery cases, read real clues, and solve them on your own. Step into the role of detective, analyze the evidence, question the suspects, and uncover the truth.</p>
+      <p>Interactive Crime is your gateway to immersive online detective experiences. Buy our self-contained mystery cases and dive into real clues, witness statements, and evidence. Perfect for true crime fans who want to test their skills and solve dark, twisted mysteries on their own.</p>
+      <a class="cta-button" href="#cases">Start Investigating Now</a>
     </div>
 
-    <h2 class="section-title">Available Cases</h2>
+    <h2 id="cases" class="section-title">Available Cases</h2>
     <div class="cases">
       <div class="case-card">
         <h2>Case 1: The Ember Lounge Arson</h2>
@@ -153,6 +272,14 @@
         <p>An abandoned car. A missing wife. A husband who seems too calm. Was it an abduction—or something far worse?</p>
         <a href="https://interactivecrime.gumroad.com/l/krifwx" target="_blank">Buy Now on Gumroad</a>
       </div>
+    </div>
+
+    <div class="about-contact" id="about">
+      <h3>About Interactive Crime</h3>
+      <p>We believe storytelling should be immersive. Each Interactive Crime case is carefully crafted to challenge your mind and put you in the role of a detective. No filler, no hand-holding—just pure mystery-solving fun.</p>
+      
+      <h3 id="contact">Contact</h3>
+      <p>Questions or need help? Email us at <a href="mailto:support@interactivecrime.com" style="color:#e25822; text-decoration:none;">support@interactivecrime.com</a>.</p>
     </div>
   </section>
 
