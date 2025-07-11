@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case 5 – The Wrongly Accused</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2a2a2a;
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 2px solid #ef5350;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #ef5350;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #f0f0f0;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    nav a:hover {
+      border-color: #ef5350;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: #ef5350;
+      border-bottom: 1px solid #ef5350;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    .evidence {
+      background-color: #2f2f2f;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 6px solid #ef5350;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .submit-box {
+      background: #2f2f2f;
+      padding: 25px;
+      margin-top: 40px;
+      border: 1px solid #ef5350;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      background-color: #393939;
+      border: 1px solid #555;
+      color: #f0f0f0;
+    }
+
+    button {
+      background-color: #ef5350;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #f76d6d;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Interactive Crime</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+    <p>The Wrongly Accused – Master Investigator (Very Hard)</p>
+  </header>
+
+  <section id="overview">
+    <h2>Case 5: The Wrongly Accused</h2>
+    <p>A homeless man named Samuel Price is on death row for murder. The evidence seemed airtight: blood on his clothes, no alibi. But something feels off. The property owner benefited hugely from the insurance payout. Can you prove Samuel's innocence and unmask the real killer?</p>
+    <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
+    <ul>
+      <li>Who actually committed the murder?</li>
+      <li>What was their motive?</li>
+      <li>What key piece of evidence proves it?</li>
+    </ul>
+  </section>
+
+  <section id="crime-scene">
+    <h2>Crime Scene Report</h2>
+    <div class="evidence">
+      <p><strong>Location:</strong> Vacant apartment building downtown. Scene of a violent stabbing.</p>
+      <p><strong>Initial Findings:</strong> Blood trail leading to Samuel Price's camp. Knife found near his belongings.</p>
+      <p><strong>Investigator's Note:</strong> "Open-and-shut, they said. But the security system was 'offline.' Landlord refuses to share financial records."</p>
+    </div>
+  </section>
+
+  <section id="witnesses">
+    <h2>Witness Statements</h2>
+    <div class="evidence">
+      <p><strong>Neighbor (Mrs. Dawes):</strong> “Samuel would ask for leftovers. He was harmless. But the landlord threatened to ‘clean up’ the block.”</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Security Contractor:</strong> “The cameras were off. Landlord told us to skip that month's maintenance.”</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Samuel Price (Defendant):</strong> “I didn’t kill anyone. I found the knife in the trash. It wasn’t mine.”</p>
+    </div>
+  </section>
+
+  <section id="evidence">
+    <h2>Evidence Locker</h2>
+    <div class="evidence">
+      <p><strong>Insurance Policy:</strong> Landlord stands to gain $500,000 on 'vandalism and loss of tenants' clause if property condemned.</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Eviction Notice Draft:</strong> Unsent letter threatening Samuel if he didn't leave the block.</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Knife Analysis:</strong> Samuel's fingerprints but no blood on handle. Suggests it was planted.</p>
+    </div>
+  </section>
+
+  <section id="solve">
+    <h2>Submit Your Solution</h2>
+    <div class="submit-box">
+      <label>Who actually committed the murder?</label>
+      <input type="text" id="suspect" placeholder="Type suspect's name" />
+      <label>What was their motive?</label>
+      <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
+      <label>What key evidence proves it?</label>
+      <input type="text" id="evidenceInput" placeholder="Name the item or detail" />
+      <button onclick="checkAnswers()">Submit Answers</button>
+      <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+    </div>
+  </section>
+
+  <script>
+    function checkAnswers() {
+      const suspect = document.getElementById('suspect').value.trim().toLowerCase();
+      const motive = document.getElementById('motive').value.trim().toLowerCase();
+      const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
+      const result = document.getElementById('result');
+
+      const suspectCorrect = suspect.includes('jacob') && suspect.includes('hart');
+      const motiveCorrect = motive.includes('insurance') || motive.includes('money') || motive.includes('property');
+      const evidenceCorrect = evidence.includes('insurance') || evidence.includes('eviction') || evidence.includes('letter');
+
+      if (suspectCorrect && motiveCorrect && evidenceCorrect) {
+        result.textContent = "✅ Correct! You solved the case.";
+        result.style.color = "#00e676";
+      } else {
+        result.textContent = "❌ Try again. Look closer at the evidence.";
+        result.style.color = "#ff5252";
+      }
+    }
+  </script>
+</body>
+</html>
