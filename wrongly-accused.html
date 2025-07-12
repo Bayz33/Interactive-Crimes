@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case 5 – The Wrongly Accused</title>
+  <title>Case 5: The Wrongly Accused – Interactive Crime</title>
+  <meta name="description" content="Investigate the case of a man convicted of murder. Dig into conflicting testimonies, questionable evidence, and hidden motives to prove his innocence." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <style>
     body {
       background-color: #1a1a1a;
-      color: #f0f0f0;
+      color: #e0e0e0;
       font-family: 'Courier New', Courier, monospace;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #2a2a2a;
-      padding: 25px 20px;
+      background-color: #222;
+      padding: 25px;
       text-align: center;
       border-bottom: 2px solid #ef5350;
     }
@@ -33,7 +36,7 @@
 
     nav a {
       margin: 0 12px;
-      color: #f0f0f0;
+      color: #e0e0e0;
       text-decoration: none;
       font-weight: bold;
       border-bottom: 2px solid transparent;
@@ -45,10 +48,10 @@
     }
 
     section {
-      padding: 30px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
-      line-height: 1.6;
+      padding: 30px 20px;
+      line-height: 1.7;
     }
 
     h2 {
@@ -59,15 +62,19 @@
     }
 
     .evidence {
-      background-color: #2f2f2f;
+      background-color: #262626;
       padding: 20px;
       margin-top: 20px;
       border-left: 6px solid #ef5350;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
 
+    .evidence p {
+      margin: 10px 0;
+    }
+
     .submit-box {
-      background: #2f2f2f;
+      background: #262626;
       padding: 25px;
       margin-top: 40px;
       border: 1px solid #ef5350;
@@ -84,9 +91,14 @@
       width: 100%;
       padding: 12px;
       margin-top: 5px;
-      background-color: #393939;
+      background-color: #2a2a2a;
       border: 1px solid #555;
-      color: #f0f0f0;
+      color: #e0e0e0;
+      font-family: inherit;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #aaa;
     }
 
     button {
@@ -97,10 +109,20 @@
       margin-top: 20px;
       cursor: pointer;
       font-size: 16px;
+      transition: background-color 0.3s;
     }
 
     button:hover {
-      background-color: #f76d6d;
+      background-color: #f76c6c;
+    }
+
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #ef5350;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
@@ -111,13 +133,12 @@
     <nav>
       <a href="index.html">Home</a>
     </nav>
-    <p>The Wrongly Accused – Master Investigator (Very Hard)</p>
   </header>
 
-  <section id="overview">
+  <section>
     <h2>Case 5: The Wrongly Accused</h2>
-    <p>A homeless man named Samuel Price is on death row for murder. The evidence seems airtight: blood on his clothes, no alibi, weapon found in his camp. But the more you dig, the more the story unravels. Conflicting witnesses, bribery, and a landlord with everything to gain. Can you see what the jury missed?</p>
-    <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
+    <p>Three years ago, Nathan Cole—a homeless man—was convicted of the murder of local shop owner Gerald Myers. He claimed innocence. The case seemed closed: a bloody knife in his shopping cart, an eyewitness placing him near the scene. But new inconsistencies have surfaced.</p>
+    <p>Your mission: <strong>Reinvestigate this conviction</strong> by answering three critical questions:</p>
     <ul>
       <li>Who actually committed the murder?</li>
       <li>What was their motive?</li>
@@ -128,47 +149,35 @@
   <section id="crime-scene">
     <h2>Crime Scene Report</h2>
     <div class="evidence">
-      <p><strong>Location:</strong> Vacant apartment building, urban alley entrance.</p>
-      <p><strong>Scene Details:</strong> Victim stabbed in 2nd-floor hall. Blood trail leads outside toward the camp Samuel Price stayed at. Knife recovered in dumpster near his tent.</p>
-      <p><strong>Investigator’s Note:</strong> “Case looked open-and-shut. But missing security footage and landlord's sealed records suggest something darker.”</p>
+      <p><strong>Location:</strong> Myers Grocery, a small neighborhood store, closed at 11 p.m. The body was found near the register, multiple stab wounds.</p>
+      <p><strong>Evidence Collected:</strong> Bloodied knife recovered in Nathan's cart. Store was ransacked but money left behind. Partial fingerprints on the back door.</p>
+      <p><strong>Investigator’s Note:</strong> “Scene suggested a struggle. No forced entry at the front. Back door was unlatched.”</p>
     </div>
   </section>
 
   <section id="witnesses">
     <h2>Witness Statements</h2>
     <div class="evidence">
-      <p><strong>Marcy Dawes (Neighbor 1):</strong> “Samuel threatened me once. Said he’d burn my house down.”</p>
+      <p><strong>Officer Laura Grant:</strong> “Cole was picked up blocks away with the knife in his cart. He seemed confused, possibly drunk. Didn’t resist arrest.”</p>
     </div>
     <div class="evidence">
-      <p><strong>Leo Marks (Neighbor 2):</strong> “The landlord, Jacob Hart, was furious about the camp. He said he’d do anything to get them out.”</p>
+      <p><strong>Leo Marks (Neighbor):</strong> “I heard arguing. Then quiet. A back door slam. Didn’t see anyone clearly.”</p>
     </div>
     <div class="evidence">
-      <p><strong>Security Contractor:</strong> “The cameras were 'offline.' Landlord told us to skip that month's backup.”</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Nadine Reyes (Tenant):</strong> “Jacob Hart offered me $200 to say I saw Samuel fighting with the victim. I didn’t take it.”</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Samuel Price (Defendant):</strong> “I didn’t kill anyone. I found the knife in the trash. The landlord was always threatening us.”</p>
+      <p><strong>Anthony Myers (Victim’s Son):</strong> “Dad mentioned threatening to evict a camp behind the store. Said they were scaring customers.”</p>
     </div>
   </section>
 
   <section id="evidence">
     <h2>Evidence Locker</h2>
     <div class="evidence">
-      <p><strong>Insurance Policy:</strong> Pays landlord $500,000 if building condemned due to violent crime.</p>
+      <p><strong>Knife:</strong> Bloody, partial prints too smudged for ID. Cole insists he “found it” in a trash bin.</p>
     </div>
     <div class="evidence">
-      <p><strong>Unsigned Threat Letter:</strong> “GET OUT OR ELSE” found in the victim’s room. Handwriting inconclusive.</p>
+      <p><strong>Store Camera:</strong> Offline for three hours. Unknown cause. Cables were damaged behind shelving.</p>
     </div>
     <div class="evidence">
-      <p><strong>Security Log:</strong> Shows footage marked “corrupted” for the night of the murder.</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Bribery Ledger:</strong> Landlord's withdrawals match witness payment offers.</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Knife Analysis:</strong> Samuel’s prints but no blood on handle. Blood wiped clean suggests planting.</p>
+      <p><strong>Back Door Prints:</strong> Partial, do not match Cole. APD didn’t pursue new matches after conviction.</p>
     </div>
   </section>
 
@@ -193,18 +202,22 @@
       const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
       const result = document.getElementById('result');
 
-      const suspectCorrect = suspect.includes('jacob') && suspect.includes('hart');
-      const motiveCorrect = motive.includes('insurance') || motive.includes('money') || motive.includes('property') || motive.includes('evict');
-      const evidenceCorrect = evidence.includes('insurance') || evidence.includes('bribery') || evidence.includes('ledger') || evidence.includes('threat') || evidence.includes('letter');
+      const suspectCorrect = suspect.includes('anthony') || suspect.includes('myers');
+      const motiveCorrect = motive.includes('inheritance') || motive.includes('own') || motive.includes('take over') || motive.includes('control') || motive.includes('money');
+      const evidenceCorrect = evidence.includes('back door') || evidence.includes('prints') || evidence.includes('camera');
 
       if (suspectCorrect && motiveCorrect && evidenceCorrect) {
         result.textContent = "✅ Correct! You solved the case.";
         result.style.color = "#00e676";
       } else {
-        result.textContent = "❌ Try again. Look closer at the evidence.";
+        result.textContent = "❌ Try again. Review the evidence carefully.";
         result.style.color = "#ff5252";
       }
     }
   </script>
+
+  <footer>
+    © 2024 Interactive Crime. All rights reserved.
+  </footer>
 </body>
 </html>
