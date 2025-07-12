@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case 4 – The Abandoned Asylum Files</title>
+  <title>Case 4: The Abandoned Asylum Files – Interactive Crime</title>
+  <meta name="description" content="Explore the cold case of a haunted asylum. Analyze patient records and staff notes to uncover the truth buried in madness and lies." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <style>
     body {
-      background-color: #111827;
-      color: #e0f7fa;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
       font-family: 'Courier New', Courier, monospace;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #1a202c;
-      padding: 25px 20px;
+      background-color: #222;
+      padding: 25px;
       text-align: center;
       border-bottom: 2px solid #42a5f5;
     }
@@ -33,7 +36,7 @@
 
     nav a {
       margin: 0 12px;
-      color: #e0f7fa;
+      color: #e0e0e0;
       text-decoration: none;
       font-weight: bold;
       border-bottom: 2px solid transparent;
@@ -45,10 +48,10 @@
     }
 
     section {
-      padding: 30px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
-      line-height: 1.6;
+      padding: 30px 20px;
+      line-height: 1.7;
     }
 
     h2 {
@@ -59,15 +62,19 @@
     }
 
     .evidence {
-      background-color: #1f2937;
+      background-color: #262626;
       padding: 20px;
       margin-top: 20px;
       border-left: 6px solid #42a5f5;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
 
+    .evidence p {
+      margin: 10px 0;
+    }
+
     .submit-box {
-      background: #1f2937;
+      background: #262626;
       padding: 25px;
       margin-top: 40px;
       border: 1px solid #42a5f5;
@@ -84,9 +91,14 @@
       width: 100%;
       padding: 12px;
       margin-top: 5px;
-      background-color: #2d3748;
+      background-color: #2a2a2a;
       border: 1px solid #555;
-      color: #e0f7fa;
+      color: #e0e0e0;
+      font-family: inherit;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #aaa;
     }
 
     button {
@@ -97,10 +109,31 @@
       margin-top: 20px;
       cursor: pointer;
       font-size: 16px;
+      transition: background-color 0.3s;
     }
 
     button:hover {
       background-color: #64b5f6;
+    }
+
+    .free-banner {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background-color: #00e676;
+      color: #000;
+      font-weight: bold;
+      font-size: 0.95em;
+      border-radius: 4px;
+    }
+
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #42a5f5;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
@@ -111,15 +144,15 @@
     <nav>
       <a href="index.html">Home</a>
     </nav>
-    <p>The Abandoned Asylum Files – Veteran Detective (Hard)</p>
+    <p class="free-banner">FREE for a limited time</p>
   </header>
 
-  <section id="overview">
+  <section>
     <h2>Case 4: The Abandoned Asylum Files</h2>
-    <p>An old asylum sits rotting on the edge of town. Police abandoned the investigation decades ago. Now a new lead emerges, suggesting the deaths weren’t suicides—but murders covered up by someone on staff. Can you prove it?</p>
+    <p>Once a bustling psychiatric hospital, now just crumbling walls and whispered legends. But the truth is buried in old files and cryptic notes. Years ago, a patient disappeared without a trace. The case went cold. Until now.</p>
     <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
     <ul>
-      <li>Who committed the crimes?</li>
+      <li>Who is responsible for the disappearance?</li>
       <li>What was their motive?</li>
       <li>What key piece of evidence proves it?</li>
     </ul>
@@ -128,39 +161,42 @@
   <section id="crime-scene">
     <h2>Crime Scene Report</h2>
     <div class="evidence">
-      <p><strong>Location:</strong> Old Fairview Asylum – abandoned psychiatric facility.</p>
-      <p><strong>Discovery:</strong> Human remains in basement cells. Records show multiple deaths listed as suicides.</p>
-      <p><strong>Investigator Note:</strong> "Strangely consistent hanging method. Suspicious injuries suggest restraint before death."</p>
+      <p><strong>Location:</strong> Eastgate Asylum – abandoned for 20 years. Fading hallways, collapsed roofs, mold-eaten records.</p>
+      <p><strong>Evidence Found:</strong> Patient file with missing pages. Blood-stained bedsheet. Staff logbook with odd redactions.</p>
+      <p><strong>Investigator’s Note:</strong> “Most records are damaged. But some staff logs suggest an internal cover-up.”</p>
     </div>
   </section>
 
   <section id="witnesses">
-    <h2>Archived Statements</h2>
+    <h2>Historical Witness Statements</h2>
     <div class="evidence">
-      <p><strong>Nurse Caroline:</strong> “Dr. Morse said these patients were violent. Said restraints and isolation were for everyone’s safety.”</p>
+      <p><strong>Dr. Evelyn Shaw (Psychiatrist):</strong> “I always thought Director Harris was hiding something. He had keys to every room and no one questioned him.”</p>
     </div>
     <div class="evidence">
-      <p><strong>Janitor Ed:</strong> “Heard screams at night. Morse would stay late alone. He paid me to forget what I heard.”</p>
+      <p><strong>Orderly Tom Price:</strong> “They moved Patient 14 at night without paperwork. I heard them arguing. Then nothing.”</p>
     </div>
     <div class="evidence">
-      <p><strong>Former Patient (letter):</strong> “She lied on my diagnosis to keep me locked up. I’m not insane. She wanted us for experiments.”</p>
+      <p><strong>Nurse Linda Coe:</strong> “Some files went missing after Director Harris did his ‘audit’. He said he was protecting us from scandal.”</p>
     </div>
   </section>
 
   <section id="evidence">
     <h2>Evidence Locker</h2>
     <div class="evidence">
-      <p><strong>Forged Patient File:</strong> Diagnosis altered to read "dangerously psychotic." Real notes underneath indicate stable mental health.</p>
+      <p><strong>Damaged Staff Logbook:</strong> Several redacted pages. Entries stop on the night of Patient 14’s disappearance.</p>
     </div>
     <div class="evidence">
-      <p><strong>Recovered Confession Note:</strong> Found in Morse’s office after her disappearance. “I did what had to be done. No one will understand.”</p>
+      <p><strong>Blood-Stained Bedsheet:</strong> DNA testing inconclusive due to age and contamination.</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Partial Patient File:</strong> Missing medical history. Notes read “uncooperative,” “violent,” and “requires transfer.”</p>
     </div>
   </section>
 
   <section id="solve">
     <h2>Submit Your Solution</h2>
     <div class="submit-box">
-      <label>Who committed the crimes?</label>
+      <label>Who is responsible?</label>
       <input type="text" id="suspect" placeholder="Type suspect's name" />
       <label>What was their motive?</label>
       <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
@@ -178,9 +214,9 @@
       const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
       const result = document.getElementById('result');
 
-      const suspectCorrect = suspect.includes('evelyn') && suspect.includes('morse');
-      const motiveCorrect = motive.includes('experiment') || motive.includes('cover-up') || motive.includes('coverup');
-      const evidenceCorrect = evidence.includes('forged') || evidence.includes('confession');
+      const suspectCorrect = suspect.includes('director harris') || suspect.includes('harris');
+      const motiveCorrect = motive.includes('cover up') || motive.includes('scandal') || motive.includes('hide');
+      const evidenceCorrect = evidence.includes('logbook') || evidence.includes('records') || evidence.includes('file');
 
       if (suspectCorrect && motiveCorrect && evidenceCorrect) {
         result.textContent = "✅ Correct! You solved the case.";
@@ -191,5 +227,9 @@
       }
     }
   </script>
+
+  <footer>
+    © 2024 Interactive Crime. All rights reserved.
+  </footer>
 </body>
 </html>
