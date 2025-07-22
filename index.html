@@ -3,112 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Interactive Crime: Immersive crime-solving audio experiences."/>
   <title>Interactive Crime</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #111;
+      margin: 0;
+      background-color: #0a0a0a;
       color: #f4f4f4;
     }
+
     header {
-      background-color: #000;
-      padding: 1.5em;
+      background-color: #111;
+      padding: 20px;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
-      font-size: 2em;
-      letter-spacing: 2px;
+      font-size: 2.5em;
+      color: crimson;
     }
-    .hero {
-      background: url('images/images/interactivecrime-home.jpg.jpg') no-repeat center center;
-      background-size: cover;
-      height: 400px;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
+      background-color: #1a1a1a;
     }
-    .content {
-      padding: 2em;
-      max-width: 900px;
-      margin: 0 auto;
+
+    nav a {
+      color: #f4f4f4;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .case-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5em;
-    }
-    .case {
-      background-color: #222;
-      padding: 1em;
-      border-radius: 8px;
+
+    .intro {
       text-align: center;
-      transition: transform 0.2s ease;
+      padding: 30px 20px;
     }
-    .case:hover {
-      transform: scale(1.02);
+
+    .intro p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
     }
-    .case h2 {
-      margin: 0.5em 0;
+
+    .cases {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
     }
-    .case a {
+
+    .case-card {
+      background-color: #1c1c1c;
+      border: 1px solid #444;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 300px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+    }
+
+    .case-card h2 {
+      margin-top: 0;
+    }
+
+    .case-card p {
+      font-size: 0.95em;
+    }
+
+    .case-card a {
       display: inline-block;
-      margin-top: 0.5em;
-      padding: 0.5em 1em;
+      margin-top: 10px;
+      padding: 10px 15px;
       background-color: crimson;
       color: #fff;
       text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .difficulty {
+      font-size: 0.9em;
+      font-style: italic;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .easy { color: #90ee90; }
+    .intermediate { color: #ffcc00; }
+    .hard { color: #ff6347; }
+    .very-hard { color: #ff4500; }
+
+    .free-banner {
+      display: inline-block;
+      background-color: #28a745;
+      color: white;
+      padding: 2px 8px;
+      font-size: 0.8em;
+      margin-bottom: 10px;
       border-radius: 4px;
     }
+
+    .about-contact {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .about-contact h3 {
+      color: #e25822;
+    }
+
     footer {
       text-align: center;
-      padding: 2em 1em;
-      background-color: #000;
-      font-size: 0.9em;
-      color: #aaa;
+      padding: 20px;
+      background-color: #111;
+      color: #888;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Interactive Crime</h1>
-    <p>Solve the case. Live the mystery.</p>
   </header>
 
-  <section class="hero"></section>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#cases">Cases</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <div class="content">
-    <h2>Choose a Case</h2>
-    <div class="case-grid">
-      <div class="case">
-        <h2>🔥 Ember Lounge</h2>
-        <a href="ember-lounge.html">View Case</a><br>
-        <a href="https://gumroad.com/l/emberlounge" target="_blank">Buy Now</a>
-      </div>
-      <div class="case">
-        <h2>💎 Jewelry Heist</h2>
-        <a href="jewelry-heist.html">View Case</a><br>
-        <a href="https://gumroad.com/l/jewelryheist" target="_blank">Buy Now</a>
-      </div>
-      <div class="case">
-        <h2>🕵️‍♀️ The Vanished Wife</h2>
-        <a href="vanished-wife.html">View Case</a><br>
-        <a href="https://gumroad.com/l/vanishedwife" target="_blank">Buy Now</a>
-      </div>
-      <div class="case">
-        <h2>🏚️ Abandoned Asylum</h2>
-        <a href="abandoned-asylum.html">View Case</a><br>
-        <a href="https://gumroad.com/l/asylumcase" target="_blank">Buy Now</a>
-      </div>
-      <div class="case">
-        <h2>⚖️ Wrongly Accused</h2>
-        <a href="wrongly-accused.html">View Case</a><br>
-        <a href="https://gumroad.com/l/wronglyaccused" target="_blank">Buy Now</a>
-      </div>
+  <section class="intro">
+    <p><strong>Dark mysteries. Twisted motives.</strong> Your detective journey starts here.</p>
+    <p><strong>What is Interactive Crime?</strong><br>
+    Interactive Crime is your gateway to immersive online detective experiences. Buy self-contained mystery cases and dive into real clues, witness statements, and evidence. Perfect for true crime fans who want to test their skills and solve dark, twisted mysteries on their own.</p>
+    <a href="#cases" style="background:#e25822; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">Start Investigating Now</a>
+  </section>
+
+  <h2 id="cases" class="section-title" style="text-align:center;">Available Cases</h2>
+
+  <div class="cases">
+
+    <div class="case-card">
+      <h2>Case 1: The Ember Lounge Arson</h2>
+      <div class="difficulty easy">Difficulty: Rookie Detective (Easy)</div>
+      <p>Fire, betrayal, secrets. Uncover the truth behind the flames. Analyze the evidence, question the witnesses, and find the arsonist.</p>
+      <a href="ember-lounge.html">Investigate Now</a>
     </div>
+
+    <div class="case-card">
+      <h2>Case 2: The Jewelry Store Heist</h2>
+      <div class="difficulty intermediate">Difficulty: Seasoned Investigator (Intermediate)</div>
+      <p>Diamonds are missing. No forced entry. Four suspects. Who planned the perfect crime—and what evidence proves it?</p>
+      <a href="https://interactivecrime.gumroad.com/l/tvqqx" target="_blank">Buy Now on Gumroad</a>
+    </div>
+
+    <div class="case-card">
+      <h2>Case 3: The Vanished Wife</h2>
+      <div class="difficulty intermediate">Difficulty: Seasoned Investigator (Intermediate)</div>
+      <p>An abandoned car. A missing wife. A husband who seems too calm. Was it an abduction—or something far worse?</p>
+      <a href="https://interactivecrime.gumroad.com/l/krifwx" target="_blank">Buy Now on Gumroad</a>
+    </div>
+
+    <div class="case-card">
+      <h2>Case 4: The Abandoned Asylum Files</h2>
+      <div class="difficulty hard">Difficulty: Veteran Detective (Hard)</div>
+      <span class="free-banner">FREE for a limited time</span>
+      <p>An abandoned asylum. Scattered patient records. A cold case that was never solved. Can you uncover the truth buried in madness and lies?</p>
+      <a href="abandoned-asylum.html">Investigate Free</a>
+    </div>
+
+    <div class="case-card">
+      <h2>Case 5: The Wrongly Accused</h2>
+      <div class="difficulty very-hard">Difficulty: Master Investigator (Very Hard)</div>
+      <p>A homeless man convicted of murder. The case seemed airtight—until you took it. Can you prove his innocence and unmask the real killer?</p>
+      <a href="https://interactivecrime.gumroad.com/l/gpufcn" target="_blank">Buy Now on Gumroad</a>
+    </div>
+
+  </div>
+
+  <div class="about-contact" id="about">
+    <h3>About Interactive Crime</h3>
+    <p>We believe storytelling should be immersive. Each Interactive Crime case is carefully crafted to challenge your mind and put you in the role of a detective. No filler, no hand-holding—just pure mystery-solving fun.</p>
+
+    <h3 id="contact">Contact</h3>
+    <p>Questions or need help? Email us at <a href="mailto:support@interactivecrime.com" style="color:#e25822; text-decoration:none;">support@interactivecrime.com</a>.</p>
   </div>
 
   <footer>
-    &copy; 2025 Interactive Crime. All rights reserved.
+    &copy; 2024 Interactive Crime. All rights reserved.
   </footer>
+
 </body>
 </html>
