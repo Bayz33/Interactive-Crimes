@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Case 4: The Abandoned Asylum – Interactive Crime</title>
   <meta name="description" content="Investigate the cold case inside an abandoned asylum. Analyze evidence and uncover the truth behind Patient 14's disappearance." />
-
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
   <style>
     body {
       background-color: #1a1a1a;
@@ -17,25 +13,21 @@
       margin: 0;
       padding: 0;
     }
-
     header {
       background-color: #222;
       padding: 25px 20px;
       text-align: center;
       border-bottom: 2px solid #42a5f5;
     }
-
     header h1 {
       margin: 0;
       font-size: 2em;
       color: #42a5f5;
       letter-spacing: 2px;
     }
-
     nav {
       margin-top: 10px;
     }
-
     nav a {
       margin: 0 12px;
       color: #e0e0e0;
@@ -44,11 +36,9 @@
       border-bottom: 2px solid transparent;
       transition: border-color 0.3s;
     }
-
     nav a:hover {
       border-color: #42a5f5;
     }
-
     .free-banner {
       display: inline-block;
       margin-top: 12px;
@@ -59,14 +49,12 @@
       font-size: 0.95em;
       border-radius: 4px;
     }
-
     section {
       max-width: 900px;
       margin: auto;
       padding: 30px 20px;
       line-height: 1.7;
     }
-
     h2 {
       color: #42a5f5;
       border-bottom: 1px solid #42a5f5;
@@ -74,7 +62,6 @@
       margin-top: 40px;
       font-size: 1.6em;
     }
-
     .evidence {
       background-color: #262626;
       padding: 20px;
@@ -82,11 +69,9 @@
       border-left: 6px solid #42a5f5;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-
     .evidence p {
       margin: 10px 0;
     }
-
     .submit-box {
       background: #262626;
       padding: 25px;
@@ -94,13 +79,11 @@
       border: 1px solid #42a5f5;
       box-shadow: 0 0 10px rgba(0,0,0,0.6);
     }
-
     label {
       font-weight: bold;
       display: block;
       margin-top: 15px;
     }
-
     input, textarea {
       width: 100%;
       padding: 12px;
@@ -111,11 +94,9 @@
       font-family: inherit;
       font-size: 1em;
     }
-
     input::placeholder, textarea::placeholder {
       color: #aaa;
     }
-
     button {
       background-color: #42a5f5;
       color: #fff;
@@ -126,11 +107,9 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
-
     button:hover {
       background-color: #64b5f6;
     }
-
     footer {
       background-color: #222;
       padding: 20px;
@@ -139,28 +118,23 @@
       font-size: 0.9em;
       color: #aaa;
     }
-
     @media (max-width: 600px) {
       header h1 {
         font-size: 1.5em;
       }
-
       nav a {
         margin: 0 8px;
         font-size: 0.95em;
       }
-
       section {
         padding: 20px 15px;
       }
-
       h2 {
         font-size: 1.4em;
       }
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Interactive Crime</h1>
@@ -169,7 +143,6 @@
     </nav>
     <p class="free-banner">FREE for a limited time</p>
   </header>
-
   <section>
     <h2>Case 4: The Abandoned Asylum</h2>
     <p>Once a bustling psychiatric hospital, now only rotting walls and old legends. But the truth is hidden in what remains. Decades ago, a patient vanished without a trace. The case went cold. Until now.</p>
@@ -180,7 +153,6 @@
       <li>What key piece of evidence proves it?</li>
     </ul>
   </section>
-
   <section id="crime-scene">
     <h2>Crime Scene Report</h2>
     <div class="evidence">
@@ -189,7 +161,6 @@
       <p><strong>Investigator’s Note:</strong> “Records are damaged but some staff logs hint at an internal cover-up.”</p>
     </div>
   </section>
-
   <section id="witnesses">
     <h2>Historical Witness Statements</h2>
     <div class="evidence">
@@ -202,7 +173,6 @@
       <p><strong>Nurse Linda Coe:</strong> “Files went missing after Director Harris did his so-called ‘audit.’ He claimed it was to protect us from scandal.”</p>
     </div>
   </section>
-
   <section id="evidence">
     <h2>Evidence Locker</h2>
     <div class="evidence">
@@ -215,7 +185,6 @@
       <p><strong>Partial Patient File:</strong> Missing history. Notes read “uncooperative,” “violent,” “requires transfer.”</p>
     </div>
   </section>
-
   <section id="solve">
     <h2>Submit Your Solution</h2>
     <div class="submit-box">
@@ -229,18 +198,15 @@
       <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
     </div>
   </section>
-
   <script>
     function checkAnswers() {
       const suspect = document.getElementById('suspect').value.trim().toLowerCase();
       const motive = document.getElementById('motive').value.trim().toLowerCase();
       const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
       const result = document.getElementById('result');
-
       const suspectCorrect = suspect.includes('director harris') || suspect.includes('harris');
       const motiveCorrect = motive.includes('cover') || motive.includes('scandal') || motive.includes('hide');
       const evidenceCorrect = evidence.includes('logbook') || evidence.includes('records') || evidence.includes('file');
-
       if (suspectCorrect && motiveCorrect && evidenceCorrect) {
         result.textContent = "✅ Correct! You solved the case.";
         result.style.color = "#00e676";
@@ -250,7 +216,6 @@
       }
     }
   </script>
-
   <footer>
     © 2024 Interactive Crime. All rights reserved.
   </footer>
