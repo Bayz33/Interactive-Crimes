@@ -10,6 +10,7 @@
       color: #f4f4f4;
       font-family: Arial, sans-serif;
       margin: 0;
+      overflow-x: hidden;
     }
 
     header {
@@ -26,8 +27,9 @@
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       padding: 10px;
       background-color: #1a1a1a;
     }
@@ -106,6 +108,13 @@
     button:hover {
       background-color: #b30000;
     }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -170,15 +179,15 @@
 
     <div id="solve" class="section">
       <h3>Submit Your Solution</h3>
-      <form>
+      <form onsubmit="return checkAnswer(event)">
         <label>Who started the fire?</label>
-        <input type="text" name="suspect" placeholder="Enter name..." />
+        <input type="text" id="suspect" placeholder="Enter name..." required />
 
         <label>What was their motive?</label>
-        <input type="text" name="motive" placeholder="Describe motive..." />
+        <input type="text" id="motive" placeholder="Describe motive..." required />
 
         <label>What key evidence proves it?</label>
-        <input type="text" name="evidence" placeholder="Describe the evidence..." />
+        <input type="text" id="evidence" placeholder="Describe the evidence..." required />
 
         <button type="submit">Submit Answers</button>
       </form>
@@ -188,6 +197,30 @@
   <footer>
     &copy; 2024 Interactive Crime. All rights reserved.
   </footer>
+
+  <script>
+    function checkAnswer(event) {
+      event.preventDefault();
+
+      const suspect = document.getElementById("suspect").value.trim().toLowerCase();
+      const motive = document.getElementById("motive").value.trim().toLowerCase();
+      const evidence = document.getElementById("evidence").value.trim().toLowerCase();
+
+      const correctSuspects = ["chris hall"];
+      const correctMotives = ["revenge", "he was fired", "anger over being fired"];
+      const correctEvidence = ["bar tab", "bar tab printout", "circled bar tab"];
+
+      if (
+        correctSuspects.includes(suspect) &&
+        correctMotives.some(m => motive.includes(m)) &&
+        correctEvidence.some(e => evidence.includes(e))
+      ) {
+        alert("✅ Correct! You've solved the case.");
+      } else {
+        alert("❌ Not quite. Check your clues and try again.");
+      }
+    }
+  </script>
 
 </body>
 </html>
