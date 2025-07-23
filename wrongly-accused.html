@@ -2,233 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case 5: The Wrongly Accused – Interactive Crime</title>
-  <meta name="description" content="Investigate the case of a man convicted of murder. Dig into conflicting testimonies, questionable evidence, and hidden motives to prove his innocence." />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Crimes – Wrongly Accused</title>
   <style>
     body {
-      background-color: #000000;
-      color: #f8f8f2;
-      font-family: 'Courier New', Courier, monospace;
+      background-color: #0a0a0a;
+      color: #f4f4f4;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      overflow-x: hidden;
     }
 
     header {
-      background-color: #121212;
-      padding: 25px;
+      background-color: #111;
+      padding: 20px;
       text-align: center;
-      border-bottom: 2px solid #ff4081;
     }
 
     header h1 {
+      color: crimson;
       margin: 0;
-      font-size: 2em;
-      color: #ff4081;
-      letter-spacing: 2px;
+      font-size: 2.2em;
     }
 
     nav {
-      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      background-color: #1a1a1a;
     }
 
     nav a {
-      margin: 0 12px;
-      color: #f8f8f2;
+      color: #f4f4f4;
       text-decoration: none;
       font-weight: bold;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s;
     }
 
-    nav a:hover {
-      border-color: #ff4081;
-    }
-
-    section {
+    .container {
       max-width: 900px;
       margin: auto;
-      padding: 30px 20px;
-      line-height: 1.7;
+      padding: 20px;
+    }
+
+    img.case-cover {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(255,0,0,0.3);
     }
 
     h2 {
-      color: #ff4081;
-      border-bottom: 1px solid #ff4081;
-      padding-bottom: 5px;
+      color: #e25822;
       margin-top: 40px;
     }
 
-    .evidence {
-      background-color: #1a1a1a;
-      padding: 20px;
-      margin-top: 20px;
-      border-left: 6px solid #ff4081;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    h3 {
+      margin-top: 30px;
+      color: #ffcc00;
     }
 
-    .evidence p {
-      margin: 10px 0;
+    p {
+      line-height: 1.6;
     }
 
-    .submit-box {
-      background: #1a1a1a;
-      padding: 25px;
-      margin-top: 40px;
-      border: 1px solid #ff4081;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    ul {
+      padding-left: 20px;
     }
 
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 5px;
-      background-color: #2b2b2b;
-      border: 1px solid #444;
-      color: #f8f8f2;
-      font-family: inherit;
-    }
-
-    input::placeholder, textarea::placeholder {
-      color: #999;
-    }
-
-    button {
-      background-color: #ff4081;
-      color: #fff;
-      border: none;
-      padding: 12px;
-      margin-top: 20px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #ff79b0;
+    .section {
+      margin-bottom: 40px;
     }
 
     footer {
-      background-color: #121212;
-      padding: 20px;
       text-align: center;
-      border-top: 2px solid #ff4081;
-      font-size: 0.9em;
-      color: #999;
+      padding: 20px;
+      background-color: #111;
+      color: #888;
     }
 
-    .case-cover {
+    input[type="text"] {
       width: 100%;
-      max-width: 900px;
-      display: block;
-      margin: 30px auto 0;
-      border: 2px solid #ff4081;
-      box-shadow: 0 0 12px rgba(255, 64, 129, 0.3);
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      background: #222;
+      border: 1px solid #555;
+      color: white;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: crimson;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b30000;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
-
 <body>
+
   <header>
-    <h1>Interactive Crime</h1>
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
+    <h1>Interactive Crimes</h1>
   </header>
 
-  <img src="images/images/case5-cover.jpg" alt="Case 5 Cover Image" class="case-cover" />
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="#scene">Crime Scene</a>
+    <a href="#witnesses">Witnesses</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#solve">Solve</a>
+  </nav>
 
-  <section>
-    <h2>Case 5: The Wrongly Accused</h2>
-    <p>Three years ago, Nathan Cole—a homeless man—was convicted of the murder of local shop owner Gerald Myers. He claimed innocence. The case seemed closed: a bloody knife in his shopping cart, an eyewitness placing him near the scene. But new inconsistencies have surfaced.</p>
-    <p>Your mission: <strong>Reinvestigate this conviction</strong> by answering three critical questions:</p>
+  <div class="container">
+    <img src="images/images/case5-cover.jpg" alt="Wrongly Accused Case" class="case-cover"/>
+
+    <h2>Case 5: Wrongly Accused</h2>
+    <p>A man sits behind bars for a murder he didn’t commit—or so he claims. As new evidence emerges, it’s up to you to reopen the case, sort truth from lies, and bring justice where the system failed.</p>
+
+    <p><strong>Your mission:</strong> Solve the case by answering three critical questions:</p>
     <ul>
-      <li>Who actually committed the murder?</li>
+      <li>Who actually committed the crime?</li>
       <li>What was their motive?</li>
-      <li>What key piece of evidence proves it?</li>
+      <li>What key evidence proves it?</li>
     </ul>
-  </section>
 
-  <section id="crime-scene">
-    <h2>Crime Scene Report</h2>
-    <div class="evidence">
-      <p><strong>Location:</strong> Myers Grocery, a small neighborhood store, closed at 11 p.m. The body was found near the register, multiple stab wounds.</p>
-      <p><strong>Evidence Collected:</strong> Bloodied knife recovered in Nathan's cart. Store was ransacked but money left behind. Partial fingerprints on the back door.</p>
-      <p><strong>Investigator’s Note:</strong> “Scene suggested a struggle. No forced entry at the front. Back door was unlatched.”</p>
+    <div id="scene" class="section">
+      <h3>Crime Scene Report</h3>
+      <p><strong>Location:</strong> Lincoln Apartments – Unit 4B. Blood spatter on the wall. Blunt force trauma.</p>
+      <p><strong>Victim:</strong> Emily Carson, 29. Found dead in her apartment. Neighbor called in a disturbance.</p>
+      <p><strong>Original Conviction:</strong> Devon Marks, boyfriend, sentenced on circumstantial evidence and witness testimony.</p>
+      <p><strong>Reopen Trigger:</strong> Anonymous letter sent to public defender’s office: “You got the wrong man.”</p>
     </div>
-  </section>
 
-  <section id="witnesses">
-    <h2>Witness Statements</h2>
-    <div class="evidence">
-      <p><strong>Officer Laura Grant:</strong> “Cole was picked up blocks away with the knife in his cart. He seemed confused, possibly drunk. Didn’t resist arrest.”</p>
+    <div id="witnesses" class="section">
+      <h3>Witness Statements</h3>
+      <p><strong>Neighbor Tina Lopez:</strong> “I heard shouting. A man’s voice. Thought it was the boyfriend again. He always sounded angry.”</p>
+      <p><strong>Building Maintenance – Ron Dillon:</strong> “I saw a man in a hoodie leave around 11. Didn’t look like Devon. Slimmer. Faster walk.”</p>
+      <p><strong>Public Defender Elise Tran:</strong> “The timeline never sat right with me. Devon was seen on traffic cam ten blocks away around 10:55.”</p>
     </div>
-    <div class="evidence">
-      <p><strong>Leo Marks (Neighbor):</strong> “I heard arguing. Then quiet. A back door slam. Didn’t see anyone clearly.”</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Anthony Myers (Victim’s Son):</strong> “Dad mentioned threatening to evict a camp behind the store. Said they were scaring customers.”</p>
-    </div>
-  </section>
 
-  <section id="evidence">
-    <h2>Evidence Locker</h2>
-    <div class="evidence">
-      <p><strong>Knife:</strong> Bloody, partial prints too smudged for ID. Cole insists he “found it” in a trash bin.</p>
+    <div id="evidence" class="section">
+      <h3>Evidence Locker</h3>
+      <ul>
+        <li><strong>Anonymous Letter:</strong> “You got the wrong man. She knew who really did it.”</li>
+        <li><strong>Surveillance Footage:</strong> Blurry footage shows unknown man entering 4B at 10:47 p.m. wearing a hoodie.</li>
+        <li><strong>Voice Mail:</strong> Emily left a voicemail for a friend: “He said he’d kill me if I told. I don’t know what to do.”</li>
+      </ul>
     </div>
-    <div class="evidence">
-      <p><strong>Store Camera:</strong> Offline for three hours. Unknown cause. Cables were damaged behind shelving.</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Back Door Prints:</strong> Partial, do not match Cole. APD didn’t pursue new matches after conviction.</p>
-    </div>
-  </section>
 
-  <section id="solve">
-    <h2>Submit Your Solution</h2>
-    <div class="submit-box">
-      <label>Who actually committed the murder?</label>
-      <input type="text" id="suspect" placeholder="Type suspect's name" />
-      <label>What was their motive?</label>
-      <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
-      <label>What key evidence proves it?</label>
-      <input type="text" id="evidenceInput" placeholder="Name the item or detail" />
-      <button onclick="checkAnswers()">Submit Answers</button>
-      <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+    <div id="solve" class="section">
+      <h3>Submit Your Solution</h3>
+      <form onsubmit="return checkAnswer(event)">
+        <label>Who actually committed the crime?</label>
+        <input type="text" id="suspect" placeholder="Enter name..." required />
+
+        <label>What was their motive?</label>
+        <input type="text" id="motive" placeholder="Describe motive..." required />
+
+        <label>What key evidence proves it?</label>
+        <input type="text" id="evidence" placeholder="Describe the evidence..." required />
+
+        <button type="submit">Submit Answers</button>
+      </form>
     </div>
-  </section>
+  </div>
+
+  <footer>
+    &copy; 2024 Interactive Crime. All rights reserved.
+  </footer>
 
   <script>
-    function checkAnswers() {
-      const suspect = document.getElementById('suspect').value.trim().toLowerCase();
-      const motive = document.getElementById('motive').value.trim().toLowerCase();
-      const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
-      const result = document.getElementById('result');
+    function checkAnswer(event) {
+      event.preventDefault();
 
-      const suspectCorrect = suspect.includes('anthony') || suspect.includes('myers');
-      const motiveCorrect = motive.includes('inheritance') || motive.includes('own') || motive.includes('take over') || motive.includes('control') || motive.includes('money');
-      const evidenceCorrect = evidence.includes('back door') || evidence.includes('prints') || evidence.includes('camera');
+      const suspect = document.getElementById("suspect").value.trim().toLowerCase();
+      const motive = document.getElementById("motive").value.trim().toLowerCase();
+      const evidence = document.getElementById("evidence").value.trim().toLowerCase();
 
-      if (suspectCorrect && motiveCorrect && evidenceCorrect) {
-        result.textContent = "✅ Correct! You solved the case.";
-        result.style.color = "#00e676";
+      // You can customize these values based on your desired solution
+      const correctSuspects = ["unknown man", "hooded man"];
+      const correctMotives = ["silence her", "fear of exposure", "she knew the truth"];
+      const correctEvidence = ["voicemail", "voice mail", "anonymous letter"];
+
+      if (
+        correctSuspects.includes(suspect) &&
+        correctMotives.some(m => motive.includes(m)) &&
+        correctEvidence.some(e => evidence.includes(e))
+      ) {
+        alert("✅ Correct! You've solved the case.");
       } else {
-        result.textContent = "❌ Try again. Review the evidence carefully.";
-        result.style.color = "#ff5252";
+        alert("❌ Not quite. Check your clues and try again.");
       }
     }
   </script>
 
-  <footer>
-    © 2024 Interactive Crime. All rights reserved.
-  </footer>
 </body>
 </html>
