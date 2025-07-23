@@ -3,70 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Case 1: Ember Lounge | Interactive Crime</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Interactive Crimes – Ember Lounge Case</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #111;
-      color: #eee;
+      background-color: #0a0a0a;
+      color: #f4f4f4;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      overflow-x: hidden;
     }
+
     header {
+      background-color: #111;
+      padding: 20px;
       text-align: center;
-      padding: 2rem 1rem;
     }
-    header img {
-      max-width: 100%;
-      height: auto;
+
+    header h1 {
+      color: crimson;
+      margin: 0;
+      font-size: 2.2em;
     }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      background-color: #1a1a1a;
+    }
+
+    nav a {
+      color: #f4f4f4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     .container {
-      max-width: 700px;
+      max-width: 900px;
       margin: auto;
-      padding: 1rem;
+      padding: 20px;
     }
-    h1 {
-      text-align: center;
-      color: #ff3c3c;
+
+    img.case-cover {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(255,0,0,0.3);
     }
+
+    h2 {
+      color: #e25822;
+      margin-top: 40px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: #ffcc00;
+    }
+
     p {
       line-height: 1.6;
     }
-    .question-block {
-      margin-top: 2rem;
+
+    ul {
+      padding-left: 20px;
     }
-    input[type="text"] {
-      width: 100%;
-      padding: 0.6rem;
-      font-size: 1rem;
-      margin-bottom: 1rem;
+
+    .section {
+      margin-bottom: 40px;
     }
-    button {
-      background-color: #ff3c3c;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      cursor: pointer;
-      font-size: 1rem;
-      border-radius: 4px;
-    }
-    .feedback {
-      margin-top: 1rem;
-      font-weight: bold;
-    }
+
     footer {
       text-align: center;
-      margin: 3rem auto 1rem;
-      font-size: 0.9rem;
+      padding: 20px;
+      background-color: #111;
       color: #888;
     }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      background: #222;
+      border: 1px solid #555;
+      color: white;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: crimson;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b30000;
+    }
+
     @media (max-width: 600px) {
-      .container {
-        padding: 1rem;
-      }
-      h1 {
-        font-size: 1.5rem;
+      nav {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -74,45 +120,100 @@
 <body>
 
   <header>
-    <img src="images/images/interactivecrime-home.jpg.jpg" alt="Interactive Crime" />
+    <h1>Interactive Crimes</h1>
   </header>
 
-  <div class="container">
-    <h1>Case 1: The Ember Lounge</h1>
-    <p>
-      A high-profile bartender is found dead after hours at the Ember Lounge. Was it a jealous lover, a rival mixologist, or something darker? The answers lie within.
-    </p>
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="#scene">Crime Scene</a>
+    <a href="#witnesses">Witnesses</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#solve">Solve</a>
+  </nav>
 
-    <div class="question-block">
-      <p><strong>Question:</strong> What object was found near the victim that didn’t belong there?</p>
-      <input type="text" id="answer" placeholder="Type your answer here..." />
-      <button onclick="checkAnswer()">Submit</button>
-      <div class="feedback" id="feedback"></div>
+  <div class="container">
+    <img src="images/images/case1-cover.jpg" alt="Ember Lounge Case" class="case-cover"/>
+
+    <h2>Case 1: The Ember Lounge Arson</h2>
+    <p>On June 1st, just after closing, The Ember Lounge went up in flames. By the time firefighters broke in, they found only ash and the burned remains of Marcus Kent, the bar's manager.</p>
+
+    <p>Arson investigators called the fire suspicious. Five people were at the bar that night. One of them knows the truth.</p>
+
+    <p><strong>Your mission:</strong> Solve the case by answering three critical questions:</p>
+    <ul>
+      <li>Who started the fire?</li>
+      <li>What was their motive?</li>
+      <li>What key piece of evidence proves it?</li>
+    </ul>
+
+    <div id="scene" class="section">
+      <h3>Crime Scene Report</h3>
+      <p><strong>Location:</strong> The Ember Lounge – trendy downtown cocktail bar.</p>
+      <p><strong>Fire Origin:</strong> Behind the bar, near the top-shelf liquor rack.</p>
+      <p><strong>Estimated Ignition Time:</strong> 1:08 a.m.</p>
+      <p><strong>Victim:</strong> Marcus Kent, 37. His burned remains were discovered near the back exit, keys fused in one hand.</p>
+      <p><strong>Investigator's Note:</strong> “Heavy charring at the origin point indicates accelerant use. Evidence strongly suggests deliberate ignition.”</p>
     </div>
 
-    <p style="margin-top: 2rem;">
-      Want the full case files, suspect profiles, and evidence board?  
-      <a href="https://your-gumroad-link.com" style="color: #ff3c3c;">Unlock the full experience on Gumroad</a>
-    </p>
+    <div id="witnesses" class="section">
+      <h3>Witness Statements</h3>
+      <p><strong>Sasha Morgan (Bartender):</strong> “We closed up around 12:45. Marcus said he had to finish the books alone. He was nervous. Kept looking at the door. I left at 12:50, and he told me not to worry about him.”</p>
+      <p><strong>Jared Lin (Musician):</strong> “I was loading my gear out back. Saw Marcus arguing with a guy in a hoodie. They were close, yelling. I didn’t hear details. I didn’t want to get involved, so I just left.”</p>
+      <p><strong>Bianca Dale (Regular):</strong> “I was in the restroom when the lights flickered. Then the smoke hit. I panicked and ran. I didn't see anyone. I didn’t even grab my purse—I just ran.”</p>
+      <p><strong>Chris Hall (Ex-Employee):</strong> “Look, I showed up to get my final check. Marcus refused to face me. I didn’t even step inside. We hated each other, sure—but I’m not an arsonist.”</p>
+      <p><strong>Maya Ruiz (Waitress):</strong> “I stayed to help clean up. Marcus was jumpy. Kept saying he thought someone was following him. He was on edge. I left around 12:50. He insisted he'd finish alone.”</p>
+    </div>
+
+    <div id="evidence" class="section">
+      <h3>Evidence Locker</h3>
+      <ul>
+        <li><strong>Bar Tab Printout:</strong> Printed at 12:46 a.m. Shows an unpaid tab under Chris Hall’s name, totaling $182. Marcus circled it with the note: “Settle this.”</li>
+        <li><strong>Security Still:</strong> Grainy black-and-white image from the back entrance camera, captured at 1:02 a.m. Shows a hooded figure re-entering through the rear door. Facial features obscured.</li>
+        <li><strong>Recovered Phone:</strong> Melted remains of Marcus’s phone. Data recovery pulled one unsent text, timestamped 1:03 a.m.: “He’s back. If anything happens, it’s him.”</li>
+      </ul>
+    </div>
+
+    <div id="solve" class="section">
+      <h3>Submit Your Solution</h3>
+      <form onsubmit="return checkAnswer(event)">
+        <label>Who started the fire?</label>
+        <input type="text" id="suspect" placeholder="Enter name..." required />
+
+        <label>What was their motive?</label>
+        <input type="text" id="motive" placeholder="Describe motive..." required />
+
+        <label>What key evidence proves it?</label>
+        <input type="text" id="evidence" placeholder="Describe the evidence..." required />
+
+        <button type="submit">Submit Answers</button>
+      </form>
+    </div>
   </div>
 
   <footer>
-    &copy; 2025 Interactive Crime. All rights reserved.
+    &copy; 2024 Interactive Crime. All rights reserved.
   </footer>
 
   <script>
-    function checkAnswer() {
-      const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
-      const correctAnswers = ["cufflink", "a cufflink", "gold cufflink"];
+    function checkAnswer(event) {
+      event.preventDefault();
 
-      const feedback = document.getElementById("feedback");
+      const suspect = document.getElementById("suspect").value.trim().toLowerCase();
+      const motive = document.getElementById("motive").value.trim().toLowerCase();
+      const evidence = document.getElementById("evidence").value.trim().toLowerCase();
 
-      if (correctAnswers.includes(userAnswer)) {
-        feedback.textContent = "✅ Correct! This clue could break the case wide open.";
-        feedback.style.color = "lightgreen";
+      const correctSuspects = ["chris hall"];
+      const correctMotives = ["revenge", "he was fired", "anger over being fired"];
+      const correctEvidence = ["bar tab", "bar tab printout", "circled bar tab"];
+
+      if (
+        correctSuspects.includes(suspect) &&
+        correctMotives.some(m => motive.includes(m)) &&
+        correctEvidence.some(e => evidence.includes(e))
+      ) {
+        alert("✅ Correct! You've solved the case.");
       } else {
-        feedback.textContent = "❌ Not quite. Think about what wouldn't normally be found in a lounge.";
-        feedback.style.color = "orange";
+        alert("❌ Not quite. Check your clues and try again.");
       }
     }
   </script>
