@@ -1,30 +1,27 @@
+<!-- Save as wrongly-accused.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interactive Crimes – Wrongly Accused</title>
+  <title>Interactive Crime – Wrongly Accused</title>
   <style>
     body {
       background-color: #0a0a0a;
       color: #f4f4f4;
       font-family: Arial, sans-serif;
       margin: 0;
-      overflow-x: hidden;
     }
-
     header {
       background-color: #111;
       padding: 20px;
       text-align: center;
     }
-
     header h1 {
       color: crimson;
       margin: 0;
       font-size: 2.2em;
     }
-
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -33,19 +30,16 @@
       padding: 10px;
       background-color: #1a1a1a;
     }
-
     nav a {
       color: #f4f4f4;
       text-decoration: none;
       font-weight: bold;
     }
-
     .container {
       max-width: 900px;
       margin: auto;
       padding: 20px;
     }
-
     img.case-cover {
       width: 100%;
       max-height: 400px;
@@ -54,47 +48,19 @@
       margin-bottom: 20px;
       box-shadow: 0 0 12px rgba(255,0,0,0.3);
     }
-
-    h2 {
-      color: #e25822;
-      margin-top: 40px;
-    }
-
-    h3 {
-      margin-top: 30px;
-      color: #ffcc00;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #111;
-      color: #888;
-    }
-
+    h2 { color: #e25822; margin-top: 40px; }
+    h3 { margin-top: 30px; color: #ffcc00; }
+    ul { padding-left: 20px; }
+    .section { margin-bottom: 40px; }
     input[type="text"] {
       width: 100%;
       padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 15px;
       background: #222;
       border: 1px solid #555;
       color: white;
       border-radius: 4px;
+      margin-top: 8px;
     }
-
     button {
       background-color: crimson;
       color: white;
@@ -103,22 +69,17 @@
       border-radius: 6px;
       font-size: 1em;
       cursor: pointer;
+      margin-top: 10px;
     }
-
-    button:hover {
-      background-color: #b30000;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
     #result {
-      margin-top: 15px;
       font-weight: bold;
+      margin-top: 15px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #888;
     }
   </style>
 </head>
@@ -130,10 +91,6 @@
 
   <nav>
     <a href="index.html">Overview</a>
-    <a href="#scene">Crime Scene</a>
-    <a href="#witnesses">Witnesses</a>
-    <a href="#evidence">Evidence</a>
-    <a href="#solve">Solve</a>
   </nav>
 
   <div class="container">
@@ -142,90 +99,64 @@
     <h2>Case 5: Wrongly Accused</h2>
     <p>A man sits behind bars for a murder he didn’t commit—or so he claims. As new evidence emerges, it’s up to you to reopen the case, sort truth from lies, and bring justice where the system failed.</p>
 
-    <p><strong>Your mission:</strong> Solve the case by answering three critical questions:</p>
     <ul>
       <li>Who actually committed the crime?</li>
       <li>What was their motive?</li>
       <li>What key evidence proves it?</li>
     </ul>
 
-    <div id="scene" class="section">
+    <div class="section">
       <h3>Crime Scene Report</h3>
       <p><strong>Location:</strong> Lincoln Apartments – Unit 4B. Blood spatter on the wall. Blunt force trauma.</p>
-      <p><strong>Victim:</strong> Emily Carson, 29. Found dead in her apartment. Neighbor called in a disturbance.</p>
-      <p><strong>Original Conviction:</strong> Devon Marks, boyfriend, sentenced on circumstantial evidence and witness testimony.</p>
-      <p><strong>Reopen Trigger:</strong> Anonymous letter sent to public defender’s office: “You got the wrong man.”</p>
+      <p><strong>Victim:</strong> Emily Carson, 29.</p>
+      <p><strong>Original Conviction:</strong> Devon Marks, boyfriend.</p>
+      <p><strong>Reopen Trigger:</strong> Anonymous letter: “You got the wrong man.”</p>
     </div>
 
-    <div id="witnesses" class="section">
+    <div class="section">
       <h3>Witness Statements</h3>
-      <p><strong>Neighbor Tina Lopez:</strong> “I heard shouting. A man’s voice. Thought it was the boyfriend again. He always sounded angry.”</p>
-      <p><strong>Building Maintenance – Ron Dillon:</strong> “I saw a man in a hoodie leave around 11. Didn’t look like Devon. Slimmer. Faster walk.”</p>
-      <p><strong>Public Defender Elise Tran:</strong> “The timeline never sat right with me. Devon was seen on traffic cam ten blocks away around 10:55.”</p>
+      <p><strong>Tina Lopez:</strong> “Heard shouting. Thought it was the boyfriend.”</p>
+      <p><strong>Ron Dillon:</strong> “Saw a man in a hoodie leaving around 11. Not Devon.”</p>
+      <p><strong>Elise Tran:</strong> “Timeline never fit. Devon was seen on traffic cam at 10:55.”</p>
     </div>
 
-    <div id="evidence" class="section">
+    <div class="section">
       <h3>Evidence Locker</h3>
       <ul>
-        <li><strong>Anonymous Letter:</strong> “You got the wrong man. She knew who really did it.”</li>
-        <li><strong>Surveillance Footage:</strong> Blurry footage shows unknown man entering 4B at 10:47 p.m. wearing a hoodie.</li>
-        <li><strong>Voice Mail:</strong> Emily left a voicemail for a friend: “He said he’d kill me if I told. I don’t know what to do.”</li>
+        <li><strong>Anonymous Letter:</strong> “You got the wrong man.”</li>
+        <li><strong>Surveillance Footage:</strong> Blurry image of hooded man entering 4B.</li>
+        <li><strong>Voicemail:</strong> “He said he’d kill me if I told.”</li>
       </ul>
     </div>
 
-    <div id="solve" class="section">
+    <div class="section">
       <h3>Submit Your Solution</h3>
-      <form onsubmit="return checkAnswer(event)">
-        <label>Who actually committed the crime?</label>
-        <input type="text" id="suspect" placeholder="Enter name..." required />
-
-        <label>What was their motive?</label>
-        <input type="text" id="motive" placeholder="Describe motive..." required />
-
-        <label>What key evidence proves it?</label>
-        <input type="text" id="evidence" placeholder="Describe the evidence..." required />
-
-        <button type="submit">Submit Answers</button>
-        <p id="result"></p>
-      </form>
+      <input type="text" id="suspect" placeholder="Who did it?" />
+      <input type="text" id="motive" placeholder="What was their motive?" />
+      <input type="text" id="evidence" placeholder="What proves it?" />
+      <button onclick="checkAnswer()">Submit</button>
+      <div id="result"></div>
     </div>
   </div>
 
-  <footer>
-    &copy; 2024 Interactive Crime. All rights reserved.
-  </footer>
+  <footer>&copy; 2024 Interactive Crime. All rights reserved.</footer>
 
   <script>
-    function checkAnswer(event) {
-      event.preventDefault();
-
-      const suspect = document.getElementById("suspect").value.trim().toLowerCase();
-      const motive = document.getElementById("motive").value.trim().toLowerCase();
-      const evidence = document.getElementById("evidence").value.trim().toLowerCase();
+    function checkAnswer() {
+      const suspect = document.getElementById("suspect").value.toLowerCase();
+      const motive = document.getElementById("motive").value.toLowerCase();
+      const evidence = document.getElementById("evidence").value.toLowerCase();
       const result = document.getElementById("result");
 
-      const suspectCorrect =
-        suspect.includes("unknown") ||
-        suspect.includes("hood") ||
-        suspect.includes("man");
+      const correctSuspect = suspect.includes("hood") || suspect.includes("unknown");
+      const correctMotive = motive.includes("silence") || motive.includes("exposure") || motive.includes("she knew");
+      const correctEvidence = evidence.includes("voicemail") || evidence.includes("letter") || evidence.includes("surveillance");
 
-      const motiveCorrect =
-        motive.includes("silence") ||
-        motive.includes("truth") ||
-        motive.includes("expose") ||
-        motive.includes("cover up");
-
-      const evidenceCorrect =
-        evidence.includes("voicemail") ||
-        evidence.includes("voice mail") ||
-        evidence.includes("anonymous") ||
-        evidence.includes("letter");
-
-      if (suspectCorrect && motiveCorrect && evidenceCorrect) {
-        result.textContent = "✅ Correct! You've solved the case.";
+      if (correctSuspect && correctMotive && correctEvidence) {
+        result.innerText = "✅ Correct! You've solved the case.";
         result.style.color = "#00e676";
       } else {
-        result.textContent = "❌ Not quite. Check your clues and try again.";
+        result.innerText = "❌ Not quite. Check your clues and try again.";
         result.style.color = "#ff5252";
       }
     }
