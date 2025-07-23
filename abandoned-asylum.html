@@ -1,108 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case 5: The Wrongly Accused – Interactive Crime</title>
-  <meta name="description" content="Investigate the case of a man convicted of murder. Dig into conflicting testimonies, questionable evidence, and hidden motives to prove his innocence." />
+  <title>Case 4: The Abandoned Asylum – Interactive Crime</title>
+  <meta name="description" content="Solve the mystery of a patient who vanished decades ago at a long-abandoned asylum. Uncover cover-ups and long-lost secrets." />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
   <style>
     body {
-      background-color: #000000;
-      color: #f8f8f2;
+      background-color: #0b0b0b;
+      color: #e0e0e0;
       font-family: 'Courier New', Courier, monospace;
       margin: 0;
       padding: 0;
     }
-
     header {
-      background-color: #121212;
+      background-color: #141414;
       padding: 25px;
       text-align: center;
-      border-bottom: 2px solid #ff4081;
+      border-bottom: 2px solid #ba68c8;
     }
-
     header h1 {
       margin: 0;
       font-size: 2em;
-      color: #ff4081;
+      color: #ba68c8;
       letter-spacing: 2px;
     }
-
     nav {
       margin-top: 10px;
     }
-
     nav a {
       margin: 0 12px;
-      color: #f8f8f2;
+      color: #e0e0e0;
       text-decoration: none;
       font-weight: bold;
       border-bottom: 2px solid transparent;
       transition: border-color 0.3s;
     }
-
     nav a:hover {
-      border-color: #ff4081;
+      border-color: #ba68c8;
     }
-
     section {
       max-width: 900px;
       margin: auto;
       padding: 30px 20px;
       line-height: 1.7;
     }
-
     h2 {
-      color: #ff4081;
-      border-bottom: 1px solid #ff4081;
+      color: #ba68c8;
+      border-bottom: 1px solid #ba68c8;
       padding-bottom: 5px;
       margin-top: 40px;
     }
-
     .evidence {
-      background-color: #1a1a1a;
+      background-color: #1c1c1c;
       padding: 20px;
       margin-top: 20px;
-      border-left: 6px solid #ff4081;
+      border-left: 6px solid #ba68c8;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-
     .evidence p {
       margin: 10px 0;
     }
-
     .submit-box {
-      background: #1a1a1a;
+      background: #1c1c1c;
       padding: 25px;
       margin-top: 40px;
-      border: 1px solid #ff4081;
+      border: 1px solid #ba68c8;
       box-shadow: 0 0 10px rgba(0,0,0,0.6);
     }
-
     label {
       font-weight: bold;
       display: block;
       margin-top: 15px;
     }
-
     input, textarea {
       width: 100%;
       padding: 12px;
       margin-top: 5px;
-      background-color: #2b2b2b;
-      border: 1px solid #444;
-      color: #f8f8f2;
+      background-color: #2a2a2a;
+      border: 1px solid #555;
+      color: #e0e0e0;
       font-family: inherit;
     }
-
     input::placeholder, textarea::placeholder {
-      color: #999;
+      color: #bbb;
     }
-
     button {
-      background-color: #ff4081;
+      background-color: #ba68c8;
       color: #fff;
       border: none;
       padding: 12px;
@@ -111,91 +95,76 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
-
     button:hover {
-      background-color: #ff79b0;
+      background-color: #ce93d8;
     }
-
     footer {
-      background-color: #121212;
+      background-color: #141414;
       padding: 20px;
       text-align: center;
-      border-top: 2px solid #ff4081;
+      border-top: 2px solid #ba68c8;
       font-size: 0.9em;
-      color: #999;
+      color: #aaa;
     }
-
     .case-cover {
       width: 100%;
       max-width: 900px;
       display: block;
       margin: 30px auto 0;
-      border: 2px solid #ff4081;
-      box-shadow: 0 0 12px rgba(255, 64, 129, 0.3);
+      border: 2px solid #ba68c8;
+      box-shadow: 0 0 12px rgba(186, 104, 200, 0.3);
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Interactive Crime</h1>
     <nav>
       <a href="index.html">Home</a>
     </nav>
-  </header>
-
-  <img src="images/images/case5-cover.jpg" alt="Case 5 Cover Image" class="case-cover" />
-
-  <section>
-    <h2>Case 5: The Wrongly Accused</h2>
-    <p>Three years ago, Nathan Cole—a homeless man—was convicted of the murder of local shop owner Gerald Myers. He claimed innocence. The case seemed closed: a bloody knife in his shopping cart, an eyewitness placing him near the scene. But new inconsistencies have surfaced.</p>
-    <p>Your mission: <strong>Reinvestigate this conviction</strong> by answering three critical questions:</p>
+  </header>  <img src="images/images/case4-cover.jpg" alt="Case 4 Cover Image" class="case-cover" />  <section>
+    <h2>Case 4: The Abandoned Asylum</h2>
+    <p><strong>FREE for a limited time</strong></p>
+    <p>Once a bustling psychiatric hospital, now only rotting walls and old legends. But the truth is hidden in what remains. Decades ago, a patient vanished without a trace. The case went cold. Until now.</p>
+    <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
     <ul>
-      <li>Who actually committed the murder?</li>
+      <li>Who is responsible for the disappearance?</li>
       <li>What was their motive?</li>
       <li>What key piece of evidence proves it?</li>
     </ul>
-  </section>
-
-  <section id="crime-scene">
+  </section>  <section>
     <h2>Crime Scene Report</h2>
     <div class="evidence">
-      <p><strong>Location:</strong> Myers Grocery, a small neighborhood store, closed at 11 p.m. The body was found near the register, multiple stab wounds.</p>
-      <p><strong>Evidence Collected:</strong> Bloodied knife recovered in Nathan's cart. Store was ransacked but money left behind. Partial fingerprints on the back door.</p>
-      <p><strong>Investigator’s Note:</strong> “Scene suggested a struggle. No forced entry at the front. Back door was unlatched.”</p>
+      <p><strong>Location:</strong> Eastgate Asylum – abandoned for 20 years. Crumbling hallways, collapsed roofs, mold-eaten records.</p>
+      <p><strong>Evidence Found:</strong> Patient file with missing pages. Blood-stained bedsheet. Staff logbook with redactions.</p>
+      <p><strong>Investigator’s Note:</strong> “Records are damaged but some staff logs hint at an internal cover-up.”</p>
     </div>
-  </section>
-
-  <section id="witnesses">
-    <h2>Witness Statements</h2>
+  </section>  <section>
+    <h2>Historical Witness Statements</h2>
     <div class="evidence">
-      <p><strong>Officer Laura Grant:</strong> “Cole was picked up blocks away with the knife in his cart. He seemed confused, possibly drunk. Didn’t resist arrest.”</p>
+      <p><strong>Dr. Evelyn Shaw (Psychiatrist):</strong> “Director Harris always acted like he knew more than he said. He had keys to everything.”</p>
     </div>
     <div class="evidence">
-      <p><strong>Leo Marks (Neighbor):</strong> “I heard arguing. Then quiet. A back door slam. Didn’t see anyone clearly.”</p>
+      <p><strong>Orderly Tom Price:</strong> “They moved Patient 14 at night with no paperwork. I heard arguing. Then silence.”</p>
     </div>
     <div class="evidence">
-      <p><strong>Anthony Myers (Victim’s Son):</strong> “Dad mentioned threatening to evict a camp behind the store. Said they were scaring customers.”</p>
+      <p><strong>Nurse Linda Coe:</strong> “Files went missing after Director Harris did his so-called ‘audit.’ He claimed it was to protect us from scandal.”</p>
     </div>
-  </section>
-
-  <section id="evidence">
+  </section>  <section>
     <h2>Evidence Locker</h2>
     <div class="evidence">
-      <p><strong>Knife:</strong> Bloody, partial prints too smudged for ID. Cole insists he “found it” in a trash bin.</p>
+      <p><strong>Staff Logbook:</strong> Redacted pages. Entries stop on the night of Patient 14’s disappearance.</p>
     </div>
     <div class="evidence">
-      <p><strong>Store Camera:</strong> Offline for three hours. Unknown cause. Cables were damaged behind shelving.</p>
+      <p><strong>Blood-Stained Bedsheet:</strong> DNA testing inconclusive due to age and contamination.</p>
     </div>
     <div class="evidence">
-      <p><strong>Back Door Prints:</strong> Partial, do not match Cole. APD didn’t pursue new matches after conviction.</p>
+      <p><strong>Partial Patient File:</strong> Missing history. Notes read “uncooperative,” “violent,” “requires transfer.”</p>
     </div>
-  </section>
-
-  <section id="solve">
+  </section>  <section>
     <h2>Submit Your Solution</h2>
     <div class="submit-box">
-      <label>Who actually committed the murder?</label>
+      <label>Who is responsible?</label>
       <input type="text" id="suspect" placeholder="Type suspect's name" />
       <label>What was their motive?</label>
       <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
@@ -204,18 +173,16 @@
       <button onclick="checkAnswers()">Submit Answers</button>
       <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
     </div>
-  </section>
-
-  <script>
+  </section>  <script>
     function checkAnswers() {
       const suspect = document.getElementById('suspect').value.trim().toLowerCase();
       const motive = document.getElementById('motive').value.trim().toLowerCase();
       const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
       const result = document.getElementById('result');
 
-      const suspectCorrect = suspect.includes('anthony') || suspect.includes('myers');
-      const motiveCorrect = motive.includes('inheritance') || motive.includes('own') || motive.includes('take over') || motive.includes('control') || motive.includes('money');
-      const evidenceCorrect = evidence.includes('back door') || evidence.includes('prints') || evidence.includes('camera');
+      const suspectCorrect = suspect.includes('harris') || suspect.includes('director');
+      const motiveCorrect = motive.includes('cover') || motive.includes('reputation') || motive.includes('protect');
+      const evidenceCorrect = evidence.includes('logbook') || evidence.includes('file') || evidence.includes('redacted');
 
       if (suspectCorrect && motiveCorrect && evidenceCorrect) {
         result.textContent = "✅ Correct! You solved the case.";
@@ -225,9 +192,7 @@
         result.style.color = "#ff5252";
       }
     }
-  </script>
-
-  <footer>
+  </script>  <footer>
     © 2024 Interactive Crime. All rights reserved.
   </footer>
 </body>
