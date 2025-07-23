@@ -2,199 +2,226 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Crime – The Vanished Wife</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Crimes – The Vanished Wife</title>
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-      font-family: 'Courier New', Courier, monospace;
+      background-color: #0a0a0a;
+      color: #f4f4f4;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      overflow-x: hidden;
     }
+
     header {
-      background-color: #1a1a1a;
-      padding: 25px 20px;
+      background-color: #111;
+      padding: 20px;
       text-align: center;
-      border-bottom: 2px solid #c62828;
     }
+
     header h1 {
+      color: crimson;
       margin: 0;
-      font-size: 2em;
-      color: #c62828;
-      letter-spacing: 2px;
+      font-size: 2.2em;
     }
+
     nav {
-      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      background-color: #1a1a1a;
     }
+
     nav a {
-      margin: 0 12px;
-      color: #f5f5f5;
+      color: #f4f4f4;
       text-decoration: none;
       font-weight: bold;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s;
     }
-    nav a:hover {
-      border-color: #c62828;
-    }
-    section {
-      padding: 30px;
-      max-width: 800px;
+
+    .container {
+      max-width: 900px;
       margin: auto;
+      padding: 20px;
+    }
+
+    img.case-cover {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(255,0,0,0.3);
+    }
+
+    h2 {
+      color: #e25822;
+      margin-top: 40px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: #ffcc00;
+    }
+
+    p {
       line-height: 1.6;
     }
-    h2 {
-      color: #c62828;
-      border-bottom: 1px solid #c62828;
-      padding-bottom: 5px;
-      margin-top: 40px;
+
+    ul {
+      padding-left: 20px;
     }
-    .evidence {
-      background-color: #1e1e1e;
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    footer {
+      text-align: center;
       padding: 20px;
-      margin-top: 20px;
-      border-left: 6px solid #c62828;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      background-color: #111;
+      color: #888;
     }
-    .evidence p {
-      margin: 10px 0;
-    }
-    .submit-box {
-      background: #1e1e1e;
-      padding: 25px;
-      margin-top: 40px;
-      border: 1px solid #c62828;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    }
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
-    input, textarea {
+
+    input[type="text"] {
       width: 100%;
-      padding: 12px;
-      margin-top: 5px;
-      background-color: #2a2a2a;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      background: #222;
       border: 1px solid #555;
-      color: #f5f5f5;
-      font-family: inherit;
+      color: white;
+      border-radius: 4px;
     }
-    input::placeholder, textarea::placeholder {
-      color: #bbb;
-    }
+
     button {
-      background-color: #c62828;
-      color: #fff;
+      background-color: crimson;
+      color: white;
+      padding: 10px 20px;
       border: none;
-      padding: 12px;
-      margin-top: 20px;
+      border-radius: 6px;
+      font-size: 1em;
       cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s;
     }
+
     button:hover {
-      background-color: #e53935;
+      background-color: #b30000;
     }
-    .case-image {
-      display: block;
-      max-width: 100%;
-      margin: 30px auto;
-      border: 3px solid #c62828;
-      box-shadow: 0 0 10px rgba(198, 40, 40, 0.5);
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Interactive Crime</h1>
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
+    <h1>Interactive Crimes</h1>
   </header>
 
-  <section id="overview">
-    <img src="images/images/case-3-cover.jpg" alt="Case 3 Cover Image" class="case-image" />
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="#scene">Crime Scene</a>
+    <a href="#witnesses">Witnesses</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#solve">Solve</a>
+  </nav>
+
+  <div class="container">
+    <img src="images/images/case-3-cover.jpg" alt="The Vanished Wife" class="case-cover"/>
+
     <h2>Case 3: The Vanished Wife</h2>
     <p>On November 3rd, Sarah Smith was reported missing by her husband. He claimed she left to visit family but never arrived. Her car was found abandoned outside town. Neighbors heard arguments the night before. Evidence suggests an abduction—but is it really?</p>
-    <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
+    <p><strong>Your mission:</strong> Solve the case by answering three critical questions:</p>
     <ul>
       <li>Who abducted Sarah?</li>
       <li>What was their motive?</li>
       <li>What key piece of evidence proves it?</li>
     </ul>
-  </section>
 
-  <section id="crime-scene">
-    <h2>Crime Scene Report</h2>
-    <div class="evidence">
+    <div id="scene" class="section">
+      <h3>Crime Scene Report</h3>
       <p><strong>Location:</strong> Suburban neighborhood on the edge of town.</p>
       <p><strong>Vehicle:</strong> Sarah's car found unlocked, purse inside, keys missing.</p>
       <p><strong>Timeline:</strong> Last seen arguing with husband late at night. Reported missing the next morning.</p>
-      <p><strong>Investigator's Note:</strong> "No signs of forced entry or struggle in car. Possible voluntary departure staged as abduction."</p>
+      <p><strong>Investigator's Note:</strong> “No signs of forced entry or struggle in car. Possible voluntary departure staged as abduction.”</p>
     </div>
-  </section>
 
-  <section id="witnesses">
-    <h2>Witness Statements</h2>
-    <div class="evidence">
+    <div id="witnesses" class="section">
+      <h3>Witness Statements</h3>
       <p><strong>Neighbor:</strong> “Heard raised voices around midnight. Thought it was just a fight. Didn’t see anyone leave.”</p>
-    </div>
-    <div class="evidence">
       <p><strong>Friend:</strong> “Sarah said she was scared of John. He was acting strange about money lately.”</p>
-    </div>
-    <div class="evidence">
       <p><strong>John Smith (Husband):</strong> “I don’t know why she left. We were fine. Maybe she just needed space.”</p>
     </div>
-  </section>
 
-  <section id="evidence">
-    <h2>Evidence Locker</h2>
-    <div class="evidence">
-      <p><strong>Insurance Policy:</strong> Newly updated life insurance listing John as sole beneficiary.</p>
+    <div id="evidence" class="section">
+      <h3>Evidence Locker</h3>
+      <ul>
+        <li><strong>Insurance Policy:</strong> Newly updated life insurance listing John as sole beneficiary.</li>
+        <li><strong>Motel Receipt:</strong> Paid in cash the day before under John's initials.</li>
+        <li><strong>Financial Records:</strong> Large withdrawal made from joint account the day she vanished.</li>
+      </ul>
     </div>
-    <div class="evidence">
-      <p><strong>Motel Receipt:</strong> Paid in cash the day before under John's initials.</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Financial Records:</strong> Large withdrawal made from joint account the day she vanished.</p>
-    </div>
-  </section>
 
-  <section id="solve">
-    <h2>Submit Your Solution</h2>
-    <div class="submit-box">
-      <label>Who abducted Sarah?</label>
-      <input type="text" id="suspect" placeholder="Type suspect's name" />
-      <label>What was their motive?</label>
-      <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
-      <label>What key evidence proves it?</label>
-      <input type="text" id="evidenceInput" placeholder="Name the item or detail" />
-      <button onclick="checkAnswers()">Submit Answers</button>
-      <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+    <div id="solve" class="section">
+      <h3>Submit Your Solution</h3>
+      <form id="solutionForm">
+        <label>Who abducted Sarah?</label>
+        <input type="text" id="suspect" placeholder="Enter name..." required />
+
+        <label>What was their motive?</label>
+        <input type="text" id="motive" placeholder="Describe motive..." required />
+
+        <label>What key evidence proves it?</label>
+        <input type="text" id="evidence" placeholder="Describe the evidence..." required />
+
+        <button type="submit">Submit Answers</button>
+        <p id="result"></p>
+      </form>
     </div>
-  </section>
+  </div>
+
+  <footer>
+    &copy; 2024 Interactive Crime. All rights reserved.
+  </footer>
 
   <script>
-    function checkAnswers() {
-      const suspect = document.getElementById('suspect').value.trim().toLowerCase();
-      const motive = document.getElementById('motive').value.trim().toLowerCase();
-      const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
-      const result = document.getElementById('result');
+    document.getElementById("solutionForm").addEventListener("submit", function(e) {
+      e.preventDefault();
 
-      const suspectCorrect = (suspect.includes('john') && suspect.includes('smith')) || suspect.includes('husband');
-      const motiveCorrect = motive.includes('insurance') || motive.includes('money') || motive.includes('new life') || motive.includes('payout') || motive.includes('escape');
-      const evidenceCorrect = evidence.includes('insurance') || evidence.includes('policy') || evidence.includes('receipt') || evidence.includes('financial');
+      const suspect = document.getElementById("suspect").value.trim().toLowerCase();
+      const motive = document.getElementById("motive").value.trim().toLowerCase();
+      const evidence = document.getElementById("evidence").value.trim().toLowerCase();
+      const result = document.getElementById("result");
 
-      if (suspectCorrect && motiveCorrect && evidenceCorrect) {
-        result.textContent = "✅ Correct! You solved the case.";
+      const correctSuspects = ["john smith", "john", "husband"];
+      const correctMotives = ["insurance", "money", "financial", "payout"];
+      const correctEvidence = ["insurance", "policy", "receipt", "motel", "bank", "withdrawal"];
+
+      const isCorrect =
+        correctSuspects.some(s => suspect.includes(s)) &&
+        correctMotives.some(m => motive.includes(m)) &&
+        correctEvidence.some(e => evidence.includes(e));
+
+      if (isCorrect) {
+        result.textContent = "✅ Correct! You've solved the case.";
         result.style.color = "#00e676";
       } else {
-        result.textContent = "❌ Try again. Check your clues carefully.";
+        result.textContent = "❌ Not quite. Check your clues and try again.";
         result.style.color = "#ff5252";
       }
-    }
+    });
   </script>
+
 </body>
 </html>
