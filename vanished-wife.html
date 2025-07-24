@@ -3,209 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interactive Crime – The Vanished Wife</title>
+  <title>Case 3: The Vanished Wife – Interactive Crime</title>
+  <meta name="description" content="A husband’s story doesn’t add up. His wife vanished without a trace. It’s your job to find out the truth." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     body {
-      background-color: #0a0a0a;
-      color: #f4f4f4;
-      font-family: Arial, sans-serif;
+      background-color: #0b0b0b;
+      color: #e0e0e0;
+      font-family: 'Courier New', Courier, monospace;
       margin: 0;
-      overflow-x: hidden;
+      padding: 0;
     }
-
     header {
-      background-color: #111;
-      padding: 20px;
+      background-color: #141414;
+      padding: 25px;
       text-align: center;
+      border-bottom: 2px solid #ba68c8;
     }
-
     header h1 {
-      color: crimson;
       margin: 0;
-      font-size: 2.2em;
+      font-size: 2em;
+      color: #ba68c8;
+      letter-spacing: 2px;
     }
-
     nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
-      background-color: #1a1a1a;
+      margin-top: 10px;
     }
-
     nav a {
-      color: #f4f4f4;
+      margin: 0 12px;
+      color: #e0e0e0;
       text-decoration: none;
       font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
     }
-
-    .container {
+    nav a:hover {
+      border-color: #ba68c8;
+    }
+    section {
       max-width: 900px;
       margin: auto;
-      padding: 20px;
+      padding: 30px 20px;
+      line-height: 1.7;
     }
-
-    img.case-cover {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 12px rgba(255,0,0,0.3);
-    }
-
     h2 {
-      color: #e25822;
+      color: #ba68c8;
+      border-bottom: 1px solid #ba68c8;
+      padding-bottom: 5px;
       margin-top: 40px;
     }
-
-    h3 {
-      margin-top: 30px;
-      color: #ffcc00;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    footer {
-      text-align: center;
+    .evidence {
+      background-color: #1c1c1c;
       padding: 20px;
-      background-color: #111;
-      color: #888;
-    }
-
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 15px;
-      background: #222;
-      border: 1px solid #555;
-      color: white;
-      border-radius: 4px;
-    }
-
-    button {
-      background-color: crimson;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #b30000;
-    }
-
-    #result {
       margin-top: 20px;
-      font-weight: bold;
-      font-size: 1.1em;
+      border-left: 6px solid #ba68c8;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
+    .submit-box {
+      background: #1c1c1c;
+      padding: 25px;
+      margin-top: 40px;
+      border: 1px solid #ba68c8;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      background-color: #2a2a2a;
+      border: 1px solid #555;
+      color: #e0e0e0;
+      font-family: inherit;
+    }
+    button {
+      background-color: #ba68c8;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ce93d8;
+    }
+    footer {
+      background-color: #141414;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #ba68c8;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    .case-cover {
+      width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 30px auto 0;
+      border: 2px solid #ba68c8;
+      box-shadow: 0 0 12px rgba(186, 104, 200, 0.3);
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Interactive Crime</h1>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="#scene">Crime Scene</a>
+      <a href="#witnesses">Witnesses</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#solve">Solve</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Overview</a>
-    <a href="#scene">Crime Scene</a>
-    <a href="#witnesses">Witnesses</a>
-    <a href="#evidence">Evidence</a>
-    <a href="#solve">Solve</a>
-  </nav>
+  <img src="images/images/case3-cover.jpg" alt="Case 3 Cover" class="case-cover" />
 
-  <div class="container">
-    <img src="images/images/case-3-cover.jpg" alt="The Vanished Wife" class="case-cover"/>
-
+  <section>
     <h2>Case 3: The Vanished Wife</h2>
-    <p>On November 3rd, Sarah Smith was reported missing by her husband. He claimed she left to visit family but never arrived. Her car was found abandoned outside town. Neighbors heard arguments the night before. Evidence suggests an abduction—but is it really?</p>
-    <p><strong>Your mission:</strong> Solve the case by answering three critical questions:</p>
+    <p><strong>FREE for a limited time</strong></p>
+    <p>Her husband said she went to visit her sister. But no one ever saw her again. You’ve been called to reopen the file—and something smells off.</p>
+    <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
     <ul>
-      <li>Who abducted Sarah?</li>
+      <li>Who is responsible for her disappearance?</li>
       <li>What was their motive?</li>
       <li>What key piece of evidence proves it?</li>
     </ul>
+  </section>
 
-    <div id="scene" class="section">
-      <h3>Crime Scene Report</h3>
-      <p><strong>Location:</strong> Suburban neighborhood on the edge of town.</p>
-      <p><strong>Vehicle:</strong> Sarah's car found unlocked, purse inside, keys missing.</p>
-      <p><strong>Timeline:</strong> Last seen arguing with husband late at night. Reported missing the next morning.</p>
-      <p><strong>Investigator's Note:</strong> “No signs of forced entry or struggle in car. Possible voluntary departure staged as abduction.”</p>
+  <section id="scene">
+    <h2>Crime Scene Report</h2>
+    <div class="evidence">
+      <p><strong>Location:</strong> 223 Hawthorn Drive – quiet suburban neighborhood.</p>
+      <p><strong>Last Seen:</strong> June 4th, 8:30pm by the neighbor across the street.</p>
+      <p><strong>Notable Findings:</strong> Blood traces under living room rug. Cell phone wiped clean. Husband’s alibi inconsistent.</p>
     </div>
+  </section>
 
-    <div id="witnesses" class="section">
-      <h3>Witness Statements</h3>
-      <p><strong>Neighbor:</strong> “Heard raised voices around midnight. Thought it was just a fight. Didn’t see anyone leave.”</p>
-      <p><strong>Friend:</strong> “Sarah said she was scared of John. He was acting strange about money lately.”</p>
-      <p><strong>John Smith (Husband):</strong> “I don’t know why she left. We were fine. Maybe she just needed space.”</p>
+  <section id="witnesses">
+    <h2>Witness Statements</h2>
+    <div class="evidence">
+      <p><strong>Neighbor (Eileen Jacobs):</strong> “I saw her arguing with her husband on the porch that night. She looked scared.”</p>
     </div>
-
-    <div id="evidence" class="section">
-      <h3>Evidence Locker</h3>
-      <ul>
-        <li><strong>Insurance Policy:</strong> Newly updated life insurance listing John as sole beneficiary.</li>
-        <li><strong>Motel Receipt:</strong> Paid in cash the day before under John's initials.</li>
-        <li><strong>Financial Records:</strong> Large withdrawal made from joint account the day she vanished.</li>
-      </ul>
+    <div class="evidence">
+      <p><strong>Sister (Karen Moore):</strong> “She never showed up. I thought she changed her mind. Now I’m not so sure...”</p>
     </div>
-
-    <div id="solve" class="section">
-      <h3>Submit Your Solution</h3>
-      <form onsubmit="return checkAnswer(event)">
-        <label>Who abducted Sarah?</label>
-        <input type="text" id="suspect" placeholder="Enter name..." required />
-
-        <label>What was their motive?</label>
-        <input type="text" id="motive" placeholder="Describe motive..." required />
-
-        <label>What key evidence proves it?</label>
-        <input type="text" id="evidence" placeholder="Describe the evidence..." required />
-
-        <button type="submit">Submit Answers</button>
-      </form>
+    <div class="evidence">
+      <p><strong>Husband (Craig Lawson):</strong> “She left after dinner. We weren’t arguing, that’s ridiculous.”</p>
     </div>
-  </div>
+  </section>
 
-  <footer>
-    &copy; 2024 Interactive Crime. All rights reserved.
-  </footer>
+  <section id="evidence">
+    <h2>Evidence Locker</h2>
+    <div class="evidence">
+      <p><strong>Rug Blood Samples:</strong> Matched to missing wife. Husband claims nosebleed. Amount inconsistent with explanation.</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Security Camera:</strong> Back door camera mysteriously turned off 30 mins before disappearance.</p>
+    </div>
+    <div class="evidence">
+      <p><strong>Text Log:</strong> Final message to sister says, “He’s getting worse. If I don’t call—look for me.”</p>
+    </div>
+  </section>
 
-  </section>  <script>
+  <section id="solve">
+    <h2>Submit Your Solution</h2>
+    <div class="submit-box">
+      <label>Who is responsible?</label>
+      <input type="text" id="suspect" placeholder="Type suspect's name" />
+      <label>What was their motive?</label>
+      <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
+      <label>What key evidence proves it?</label>
+      <input type="text" id="evidenceInput" placeholder="Name the item or detail" />
+      <button onclick="checkAnswers()">Submit Answers</button>
+      <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+    </div>
+  </section>
+
+  <script>
     function checkAnswers() {
-      const suspect = document.getElementById('suspect').value.trim().toLowerCase();
-      const motive = document.getElementById('motive').value.trim().toLowerCase();
-      const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
+      const suspect = document.getElementById('suspect').value.toLowerCase();
+      const motive = document.getElementById('motive').value.toLowerCase();
+      const evidence = document.getElementById('evidenceInput').value.toLowerCase();
       const result = document.getElementById('result');
 
-      const correctSuspects = ["john smith", "john", "husband"];
-      const correctMotives = ["insurance", "money", "financial", "payout"];
-      const correctEvidence = ["insurance policy", "motel receipt", "financial records", "receipt", "withdrawal", "policy"];
-      
-      if (suspectCorrect && motiveCorrect && evidenceCorrect) {
+      const isSuspectCorrect = suspect.includes("craig") || suspect.includes("husband");
+      const isMotiveCorrect = motive.includes("control") || motive.includes("jealous") || motive.includes("abuse");
+      const isEvidenceCorrect = evidence.includes("text") || evidence.includes("rug") || evidence.includes("camera");
+
+      if (isSuspectCorrect && isMotiveCorrect && isEvidenceCorrect) {
         result.textContent = "✅ Correct! You solved the case.";
         result.style.color = "#00e676";
       } else {
@@ -213,7 +205,9 @@
         result.style.color = "#ff5252";
       }
     }
-  </script>  <footer>
+  </script>
+
+  <footer>
     © 2024 Interactive Crime. All rights reserved.
   </footer>
 </body>
