@@ -204,11 +204,16 @@
       const evidence = document.getElementById("evidence").value.trim().toLowerCase();
       const result = document.getElementById("result");
 
-      const suspectMatch = suspect.includes("john") || suspect.includes("husband");
-      const motiveMatch = motive.includes("insurance") || motive.includes("money") || motive.includes("payout") || motive.includes("financial");
-      const evidenceMatch = evidence.includes("insurance") || evidence.includes("motel") || evidence.includes("withdrawal");
+      const correctSuspects = ["john smith", "john", "husband"];
+      const correctMotives = ["insurance", "money", "financial", "payout"];
+      const correctEvidence = ["insurance policy", "motel receipt", "bank withdrawal", "financial records", "receipt"];
 
-      if (suspectMatch && motiveMatch && evidenceMatch) {
+      const isCorrect =
+        correctSuspects.some(s => suspect.includes(s)) &&
+        correctMotives.some(m => motive.includes(m)) &&
+        correctEvidence.some(e => evidence.includes(e));
+
+      if (isCorrect) {
         result.textContent = "✅ Correct! You've solved the case.";
         result.style.color = "#00e676";
       } else {
