@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interactive Crimes – The Vanished Wife</title>
+  <title>Interactive Crime – The Vanished Wife</title>
   <style>
     body {
       background-color: #0a0a0a;
@@ -126,7 +126,7 @@
 <body>
 
   <header>
-    <h1>Interactive Crimes</h1>
+    <h1>Interactive Crime</h1>
   </header>
 
   <nav>
@@ -204,9 +204,9 @@
       const evidence = document.getElementById("evidence").value.trim().toLowerCase();
       const result = document.getElementById("result");
 
-      const correctSuspects = ["john smith", "john", "husband"];
-      const correctMotives = ["insurance", "money", "financial", "payout"];
-      const correctEvidence = ["insurance", "policy", "receipt", "motel", "bank", "withdrawal"];
+      const correctSuspects = ["john smith", "john", "her husband", "husband"];
+      const correctMotives = ["money", "insurance", "payout", "life insurance"];
+      const correctEvidence = ["insurance policy", "motel receipt", "financial records", "withdrawal", "receipt", "bank records"];
 
       const isCorrect =
         correctSuspects.some(s => suspect.includes(s)) &&
