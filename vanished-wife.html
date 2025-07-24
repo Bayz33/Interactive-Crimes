@@ -199,9 +199,12 @@
     function checkAnswer(event) {
       event.preventDefault();
 
-      const suspect = document.getElementById("suspect").value.trim().toLowerCase();
-      const motive = document.getElementById("motive").value.trim().toLowerCase();
-      const evidence = document.getElementById("evidenceInput").value.trim().toLowerCase();
+      const suspect =
+        document.getElementById("suspect").value.trim().toLowerCase();
+      const motive =
+        document.getElementById("motive").value.trim().toLowerCase();
+      const evidence =
+        document.getElementById("evidenceInput").value.trim().toLowerCase();
 
       const correctSuspects = ["john smith", "john", "husband"];
       const correctMotives = ["insurance", "money", "financial", "payout"];
