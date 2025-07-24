@@ -196,13 +196,12 @@
   </footer>
 
   <script>
-    document.getElementById("solutionForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+    function checkAnswer(event) {
+      event.preventDefault();
 
       const suspect = document.getElementById("suspect").value.trim().toLowerCase();
       const motive = document.getElementById("motive").value.trim().toLowerCase();
-      const evidence = document.getElementById("evidence").value.trim().toLowerCase();
-      const result = document.getElementById("result");
+      const evidence = document.getElementById("evidenceInput").value.trim().toLowerCase();
 
       const correctSuspects = ["john smith", "john", "husband"];
       const correctMotives = ["insurance", "money", "financial", "payout"];
@@ -214,19 +213,17 @@
         "withdrawal",
         "policy"
       ];
-
-      const suspectMatch = correctSuspects.some(s => suspect.includes(s));
-      const motiveMatch = correctMotives.some(m => motive.includes(m));
-      const evidenceMatch = correctEvidence.some(e => evidence.includes(e));
-
-      if (suspectMatch && motiveMatch && evidenceMatch) {
-        result.textContent = "✅ Correct! You've solved the case.";
-        result.style.color = "#00e676";
+      
+      if (
+        correctSuspects.includes(suspect) &&
+        correctMotives.some(m => motive.includes(m)) &&
+        correctEvidence.some(e => evidence.includes(e))
+      ) {
+        alert("✅ Correct! You've solved the case.");
       } else {
-        result.textContent = "❌ Not quite. Check your clues and try again.";
-        result.style.color = "#ff5252";
+        alert("❌ Not quite. Check your clues and try again.");
       }
-    });
+    }
   </script>
 
 </body>
