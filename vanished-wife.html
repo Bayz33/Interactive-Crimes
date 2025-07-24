@@ -194,32 +194,27 @@
     &copy; 2024 Interactive Crime. All rights reserved.
   </footer>
 
-  <script>
-    function checkAnswer(event) {
-      event.preventDefault();
-
-      const suspect =
-        document.getElementById("suspect").value.trim().toLowerCase();
-      const motive =
-        document.getElementById("motive").value.trim().toLowerCase();
-      const evidence =
-        document.getElementById("evidenceInput").value.trim().toLowerCase();
+  </section>  <script>
+    function checkAnswers() {
+      const suspect = document.getElementById('suspect').value.trim().toLowerCase();
+      const motive = document.getElementById('motive').value.trim().toLowerCase();
+      const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
+      const result = document.getElementById('result');
 
       const correctSuspects = ["john smith", "john", "husband"];
       const correctMotives = ["insurance", "money", "financial", "payout"];
       const correctEvidence = ["insurance policy", "motel receipt", "financial records", "receipt", "withdrawal", "policy"];
       
-      if (
-        correctSuspects.includes(suspect) &&
-        correctMotives.some(m => motive.includes(m)) &&
-        correctEvidence.some(e => evidence.includes(e))
-      ) {
-        alert("✅ Correct! You've solved the case.");
+      if (suspectCorrect && motiveCorrect && evidenceCorrect) {
+        result.textContent = "✅ Correct! You solved the case.";
+        result.style.color = "#00e676";
       } else {
-        alert("❌ Not quite. Check your clues and try again.");
+        result.textContent = "❌ Try again. Review the evidence carefully.";
+        result.style.color = "#ff5252";
       }
     }
-  </script>
-
+  </script>  <footer>
+    © 2024 Interactive Crime. All rights reserved.
+  </footer>
 </body>
 </html>
