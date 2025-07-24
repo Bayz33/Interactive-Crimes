@@ -206,14 +206,20 @@
 
       const correctSuspects = ["john smith", "john", "husband"];
       const correctMotives = ["insurance", "money", "financial", "payout"];
-      const correctEvidence = ["insurance policy", "motel receipt", "bank withdrawal", "financial records", "receipt"];
+      const correctEvidence = [
+        "insurance policy",
+        "motel receipt",
+        "financial records",
+        "receipt",
+        "withdrawal",
+        "policy"
+      ];
 
-      const isCorrect =
-        correctSuspects.some(s => suspect.includes(s)) &&
-        correctMotives.some(m => motive.includes(m)) &&
-        correctEvidence.some(e => evidence.includes(e));
+      const suspectMatch = correctSuspects.some(s => suspect.includes(s));
+      const motiveMatch = correctMotives.some(m => motive.includes(m));
+      const evidenceMatch = correctEvidence.some(e => evidence.includes(e));
 
-      if (isCorrect) {
+      if (suspectMatch && motiveMatch && evidenceMatch) {
         result.textContent = "✅ Correct! You've solved the case.";
         result.style.color = "#00e676";
       } else {
