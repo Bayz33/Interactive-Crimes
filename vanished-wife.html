@@ -10,7 +10,6 @@
       color: #f4f4f4;
       font-family: Arial, sans-serif;
       margin: 0;
-      overflow-x: hidden;
     }
 
     header {
@@ -27,7 +26,6 @@
 
     nav {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
       padding: 10px;
@@ -65,25 +63,6 @@
       color: #ffcc00;
     }
 
-    p {
-      line-height: 1.6;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #111;
-      color: #888;
-    }
-
     input[type="text"] {
       width: 100%;
       padding: 10px;
@@ -115,11 +94,11 @@
       font-size: 1.1em;
     }
 
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #888;
     }
   </style>
 </head>
@@ -149,7 +128,7 @@
       <li>What key piece of evidence proves it?</li>
     </ul>
 
-    <div id="scene" class="section">
+    <div id="scene">
       <h3>Crime Scene Report</h3>
       <p><strong>Location:</strong> Suburban neighborhood on the edge of town.</p>
       <p><strong>Vehicle:</strong> Sarah's car found unlocked, purse inside, keys missing.</p>
@@ -157,14 +136,14 @@
       <p><strong>Investigator's Note:</strong> “No signs of forced entry or struggle in car. Possible voluntary departure staged as abduction.”</p>
     </div>
 
-    <div id="witnesses" class="section">
+    <div id="witnesses">
       <h3>Witness Statements</h3>
       <p><strong>Neighbor:</strong> “Heard raised voices around midnight. Thought it was just a fight. Didn’t see anyone leave.”</p>
       <p><strong>Friend:</strong> “Sarah said she was scared of John. He was acting strange about money lately.”</p>
       <p><strong>John Smith (Husband):</strong> “I don’t know why she left. We were fine. Maybe she just needed space.”</p>
     </div>
 
-    <div id="evidence" class="section">
+    <div id="evidence">
       <h3>Evidence Locker</h3>
       <ul>
         <li><strong>Insurance Policy:</strong> Newly updated life insurance listing John as sole beneficiary.</li>
@@ -173,7 +152,7 @@
       </ul>
     </div>
 
-    <div id="solve" class="section">
+    <div id="solve">
       <h3>Submit Your Solution</h3>
       <form id="solutionForm">
         <label>Who abducted Sarah?</label>
@@ -196,31 +175,34 @@
   </footer>
 
   <script>
-    document.getElementById("solutionForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const suspect = document.getElementById("suspect").value.trim().toLowerCase();
-      const motive = document.getElementById("motive").value.trim().toLowerCase();
-      const evidence = document.getElementById("evidence").value.trim().toLowerCase();
+    window.onload = function () {
+      const form = document.getElementById("solutionForm");
       const result = document.getElementById("result");
 
-      const correctSuspects = ["john smith", "john", "her husband", "husband"];
-      const correctMotives = ["money", "insurance", "payout", "life insurance"];
-      const correctEvidence = ["insurance policy", "motel receipt", "financial records", "withdrawal", "receipt", "bank records"];
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-      const isCorrect =
-        correctSuspects.some(s => suspect.includes(s)) &&
-        correctMotives.some(m => motive.includes(m)) &&
-        correctEvidence.some(e => evidence.includes(e));
+        const suspect = document.getElementById("suspect").value.toLowerCase().trim();
+        const motive = document.getElementById("motive").value.toLowerCase().trim();
+        const evidence = document.getElementById("evidence").value.toLowerCase().trim();
 
-      if (isCorrect) {
-        result.textContent = "✅ Correct! You've solved the case.";
-        result.style.color = "#00e676";
-      } else {
-        result.textContent = "❌ Not quite. Check your clues and try again.";
-        result.style.color = "#ff5252";
-      }
-    });
+        const correctSuspects = ["john smith", "john", "husband", "her husband"];
+        const correctMotives = ["money", "insurance", "life insurance", "payout"];
+        const correctEvidence = ["insurance policy", "motel receipt", "financial records", "bank withdrawal"];
+
+        const valid = correctSuspects.some(s => suspect.includes(s)) &&
+                      correctMotives.some(m => motive.includes(m)) &&
+                      correctEvidence.some(e => evidence.includes(e));
+
+        if (valid) {
+          result.textContent = "✅ Correct! You've solved the case.";
+          result.style.color = "#00ff88";
+        } else {
+          result.textContent = "❌ Incorrect. Try again after reviewing the evidence.";
+          result.style.color = "#ff4444";
+        }
+      });
+    };
   </script>
 
 </body>
