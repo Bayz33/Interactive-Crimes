@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interactive Crime – Ember Lounge Case</title>
+  <title>Interactive Crime – Ember Lounge Arson</title>
   <style>
     body {
-      background-color: #0a0a0a;
+      background-color: #0f0f0f;
       color: #f4f4f4;
       font-family: Arial, sans-serif;
       margin: 0;
@@ -14,30 +14,15 @@
     }
 
     header {
-      background-color: #111;
+      background-color: #1a1a1a;
       padding: 20px;
       text-align: center;
     }
 
     header h1 {
-      color: crimson;
+      color: #ff4500;
       margin: 0;
-      font-size: 2.2em;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
-      background-color: #1a1a1a;
-    }
-
-    nav a {
-      color: #f4f4f4;
-      text-decoration: none;
-      font-weight: bold;
+      font-size: 2.4em;
     }
 
     .container {
@@ -46,49 +31,44 @@
       padding: 20px;
     }
 
+    nav {
+      background-color: #262626;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #f4f4f4;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     img.case-cover {
       width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 12px rgba(255,0,0,0.3);
+      border-radius: 10px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(255, 69, 0, 0.4);
     }
 
     h2 {
-      color: #e25822;
-      margin-top: 40px;
+      color: #ff7043;
     }
 
     h3 {
       margin-top: 30px;
-      color: #ffcc00;
+      color: #ffa726;
     }
 
-    p {
+    p, li {
       line-height: 1.6;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #111;
-      color: #888;
     }
 
     input[type="text"] {
       width: 100%;
       padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 15px;
+      margin: 10px 0 20px;
       background: #222;
       border: 1px solid #555;
       color: white;
@@ -96,7 +76,7 @@
     }
 
     button {
-      background-color: crimson;
+      background-color: #ff4500;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -106,41 +86,37 @@
     }
 
     button:hover {
-      background-color: #b30000;
+      background-color: #e03e00;
     }
 
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .container {
-        padding: 10px;
-      }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: #aaa;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Interactive Crimes</h1>
+    <h1>Interactive Crime</h1>
   </header>
 
   <nav>
-    <a href="index.html">Overview</a>
+    <a href="index.html">Home</a>
     <a href="#scene">Crime Scene</a>
     <a href="#witnesses">Witnesses</a>
     <a href="#evidence">Evidence</a>
-    <a href="#solve">Solve</a>
+    <a href="#solve">Submit Solution</a>
   </nav>
 
   <div class="container">
-    <img src="images/images/case1-cover.jpg" alt="Ember Lounge Case" class="case-cover"/>
+    <img src="images/images/case1-cover.jpg" alt="Ember Lounge Arson" class="case-cover" />
 
     <h2>Case 1: The Ember Lounge Arson</h2>
-    <p>On June 1st, just after closing, The Ember Lounge went up in flames. By the time firefighters broke in, they found only ash and the burned remains of Marcus Kent, the bar's manager.</p>
-
+    <p>On June 1st, just after closing, The Ember Lounge went up in flames. By the time firefighters broke in, they found only ash and the burned remains of Marcus Kent, the bar’s manager.</p>
     <p>Arson investigators called the fire suspicious. Five people were at the bar that night. One of them knows the truth.</p>
 
     <p><strong>Your mission:</strong> Solve the case by answering three critical questions:</p>
@@ -150,48 +126,40 @@
       <li>What key piece of evidence proves it?</li>
     </ul>
 
-    <div id="scene" class="section">
-      <h3>Crime Scene Report</h3>
-      <p><strong>Location:</strong> The Ember Lounge – trendy downtown cocktail bar.</p>
-      <p><strong>Fire Origin:</strong> Behind the bar, near the top-shelf liquor rack.</p>
-      <p><strong>Estimated Ignition Time:</strong> 1:08 a.m.</p>
-      <p><strong>Victim:</strong> Marcus Kent, 37. His burned remains were discovered near the back exit, keys fused in one hand.</p>
-      <p><strong>Investigator's Note:</strong> “Heavy charring at the origin point indicates accelerant use. Evidence strongly suggests deliberate ignition.”</p>
-    </div>
+    <h3 id="scene">Crime Scene Report</h3>
+    <p><strong>Location:</strong> The Ember Lounge – trendy downtown cocktail bar.</p>
+    <p><strong>Fire Origin:</strong> Behind the bar, near the top-shelf liquor rack.</p>
+    <p><strong>Estimated Ignition Time:</strong> 1:08 a.m.</p>
+    <p><strong>Victim:</strong> Marcus Kent, 37. His burned remains were discovered near the back exit, keys fused in one hand.</p>
+    <p><strong>Investigator’s Note:</strong> “Heavy charring at the origin point indicates accelerant use. Evidence strongly suggests deliberate ignition.”</p>
 
-    <div id="witnesses" class="section">
-      <h3>Witness Statements</h3>
-      <p><strong>Sasha Morgan (Bartender):</strong> “We closed up around 12:45. Marcus said he had to finish the books alone. He was nervous. Kept looking at the door. I left at 12:50, and he told me not to worry about him.”</p>
-      <p><strong>Jared Lin (Musician):</strong> “I was loading my gear out back. Saw Marcus arguing with a guy in a hoodie. They were close, yelling. I didn’t hear details. I didn’t want to get involved, so I just left.”</p>
-      <p><strong>Bianca Dale (Regular):</strong> “I was in the restroom when the lights flickered. Then the smoke hit. I panicked and ran. I didn't see anyone. I didn’t even grab my purse—I just ran.”</p>
-      <p><strong>Chris Hall (Ex-Employee):</strong> “Look, I showed up to get my final check. Marcus refused to face me. I didn’t even step inside. We hated each other, sure—but I’m not an arsonist.”</p>
-      <p><strong>Maya Ruiz (Waitress):</strong> “I stayed to help clean up. Marcus was jumpy. Kept saying he thought someone was following him. He was on edge. I left around 12:50. He insisted he'd finish alone.”</p>
-    </div>
+    <h3 id="witnesses">Witness Statements</h3>
+    <p><strong>Sasha Morgan (Bartender):</strong> “We closed up around 12:45. Marcus said he had to finish the books alone. He was nervous. Kept looking at the door. I left at 12:50, and he told me not to worry about him.”</p>
+    <p><strong>Jared Lin (Musician):</strong> “I was loading my gear out back. Saw Marcus arguing with a guy in a hoodie. They were close, yelling. I didn’t hear details. I didn’t want to get involved, so I just left.”</p>
+    <p><strong>Bianca Dale (Regular):</strong> “I was in the restroom when the lights flickered. Then the smoke hit. I panicked and ran. I didn't see anyone. I didn’t even grab my purse—I just ran.”</p>
+    <p><strong>Chris Hall (Ex-Employee):</strong> “Look, I showed up to get my final check. Marcus refused to face me. I didn’t even step inside. We hated each other, sure—but I’m not an arsonist.”</p>
+    <p><strong>Maya Ruiz (Waitress):</strong> “I stayed to help clean up. Marcus was jumpy. Kept saying he thought someone was following him. He was on edge. I left around 12:50. He insisted he'd finish alone.”</p>
 
-    <div id="evidence" class="section">
-      <h3>Evidence Locker</h3>
-      <ul>
-        <li><strong>Bar Tab Printout:</strong> Printed at 12:46 a.m. Shows an unpaid tab under Chris Hall’s name, totaling $182. Marcus circled it with the note: “Settle this.”</li>
-        <li><strong>Security Still:</strong> Grainy black-and-white image from the back entrance camera, captured at 1:02 a.m. Shows a hooded figure re-entering through the rear door. Facial features obscured.</li>
-        <li><strong>Recovered Phone:</strong> Melted remains of Marcus’s phone. Data recovery pulled one unsent text, timestamped 1:03 a.m.: “He’s back. If anything happens, it’s him.”</li>
-      </ul>
-    </div>
+    <h3 id="evidence">Evidence Locker</h3>
+    <ul>
+      <li><strong>Bar Tab Printout:</strong> Printed at 12:46 a.m. Shows an unpaid tab under Chris Hall’s name, totaling $182. Marcus circled it with the note: “Settle this.”</li>
+      <li><strong>Security Still:</strong> Grainy black-and-white image from the back entrance camera, captured at 1:02 a.m. Shows a hooded figure re-entering through the rear door. Facial features obscured.</li>
+      <li><strong>Recovered Phone:</strong> Melted remains of Marcus’s phone. Data recovery pulled one unsent text, timestamped 1:03 a.m.: “He’s back. If anything happens, it’s him.”</li>
+    </ul>
 
-    <div id="solve" class="section">
-      <h3>Submit Your Solution</h3>
-      <form onsubmit="return checkAnswer(event)">
-        <label>Who started the fire?</label>
-        <input type="text" id="suspect" placeholder="Enter name..." required />
+    <h3 id="solve">Submit Your Solution</h3>
+    <form onsubmit="return checkAnswer(event)">
+      <label>Who started the fire?</label>
+      <input type="text" id="suspect" placeholder="Enter name..." required />
 
-        <label>What was their motive?</label>
-        <input type="text" id="motive" placeholder="Describe motive..." required />
+      <label>What was their motive?</label>
+      <input type="text" id="motive" placeholder="Describe motive..." required />
 
-        <label>What key evidence proves it?</label>
-        <input type="text" id="evidenceInput" placeholder="Describe the evidence..." required />
+      <label>What key evidence proves it?</label>
+      <input type="text" id="evidenceInput" placeholder="Describe the evidence..." required />
 
-        <button type="submit">Submit Answers</button>
-      </form>
-    </div>
+      <button type="submit">Submit Answers</button>
+    </form>
   </div>
 
   <footer>
