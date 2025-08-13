@@ -1,102 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Case 5: Wrongly Accused – Interactive Crime</title>
+  <title>Case 5: Wrongly Accused – Interactive Crime (MCQ)</title>
   <meta name="description" content="A man is imprisoned for a crime he may not have committed. You must examine the clues and uncover the truth." />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Courier New', Courier, monospace;
-      background-color: #0a0a0a;
-      color: #e0e0e0;
-    }
-    header {
-      background-color: #141414;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #e25822;
-    }
-    header h1 {
-      color: #e25822;
-      margin: 0;
-    }
-    nav a {
-      color: #e0e0e0;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
-      border-bottom: 2px solid transparent;
-    }
-    nav a:hover {
-      border-bottom: 2px solid #e25822;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-    .cover {
-      width: 100%;
-      margin-top: 20px;
-      border: 2px solid #e25822;
-    }
-    h2 {
-      color: #e25822;
-      border-bottom: 1px solid #e25822;
-      padding-bottom: 5px;
-    }
-    .evidence {
-      background-color: #1c1c1c;
-      padding: 15px;
-      margin-top: 20px;
-      border-left: 5px solid #e25822;
-    }
-    .submit-box {
-      background-color: #1c1c1c;
-      padding: 20px;
-      margin-top: 30px;
-      border: 1px solid #e25822;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      background-color: #2a2a2a;
-      border: 1px solid #555;
-      color: #e0e0e0;
-    }
-    button {
-      margin-top: 20px;
-      background-color: #e25822;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #f26c3d;
-    }
-    footer {
-      background-color: #141414;
-      text-align: center;
-      padding: 20px;
-      color: #aaa;
-      margin-top: 40px;
-      border-top: 2px solid #e25822;
-    }
+    body { margin: 0; font-family: 'Courier New', Courier, monospace; background-color: #0a0a0a; color: #e0e0e0; }
+    header { background-color: #141414; padding: 20px; text-align: center; border-bottom: 2px solid #e25822; }
+    header h1 { color: #e25822; margin: 0; }
+    nav a { color: #e0e0e0; margin: 0 12px; text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
+    nav a:hover { border-bottom: 2px solid #e25822; }
+    .container { max-width: 900px; margin: auto; padding: 20px; }
+    .cover { width: 100%; margin-top: 20px; border: 2px solid #e25822; }
+    h2 { color: #e25822; border-bottom: 1px solid #e25822; padding-bottom: 5px; }
+    .evidence { background-color: #1c1c1c; padding: 15px; margin-top: 20px; border-left: 5px solid #e25822; }
+    .submit-box { background-color: #1c1c1c; padding: 20px; margin-top: 30px; border: 1px solid #e25822; }
+    /* MCQ styling */
+    fieldset { border: 1px solid #e25822; border-radius: 8px; padding: 12px; margin-top: 16px; }
+    legend { padding: 0 6px; color: #e25822; }
+    .mcq { display: grid; gap: 10px; margin-top: 8px; }
+    .mcq label { display: flex; gap: 10px; align-items: flex-start; background: #2a2a2a; border: 1px solid #555; border-radius: 8px; padding: 10px; }
+    .mcq input { margin-top: 2px; }
+    #result { margin-top: 16px; font-weight: bold; }
+    button { margin-top: 20px; background-color: #e25822; color: white; border: none; padding: 12px 20px; font-size: 16px; cursor: pointer; }
+    button:hover { background-color: #f26c3d; }
+    footer { background-color: #141414; text-align: center; padding: 20px; color: #aaa; margin-top: 40px; border-top: 2px solid #e25822; }
   </style>
 </head>
-<body>
-
-<header>
+<body><header>
   <h1>Interactive Crime</h1>
   <nav>
     <a href="index.html">Home</a>
@@ -105,12 +36,8 @@
     <a href="#evidence">Evidence</a>
     <a href="#solve">Solve</a>
   </nav>
-</header>
-
-<div class="container">
-  <img src="images/images/case5-cover.jpg" alt="Case 5 Cover" class="cover"/>
-
-  <section id="scene">
+</header><div class="container">
+  <img src="images/images/case5-cover.jpg" alt="Case 5 Cover" class="cover"/>  <section id="scene">
     <h2>Case 5: Wrongly Accused</h2>
     <p>A man sits behind bars for a murder he didn’t commit—or so he claims. As new evidence emerges, it’s up to you to reopen the case, sort truth from lies, and bring justice where the system failed.</p>
     <p>Your mission: <strong>Reinvestigate the case</strong> and answer three key questions:</p>
@@ -119,76 +46,74 @@
       <li>What was their motive?</li>
       <li>What key piece of evidence proves it?</li>
     </ul>
-  </section>
-
-  <section id="witnesses">
+  </section>  <section id="witnesses">
     <h2>Witness Statements</h2>
-    <div class="evidence">
-      <p><strong>Tina Lopez:</strong> “Heard shouting. Thought it was the boyfriend.”</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Ron Dillon:</strong> “Saw a man in a hoodie leaving around 11. Not Devon.”</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Elise Tran:</strong> “Timeline never fit. Devon was seen on traffic cam at 10:55.”</p>
-    </div>
-  </section>
-
-  <section id="evidence">
+    <div class="evidence"><p><strong>Tina Lopez:</strong> “Heard shouting. Thought it was the boyfriend.”</p></div>
+    <div class="evidence"><p><strong>Ron Dillon:</strong> “Saw a man in a hoodie leaving around 11. Not Devon.”</p></div>
+    <div class="evidence"><p><strong>Elise Tran:</strong> “Timeline never fit. Devon was seen on traffic cam at 10:55.”</p></div>
+  </section>  <section id="evidence">
     <h2>Evidence Collected</h2>
-    <div class="evidence">
-      <p><strong>Anonymous Letter:</strong> “You got the wrong man.”</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Surveillance Footage:</strong> Blurry image of hooded man entering Unit 4B.</p>
-    </div>
-    <div class="evidence">
-      <p><strong>Voicemail:</strong> “He said he’d kill me if I told.”</p>
-    </div>
-  </section>
-
-  <section id="solve">
+    <div class="evidence"><p><strong>Anonymous Letter:</strong> “You got the wrong man.”</p></div>
+    <div class="evidence"><p><strong>Surveillance Footage:</strong> Blurry image of hooded man entering Unit 4B.</p></div>
+    <div class="evidence"><p><strong>Voicemail:</strong> “He said he’d kill me if I told.”</p></div>
+  </section>  <section id="solve">
     <h2>Submit Your Solution</h2>
     <div class="submit-box">
-      <label for="suspect">Who is responsible?</label>
-      <input type="text" id="suspect" placeholder="Type suspect's identity" />
-
-      <label for="motive">What was their motive?</label>
-      <textarea id="motive" rows="3" placeholder="Explain the motive..."></textarea>
-
-      <label for="evidenceInput">What key evidence proves it?</label>
-      <input type="text" id="evidenceInput" placeholder="Name the item or detail" />
-
-      <button onclick="checkAnswers()">Submit Answers</button>
-      <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+      <!-- MULTIPLE CHOICE VERSION -->
+      <fieldset>
+        <legend>Who actually committed the crime?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="suspect" value="boyfriend" required/> The boyfriend (Devon)</label>
+          <label><input type="radio" name="suspect" value="hooded"/> The unknown <em>hooded man</em> seen on surveillance</label>
+          <label><input type="radio" name="suspect" value="neighbor"/> A random neighbor</label>
+          <label><input type="radio" name="suspect" value="tina"/> Tina Lopez (witness)</label>
+          <label><input type="radio" name="suspect" value="unknown"/> Unknown / can’t be determined</label>
+        </div>
+      </fieldset><fieldset>
+    <legend>What was the motive?</legend>
+    <div class="mcq">
+      <label><input type="radio" name="motive" value="silence" required/> Silence the victim to prevent exposure</label>
+      <label><input type="radio" name="motive" value="robbery"/> Robbery gone wrong</label>
+      <label><input type="radio" name="motive" value="jealousy"/> Jealousy</label>
+      <label><input type="radio" name="motive" value="frame"/> Frame Devon</label>
+      <label><input type="radio" name="motive" value="random"/> Random violence</label>
     </div>
-  </section>
+  </fieldset>
+
+  <fieldset>
+    <legend>What key evidence proves it?</legend>
+    <div class="mcq">
+      <label><input type="radio" name="evidence" value="voicemail" required/> The threatening <strong>voicemail</strong></label>
+      <label><input type="radio" name="evidence" value="letter"/> The <strong>anonymous letter</strong> saying “You got the wrong man.”</label>
+      <label><input type="radio" name="evidence" value="surveillance"/> The <strong>surveillance footage</strong> of the hooded man</label>
+      <label><input type="radio" name="evidence" value="witness"/> Tina’s statement</label>
+    </div>
+  </fieldset>
+
+  <button id="submitBtn">Submit Answers</button>
+  <p id="result"></p>
 </div>
 
-<script>
-  function checkAnswers() {
-    const suspect = document.getElementById("suspect").value.trim().toLowerCase();
-    const motive = document.getElementById("motive").value.trim().toLowerCase();
-    const evidence = document.getElementById("evidenceInput").value.trim().toLowerCase();
-    const result = document.getElementById("result");
+  </section>
+</div><script>
+  document.getElementById('submitBtn').addEventListener('click', function(){
+    const suspect = (document.querySelector('input[name="suspect"]:checked')||{}).value || '';
+    const motive  = (document.querySelector('input[name="motive"]:checked')||{}).value || '';
+    const evidence= (document.querySelector('input[name="evidence"]:checked')||{}).value || '';
+    const result  = document.getElementById('result');
 
-    const suspectCorrect = suspect.includes("hood") || suspect.includes("unknown");
-    const motiveCorrect = motive.includes("silence") || motive.includes("exposure") || motive.includes("she knew");
-    const evidenceCorrect = evidence.includes("voicemail") || evidence.includes("letter") || evidence.includes("surveillance");
+    // Ground truth, aligned with your original free-text acceptance
+    const ok = (suspect === 'hooded') && (motive === 'silence') && (evidence === 'voicemail');
 
-    if (suspectCorrect && motiveCorrect && evidenceCorrect) {
-      result.textContent = "✅ Correct! You've solved the case.";
-      result.style.color = "#00e676";
+    if(ok){
+      result.textContent = '✅ Correct! You\'ve solved the case.';
+      result.style.color = '#00e676';
     } else {
-      result.textContent = "❌ Not quite. Check your clues and try again.";
-      result.style.color = "#ff5252";
+      result.textContent = '❌ Not quite. Check your clues and try again.';
+      result.style.color = '#ff5252';
     }
-  }
-</script>
-
-<footer>
+  });
+</script><footer>
   © 2024 Interactive Crime. All rights reserved.
-</footer>
-
-</body>
+</footer></body>
 </html>
