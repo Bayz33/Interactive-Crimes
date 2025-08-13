@@ -1,113 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interactive Crime – Jewelry Store Heist</title>
+  <title>Interactive Crime – Jewelry Store Heist (MCQ)</title>
   <style>
-    body {
-      background-color: #0c1a2b;
-      color: #e0f7fa;
-      font-family: 'Courier New', Courier, monospace;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #092339;
-      padding: 25px;
-      text-align: center;
-      border-bottom: 2px solid #00bcd4;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: #00bcd4;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #e0f7fa;
-      text-decoration: none;
-      font-weight: bold;
-      border-bottom: 2px solid transparent;
-    }
-    nav a:hover {
-      border-color: #00bcd4;
-    }
-    section {
-      padding: 30px;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.6;
-    }
-    h2 {
-      color: #00bcd4;
-      border-bottom: 1px solid #00bcd4;
-      padding-bottom: 5px;
-      margin-top: 40px;
-    }
-    .evidence {
-      background-color: #13293d;
-      padding: 20px;
-      margin-top: 15px;
-      border-left: 5px solid #00bcd4;
-    }
-    .submit-box {
-      background: #13293d;
-      padding: 25px;
-      margin-top: 40px;
-      border: 1px solid #00bcd4;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      background-color: #1e3a56;
-      border: 1px solid #00bcd4;
-      color: #e0f7fa;
-      font-family: inherit;
-    }
-    button {
-      background-color: #00bcd4;
-      color: #fff;
-      border: none;
-      padding: 12px;
-      margin-top: 20px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    button:hover {
-      background-color: #26c6da;
-    }
-    img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-    }
+    body { background-color: #0c1a2b; color: #e0f7fa; font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; }
+    header { background-color: #092339; padding: 25px; text-align: center; border-bottom: 2px solid #00bcd4; }
+    header h1 { margin: 0; font-size: 2.2em; color: #00bcd4; }
+    nav { margin-top: 10px; }
+    nav a { margin: 0 15px; color: #e0f7fa; text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
+    nav a:hover { border-color: #00bcd4; }
+    section { padding: 30px; max-width: 800px; margin: auto; line-height: 1.6; }
+    h2 { color: #00bcd4; border-bottom: 1px solid #00bcd4; padding-bottom: 5px; margin-top: 40px; }
+    .evidence { background-color: #13293d; padding: 20px; margin-top: 15px; border-left: 5px solid #00bcd4; }
+    .submit-box { background: #13293d; padding: 25px; margin-top: 40px; border: 1px solid #00bcd4; }
+    button { background-color: #00bcd4; color: #fff; border: none; padding: 12px; margin-top: 20px; cursor: pointer; font-size: 16px; }
+    button:hover { background-color: #26c6da; }
+    img { width: 100%; max-height: 400px; object-fit: cover; }
+    /* MCQ styling */
+    fieldset { border: 1px solid #00bcd4; border-radius: 8px; padding: 12px; margin-top: 16px; }
+    legend { padding: 0 6px; color: #00bcd4; }
+    .mcq { display: grid; gap: 10px; margin-top: 8px; }
+    .mcq label { display: flex; gap: 10px; align-items: flex-start; background: #1e3a56; border: 1px solid #00bcd4; border-radius: 8px; padding: 10px; }
+    .mcq input { margin-top: 2px; }
+    #result { margin-top: 16px; font-weight: bold; }
   </style>
 </head>
 <body>
   <header>
     <h1>Interactive Crime</h1>
     <nav>
-    <a href="index.html">Home</a>
-    <a href="#scene">Crime Scene</a>
-    <a href="#witnesses">Witnesses</a>
-    <a href="#evidence">Evidence</a>
-    <a href="#solve">Solve</a>
-  </nav>
-  </header>
-
-  <img src="images/images/case-2-promo-image.jpg" alt="Jewelry Store Heist Cover"/>
-
-  <section>
+      <a href="index.html">Home</a>
+      <a href="#scene">Crime Scene</a>
+      <a href="#witnesses">Witnesses</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#solve">Solve</a>
+    </nav>
+  </header>  <img src="images/images/case-2-promo-image.jpg" alt="Jewelry Store Heist Cover"/>  <section>
     <h2>Case 2: The Jewelry Store Heist</h2>
     <p>On September 12th, the upscale Midtown Jewelers was robbed just before closing. The owner was tied up in the back and a tray of rare diamonds was stolen. Investigators found no sign of forced entry. Four employees were working that night. One of them planned it.</p>
     <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
@@ -116,9 +45,7 @@
       <li>What was their motive?</li>
       <li>What key piece of evidence proves it?</li>
     </ul>
-  </section>
-
-  <section>
+  </section>  <section id="scene">
     <h2>Crime Scene Report</h2>
     <div class="evidence">
       <p><strong>Location:</strong> Midtown Jewelers – luxury retail store downtown.</p>
@@ -127,56 +54,72 @@
       <p><strong>Owner Statement:</strong> Tied up with zip ties in the back. Heard one voice giving orders.</p>
       <p><strong>Investigator’s Note:</strong> "Alarm code was used correctly. Likely an inside job. No fingerprints on the diamond tray, suggesting gloves."</p>
     </div>
-  </section>
-
-  <section>
+  </section>  <section id="witnesses">
     <h2>Witness Statements</h2>
     <div class="evidence"><p><strong>Amy Chen (Sales Associate):</strong> “We were about to close. I was in the back grabbing cleaning supplies. Heard the commotion and hid.”</p></div>
     <div class="evidence"><p><strong>Carlos Rivera (Security Guard):</strong> “Patrolled as normal. Cameras went out for 5 minutes. When they came back, everyone was gone.”</p></div>
     <div class="evidence"><p><strong>Lena Price (Manager):</strong> “I was counting the register. Carlos came to check in. Everything was fine. Then suddenly it went dark.”</p></div>
     <div class="evidence"><p><strong>Derek Moore (Jeweler):</strong> “I stayed late to finish setting a ring. I heard shouting. I bolted. I didn't see anything.”</p></div>
-  </section>
-
-  <section>
+  </section>  <section id="evidence">
     <h2>Evidence Locker</h2>
     <div class="evidence"><p><strong>Alarm Log:</strong> Disarmed at 8:42 p.m. using <em>Lena’s</em> unique code.</p></div>
     <div class="evidence"><p><strong>Security Footage:</strong> Shows Carlos at his desk. System cuts out at 8:43 p.m.</p></div>
     <div class="evidence"><p><strong>Recovered Note:</strong> Crumpled note in the trash: "Meet after close. Split 50/50."</p></div>
-  </section>
-
-  <section>
+  </section>  <section id="solve">
     <h2>Submit Your Solution</h2>
     <div class="submit-box">
-      <label>Who planned the heist?</label>
-      <input type="text" id="suspect" placeholder="Type suspect's name" />
-      <label>What was their motive?</label>
-      <textarea id="motive" rows="4" placeholder="Explain why they did it"></textarea>
-      <label>What key evidence proves it?</label>
-      <input type="text" id="evidenceInput" placeholder="Name the item or detail" />
-      <button onclick="checkAnswers()">Submit Answers</button>
-      <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+      <!-- Multiple Choice Version -->
+      <fieldset>
+        <legend>Who planned the heist?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="suspect" value="amy" required/> Amy Chen (Sales Associate)</label>
+          <label><input type="radio" name="suspect" value="carlos"/> Carlos Rivera (Security Guard)</label>
+          <label><input type="radio" name="suspect" value="lena"/> Lena Price (Manager)</label>
+          <label><input type="radio" name="suspect" value="derek"/> Derek Moore (Jeweler)</label>
+          <label><input type="radio" name="suspect" value="unknown"/> Unknown masked robber</label>
+        </div>
+      </fieldset><fieldset>
+    <legend>What was their motive?</legend>
+    <div class="mcq">
+      <label><input type="radio" name="motive" value="split50" required/> Split the take 50/50 for money</label>
+      <label><input type="radio" name="motive" value="insurance"/> Insurance scam with the owner</label>
+      <label><input type="radio" name="motive" value="jealousy"/> Jealousy over a relationship</label>
+      <label><input type="radio" name="motive" value="threats"/> Forced by outside threats</label>
+      <label><input type="radio" name="motive" value="schedule"/> Anger over schedule/pay cuts</label>
     </div>
-  </section>
+  </fieldset>
 
-  <script>
-    function checkAnswers() {
-      const suspect = document.getElementById('suspect').value.trim().toLowerCase();
-      const motive = document.getElementById('motive').value.trim().toLowerCase();
-      const evidence = document.getElementById('evidenceInput').value.trim().toLowerCase();
-      const result = document.getElementById('result');
+  <fieldset>
+    <legend>What key piece of evidence proves it?</legend>
+    <div class="mcq">
+      <label><input type="radio" name="evidence" value="note" required/> The <strong>crumpled note</strong> saying "Meet after close. Split 50/50."</label>
+      <label><input type="radio" name="evidence" value="alarm"/> The <strong>alarm log</strong> showing Lena’s code was used</label>
+      <label><input type="radio" name="evidence" value="cams"/> The <strong>camera outage</strong> at 8:43 p.m.</label>
+      <label><input type="radio" name="evidence" value="owner"/> The <strong>owner’s statement</strong> about one voice</label>
+    </div>
+  </fieldset>
 
-      const suspectCorrect = suspect.includes('lena') && suspect.includes('price');
-      const motiveCorrect = motive.includes('split') || motive.includes('money') || motive.includes('deal') || motive.includes('50/50');
-      const evidenceCorrect = evidence.includes('note') || evidence.includes('message') || evidence.includes('crumpled');
+  <button id="submitBtn">Submit Answers</button>
+  <p id="result"></p>
+</div>
 
-      if (suspectCorrect && motiveCorrect && evidenceCorrect) {
-        result.textContent = "✅ Correct! You solved the case.";
-        result.style.color = "#00e676";
+  </section>  <script>
+    document.getElementById('submitBtn').addEventListener('click', function(){
+      const suspect = (document.querySelector('input[name="suspect"]:checked')||{}).value || '';
+      const motive  = (document.querySelector('input[name="motive"]:checked')||{}).value || '';
+      const evidence= (document.querySelector('input[name="evidence"]:checked')||{}).value || '';
+      const result  = document.getElementById('result');
+
+      // Ground truth for this case
+      const ok = (suspect === 'lena') && (motive === 'split50') && (evidence === 'note');
+
+      if(ok){
+        result.textContent = '✅ Correct! You solved the case.';
+        result.style.color = '#00e676';
       } else {
-        result.textContent = "❌ Try again. Check your clues carefully.";
-        result.style.color = "#ff5252";
+        result.textContent = '❌ Try again. Revisit Witness Statements and the Evidence Locker.';
+        result.style.color = '#ff5252';
       }
-    }
-  </script>
-</body>
+    });
+  </script></body>
 </html>
