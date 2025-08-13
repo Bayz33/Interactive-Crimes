@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Case 3: The Vanished Wife – Interactive Crime</title>
+  <title>Case 3: The Vanished Wife – Interactive Crime (MCQ)</title>
   <meta name="description" content="Uncover the mystery behind a missing woman who vanished without a trace. Can you solve the case before time runs out?" />
   <style>
     body {
@@ -59,19 +59,22 @@
       margin-top: 30px;
       border: 1px solid #2e7d32;
     }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
+    /* MCQ styling */
+    fieldset {
+      border: 1px solid #2e7d32;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 16px;
     }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      background-color: #2a2a2a;
-      border: 1px solid #555;
-      color: #e0e0e0;
+    legend { padding: 0 6px; color: #2e7d32; }
+    .mcq { display: grid; gap: 10px; margin-top: 8px; }
+    .mcq label {
+      display: flex; gap: 10px; align-items: flex-start;
+      background: #2a2a2a; border: 1px solid #555; border-radius: 8px; padding: 10px;
     }
+    .mcq input { margin-top: 2px; }
+    #result { margin-top: 16px; font-weight: bold; }
+
     button {
       margin-top: 20px;
       background-color: #2e7d32;
@@ -81,9 +84,8 @@
       font-size: 16px;
       cursor: pointer;
     }
-    button:hover {
-      background-color: #388e3c;
-    }
+    button:hover { background-color: #388e3c; }
+
     footer {
       background-color: #141414;
       text-align: center;
@@ -151,40 +153,63 @@
   <section id="solve">
     <h2>Submit Your Solution</h2>
     <div class="submit-box">
-      <label for="suspect">Who is responsible?</label>
-      <input type="text" id="suspect" placeholder="Type suspect's name" />
+      <!-- Multiple Choice Version -->
+      <fieldset>
+        <legend>Who is responsible?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="suspect" value="daniel" required/> Daniel Moore (Husband)</label>
+          <label><input type="radio" name="suspect" value="lana"/> Lana Harris (Sister)</label>
+          <label><input type="radio" name="suspect" value="neighbor"/> Unknown Neighbor in hoodie</label>
+          <label><input type="radio" name="suspect" value="self"/> The missing woman staged her own disappearance</label>
+          <label><input type="radio" name="suspect" value="unknown"/> Unknown intruder</label>
+        </div>
+      </fieldset>
 
-      <label for="motive">What was their motive?</label>
-      <textarea id="motive" rows="3" placeholder="Explain the motive..."></textarea>
+      <fieldset>
+        <legend>What was the motive?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="motive" value="jealousy" required/> Jealousy and control over her sister’s life</label>
+          <label><input type="radio" name="motive" value="inheritance"/> Inheritance/financial gain</label>
+          <label><input type="radio" name="motive" value="frame"/> To frame Daniel after the argument</label>
+          <label><input type="radio" name="motive" value="escape"/> Help the woman escape secretly</label>
+          <label><input type="radio" name="motive" value="random"/> Random opportunistic act</label>
+        </div>
+      </fieldset>
 
-      <label for="evidenceInput">What key evidence proves it?</label>
-      <input type="text" id="evidenceInput" placeholder="Name the item or detail" />
+      <fieldset>
+        <legend>What key evidence proves it?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="evidence" value="journal" required/> The <strong>journal entry</strong>: “If anything happens to me, look at Lana.”</label>
+          <label><input type="radio" name="evidence" value="footage"/> The <strong>security footage</strong> of a hooded figure</label>
+          <label><input type="radio" name="evidence" value="phones"/> The <strong>phone records</strong> with multiple calls</label>
+          <label><input type="radio" name="evidence" value="argument"/> The <strong>argument</strong> between Daniel and his wife</label>
+        </div>
+      </fieldset>
 
-      <button onclick="checkAnswers()">Submit Answers</button>
-      <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+      <button id="submitBtn">Submit Answers</button>
+      <p id="result"></p>
     </div>
   </section>
 </div>
 
 <script>
-  function checkAnswers() {
-    const suspect = document.getElementById("suspect").value.trim().toLowerCase();
-    const motive = document.getElementById("motive").value.trim().toLowerCase();
-    const evidence = document.getElementById("evidenceInput").value.trim().toLowerCase();
-    const result = document.getElementById("result");
+  document.getElementById('submitBtn').addEventListener('click', function(){
+    const suspect = (document.querySelector('input[name="suspect"]:checked')||{}).value || '';
+    const motive  = (document.querySelector('input[name="motive"]:checked')||{}).value || '';
+    const evidence= (document.querySelector('input[name="evidence"]:checked')||{}).value || '';
+    const result  = document.getElementById('result');
 
-    const suspectCorrect = suspect.includes("lana") || suspect.includes("sister");
-    const motiveCorrect = motive.includes("jealous") || motive.includes("inherit") || motive.includes("control");
-    const evidenceCorrect = evidence.includes("journal") || evidence.includes("entry") || evidence.includes("note");
+    // Ground truth (aligned to your original case logic)
+    const ok = (suspect === 'lana') && (motive === 'jealousy') && (evidence === 'journal');
 
-    if (suspectCorrect && motiveCorrect && evidenceCorrect) {
-      result.textContent = "✅ Correct! You solved the case.";
-      result.style.color = "#00e676";
+    if(ok){
+      result.textContent = '✅ Correct! You solved the case.';
+      result.style.color = '#00e676';
     } else {
-      result.textContent = "❌ Try again. Review the evidence closely.";
-      result.style.color = "#ff5252";
+      result.textContent = '❌ Try again. Review the Witness Statements and Evidence Collected.';
+      result.style.color = '#ff5252';
     }
-  }
+  });
 </script>
 
 <footer>
