@@ -6,22 +6,23 @@
   <title>Case 7: The Hollow Manor Haunting – Interactive Crime (Halloween Special)</title>
   <meta name="description" content="On Halloween night five friends broke into Hollow Manor — four returned. One vanished. Uncover who lied, who plotted, and who silenced Vanessa."/>
   <style>
-    body { margin:0; font-family: 'Courier New', Courier, monospace; background:#070707; color:#e8e8e8; }
+    body { margin:0; font-family:'Courier New', Courier, monospace; background:#070707; color:#e8e8e8; }
     header { background:#111; padding:20px; text-align:center; border-bottom:2px solid #7b1fa2; }
     header h1 { color:#7b1fa2; margin:0; }
     nav a { color:#e8e8e8; margin:0 12px; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
     .container { max-width:900px; margin:20px auto; padding:20px; }
-    .cover { width:100%; border:2px solid #7b1fa2; display:block; margin-bottom:18px; }
+    .cover { width:100%; border:2px solid #7b1fa2; display:block; margin-bottom:18px; border-radius:6px; }
     h2 { color:#7b1fa2; border-bottom:1px solid #7b1fa2; padding-bottom:6px; }
     .blurb { margin:12px 0; line-height:1.6; }
-    .evidence, .witness { background:#141414; padding:14px; margin-top:12px; border-left:6px solid #7b1fa2; }
-    .submit-box { background:#141414; padding:18px; margin-top:22px; border:1px solid #7b1fa2; }
+    .evidence, .witness { background:#141414; padding:14px; margin-top:12px; border-left:6px solid #7b1fa2; border-radius:6px; }
+    .submit-box { background:#141414; padding:18px; margin-top:22px; border:1px solid #7b1fa2; border-radius:8px; }
     fieldset { border:1px solid #7b1fa2; padding:10px; border-radius:8px; margin-top:14px; }
     legend { color:#7b1fa2; padding:0 6px; }
     .mcq { display:grid; gap:10px; margin-top:8px; }
     .mcq label { display:flex; gap:10px; align-items:flex-start; background:#1c1c1c; padding:10px; border-radius:8px; border:1px solid #333; }
     .mcq input { margin-top:3px; }
-    button { margin-top:14px; background:#7b1fa2; border:none; color:white; padding:12px 18px; font-size:16px; cursor:pointer; border-radius:6px; }
+    button { margin-top:14px; background:#7b1fa2; border:none; color:#fff; padding:12px 18px; font-size:16px; cursor:pointer; border-radius:6px; }
     button:hover { background:#9c27b0; }
     #result { font-weight:bold; margin-top:14px; }
     .hint { color:#bdbdbd; font-style:italic; margin-top:6px; }
@@ -41,60 +42,61 @@
   </header>
 
   <div class="container">
-    <img src="images/images/hallow-manor.png" alt="Hollow Manor Cover" class="cover" />
+    <!-- Image path matches your repo: /images/images/hallow-manor.png -->
+    <img src="images/images/hallow-manor.png" alt="Hollow Manor Cover" class="cover" loading="lazy"/>
 
     <section id="scene">
       <h2>Case 7: The Hollow Manor Haunting</h2>
       <p class="blurb"><strong>Halloween Special — Difficulty: Extreme</strong></p>
       <p class="blurb">
-        On Halloween night five friends broke into Hollow Manor for a dare. Four returned; Vanessa Clarke did not. Police called it a runaway, but recovered evidence suggests someone planned that night—and several people lied about what they saw.
+        On Halloween night five friends broke into Hollow Manor for a dare. Four returned; Vanessa Clarke did not. Police called it a runaway, but recovered evidence suggests someone planned that night — and several people lied about what they saw.
       </p>
-      <p class="blurb"><strong>Your mission:</strong> determine who orchestrated the "haunting", why they did it, and which piece of evidence exposes them — while sorting truth from deliberate lies.</p>
+      <p class="blurb"><strong>Your mission:</strong> determine who orchestrated the “haunting,” why they did it, and which piece of evidence exposes them — while sorting truth from deliberate lies.</p>
     </section>
 
     <section id="witnesses">
       <h2>Witness Statements (survivors & locals)</h2>
 
       <div class="witness">
-        <strong>Liam (survivor)</strong>: “I stepped out to the porch for a smoke — when I turned back the others were inside. Vanessa was with Jenna. I ran for my phone when I heard a crash, then I ran.”  
-        <em>(Liam later says he left before things got dark.)</em>
+        <strong>Liam (survivor)</strong>: “I stepped out to the porch for a smoke — when I turned back the others were inside. Vanessa was with Jenna. I ran for my phone when I heard a crash, then I ran.”
+        <em> (Liam later says he left before things got dark.)</em>
       </div>
 
       <div class="witness">
-        <strong>Rosa (survivor)</strong>: “I heard whispering and footsteps in the attic. I went up and saw shadow — I screamed and left. I didn’t touch anything.”  
-        <em>(Rosa’s shoes were later found with wet mud.)</em>
+        <strong>Rosa (survivor)</strong>: “I heard whispering and footsteps in the attic. I went up and saw a shadow — I screamed and left. I didn’t touch anything.”
+        <em> (Rosa’s shoes were later found with wet mud.)</em>
       </div>
 
       <div class="witness">
-        <strong>Jenna (survivor)</strong>: “We were messing with the old Ouija board as a joke. Vanessa stared at the portrait and then vanished from the hallway. I stayed to call for help.”  
-        <em>(Jenna claimed she never left Vanessa’s side.)</em>
+        <strong>Jenna (survivor)</strong>: “We were messing with the old Ouija board as a joke. Vanessa stared at the portrait and then vanished from the hallway. I stayed to call for help.”
+        <em> (Jenna claimed she never left Vanessa’s side.)</em>
       </div>
 
       <div class="witness">
-        <strong>Felix (survivor, prankster)</strong>: “It was only me doing spooky stuff — wiring a speaker to play whispers. I didn’t touch Vanessa. I swear I was on the back lawn.”  
-        <em>(Felix was observed earlier buying batteries and an amplifier.)</em>
+        <strong>Felix (survivor, prankster)</strong>: “It was only me doing spooky stuff — wiring a speaker to play whispers. I didn’t touch Vanessa. I swear I was on the back lawn.”
+        <em> (Felix was observed earlier buying batteries and an amplifier.)</em>
       </div>
 
       <div class="witness">
-        <strong>Oscar (former caretaker)</strong>: “I was fired years ago. People say the Manor is cursed — but I left that night before midnight. I had no reason to harm anyone.”  
-        <em>(Oscar still holds a master ring of keys in his truck.)</em>
+        <strong>Oscar (former caretaker)</strong>: “I was fired years ago. People say the Manor is cursed — but I left that night before midnight. I had no reason to harm anyone.”
+        <em> (Oscar still holds a master ring of keys in his truck.)</em>
       </div>
     </section>
 
     <section id="evidence">
       <h2>Evidence Locker</h2>
 
-      <div class="evidence"><strong>Corrupted Phone File (Vanessa’s last clip):</strong> Audio with a faint male whisper, then static — file metadata shows it was saved at 11:07pm, but a hidden image frame exists showing a reflection in a cracked mirror.</div>
+      <div class="evidence"><strong>Corrupted Phone File (Vanessa’s last clip):</strong> Audio with a faint male whisper, then static — file metadata shows it was saved at 11:07 pm, but a hidden image frame exists showing a reflection in a cracked mirror.</div>
 
       <div class="evidence"><strong>Wet Mud on Rosa’s Shoes:</strong> Mud traces match a path behind the manor where the caretaker’s service shed sits.</div>
 
       <div class="evidence"><strong>Ouija Board Notes:</strong> Smeared ink and a torn corner with handwriting that matches Jenna’s grocery receipt signature.</div>
 
-      <div class="evidence"><strong>Keychain with 'Hollow' tag:</strong> Found in the underbrush near the back gate; engraving shows initials “O.P.”</div>
+      <div class="evidence"><strong>Keychain with “Hollow” tag:</strong> Found in the underbrush near the back gate; engraving shows initials “O.P.”</div>
 
       <div class="evidence"><strong>Vanessa’s Journal:</strong> Final entry: “If anything happens, check the cracked mirror. — V.”</div>
 
-      <p class="hint">Note: Lies appear in alibis (who says they left), in statements about touching evidence, and in claimed motives — not every inconsistency is proof of guilt, but purposeful contradictions are.</p>
+      <p class="hint">Note: lies appear in alibis (who says they left), in statements about touching evidence, and in claimed motives — not every inconsistency is proof of guilt, but purposeful contradictions are.</p>
     </section>
 
     <section id="solve">
@@ -104,32 +106,32 @@
         <fieldset>
           <legend>Who orchestrated the "haunting"?</legend>
           <div class="mcq">
-            <label><input type="radio" name="suspect" value="liam" required/> Liam (survivor who said he stepped out)</label>
-            <label><input type="radio" name="suspect" value="rosa"/> Rosa (survivor who claimed attic footsteps)</label>
-            <label><input type="radio" name="suspect" value="jenna"/> Jenna (survivor — said she stayed with Vanessa)</label>
-            <label><input type="radio" name="suspect" value="felix"/> Felix (prankster, bought amplifier)</label>
-            <label><input type="radio" name="suspect" value="oscar"/> Oscar (ex-caretaker with keys)</label>
-            <label><input type="radio" name="suspect" value="unknown"/> Unknown / outside intruder</label>
+            <label><input type="radio" name="suspect" value="liam" required> Liam (survivor who said he stepped out)</label>
+            <label><input type="radio" name="suspect" value="rosa"> Rosa (survivor who claimed attic footsteps)</label>
+            <label><input type="radio" name="suspect" value="jenna"> Jenna (survivor — said she stayed with Vanessa)</label>
+            <label><input type="radio" name="suspect" value="felix"> Felix (prankster, bought amplifier)</label>
+            <label><input type="radio" name="suspect" value="oscar"> Oscar (ex-caretaker with keys)</label>
+            <label><input type="radio" name="suspect" value="unknown"> Unknown / outside intruder</label>
           </div>
         </fieldset>
 
         <fieldset>
           <legend>What was the primary motive?</legend>
           <div class="mcq">
-            <label><input type="radio" name="motive" value="revenge" required/> Personal revenge — ancient grudge against Vanessa</label>
-            <label><input type="radio" name="motive" value="cover" /> To cover up a theft / remove Vanessa as a witness</label>
-            <label><input type="radio" name="motive" value="scare" /> To scare Vanessa into leaving town (a cruel prank gone wrong)</label>
-            <label><input type="radio" name="motive" value="money" /> Financial — control of an inheritance or property</label>
+            <label><input type="radio" name="motive" value="revenge" required> Personal revenge — ancient grudge against Vanessa</label>
+            <label><input type="radio" name="motive" value="cover"> To cover up a theft / remove Vanessa as a witness</label>
+            <label><input type="radio" name="motive" value="scare"> To scare Vanessa into leaving town (a cruel prank gone wrong)</label>
+            <label><input type="radio" name="motive" value="money"> Financial — control of an inheritance or property</label>
           </div>
         </fieldset>
 
         <fieldset>
           <legend>Which piece of evidence proves it?</legend>
           <div class="mcq">
-            <label><input type="radio" name="evidence" value="mirror" required/> Hidden frame in the corrupted phone showing Jenna’s reflection in the cracked mirror</label>
-            <label><input type="radio" name="evidence" value="keys" /> Keychain engraved “O.P.” found near back gate</label>
-            <label><input type="radio" name="evidence" value="mud" /> Mud on Rosa’s shoes matching the caretaker shed path</label>
-            <label><input type="radio" name="evidence" value="ouija" /> Torn Ouija corner with Jenna’s handwriting</label>
+            <label><input type="radio" name="evidence" value="mirror" required> Hidden frame in the corrupted phone showing Jenna’s reflection in the cracked mirror</label>
+            <label><input type="radio" name="evidence" value="keys"> Keychain engraved “O.P.” found near back gate</label>
+            <label><input type="radio" name="evidence" value="mud"> Mud on Rosa’s shoes matching the caretaker shed path</label>
+            <label><input type="radio" name="evidence" value="ouija"> Torn Ouija corner with Jenna’s handwriting</label>
           </div>
         </fieldset>
 
@@ -141,22 +143,22 @@
   </div>
 
   <script>
-    // core logic: correct answers and explanation
+    // Answer logic + feedback
     document.getElementById('submitBtn').addEventListener('click', function () {
       const suspect = (document.querySelector('input[name="suspect"]:checked')||{}).value || '';
       const motive  = (document.querySelector('input[name="motive"]:checked')||{}).value || '';
       const evidence= (document.querySelector('input[name="evidence"]:checked')||{}).value || '';
       const result  = document.getElementById('result');
 
-      // Culprit: Jenna (she staged the "haunting"; lied about staying with Vanessa; reflection in mirror proves presence)
+      // Ground truth
       const ok = (suspect === 'jenna') && (motive === 'scare' || motive === 'money' || motive === 'cover') && (evidence === 'mirror');
 
       if (ok) {
         result.style.color = '#00e676';
-        result.textContent = "✅ Correct — Jenna orchestrated the haunting. Explanation: Jenna lied about staying with Vanessa; the hidden mirror frame (from the corrupted phone file) shows her reflection near the cracked mirror at 11:07pm. Felix’s pranks and Oscar’s keys are red herrings. Jenna’s motive was to scare Vanessa into leaving town (control, property, and fear).";
+        result.textContent = "✅ Correct — Jenna orchestrated the haunting. She lied about staying with Vanessa; the hidden mirror frame shows her reflection by the cracked mirror at 11:07 pm. Felix’s pranks and Oscar’s keys are red herrings. Motive: scare/control (and possibly money/cover).";
       } else {
         result.style.color = '#ff5252';
-        result.textContent = "❌ Not quite. Re-check timelines: who contradicted their story, and which piece of digital evidence reveals their presence despite their alibi?";
+        result.textContent = "❌ Not quite. Re-check the contradictions in statements and the hidden digital frame in Vanessa’s phone file.";
       }
     });
   </script>
