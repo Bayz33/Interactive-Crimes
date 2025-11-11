@@ -1,18 +1,38 @@
+     Yep! Here’s your code with the extra bits added to help Snapchat/other apps make a nicer preview + a tiny SEO/UX polish.
+(I’ll keep your structure the same and just extend the <head>.)
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Interactive Crime — Play Free Interactive Mysteries</title>
+
+  <!-- SEO -->
   <meta name="description" content="Short, cinematic cases. Examine clues, pick the culprit, and solve the mystery. Play free cases and unlock premium stories on Interactive Crime." />
   <link rel="canonical" href="https://interactivecrime.com/">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="robots" content="index,follow">
 
-  <!-- Open Graph / Twitter -->
+  <!-- Favicon (swap path/file as needed) -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph / Social -->
   <meta property="og:title" content="Interactive Crime — Play Free Interactive Mysteries">
   <meta property="og:description" content="Five entered. Four returned. One vanished. Play the Hallow Manor Haunting free all October.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://interactivecrime.com/">
+  <meta property="og:site_name" content="Interactive Crime">
   <meta property="og:image" content="https://interactivecrime.com/og/hallow-manor.jpg">
+  <!-- (Optional but nice if you know them) -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interactive Crime — Play Free Interactive Mysteries">
+  <meta name="twitter:description" content="Short, cinematic cases. Examine clues, pick the culprit, and solve the mystery.">
+  <meta name="twitter:image" content="https://interactivecrime.com/og/hallow-manor.jpg">
 
   <style>
     /* -------- color system -------- */
@@ -185,7 +205,6 @@
       <h2>Case 7: The Hollow Manor Haunting</h2>
       <div class="difficulty extreme">Difficulty: Halloween Special (Extreme)</div>
 
-      <!-- SPEED: picture with webp + png fallback; add your real webp path -->
       <picture>
         <source srcset="images/hallow-manor.webp" type="image/webp">
         <img src="images/hallow-manor.png" class="cover-img" loading="lazy" alt="Hallow Manor — haunted manor exterior in fog">
@@ -207,3 +226,7 @@
   <footer role="contentinfo">
     &copy; 2025 Interactive Crime. All rights reserved.
   </footer>
+</body>
+</html>
+
+Next step after you upload this: drop your URL into Facebook’s “Sharing Debugger” and Snapchat’s preview so they refresh the new tags. If you want, I can also help you design a new hallow-manor OG image concept.
