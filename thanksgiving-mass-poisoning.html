@@ -3,35 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Interactive Crime — Play Free Interactive Mysteries</title>
+  <title>Case 8: The Thanksgiving Mass Poisoning — Interactive Crime</title>
 
   <!-- SEO -->
-  <meta name="description" content="Short, cinematic cases. Examine clues, pick the culprit, and solve the mystery. Play free cases and unlock premium stories on Interactive Crime." />
-  <link rel="canonical" href="https://interactivecrime.com/">
+  <meta name="description" content="One Thanksgiving service. One hundred people poisoned. The pastor is blamed, but the evidence points to someone else. Read the case, examine the clues, and name the real culprit." />
+  <link rel="canonical" href="https://interactivecrime.com/thanksgiving-mass-poisoning.html">
   <meta name="theme-color" content="#0b0b0b">
   <meta name="robots" content="index,follow">
 
-  <!-- Favicon (swap path/file as needed) -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="Interactive Crime — Play Free Interactive Mysteries">
-  <meta property="og:description" content="One Thanksgiving service. One hundred people poisoned. The pastor’s on trial—but the real culprit is still free. Play the Thanksgiving Mass Poisoning free through Dec 1.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://interactivecrime.com/">
+  <meta property="og:title" content="Case 8: The Thanksgiving Mass Poisoning — Interactive Crime">
+  <meta property="og:description" content="One hundred people collapse after a church Thanksgiving dinner. The pastor is on trial, but the evidence proves the poisoner was someone else. Can you find them?">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://interactivecrime.com/thanksgiving-mass-poisoning.html">
   <meta property="og:site_name" content="Interactive Crime">
+  <!-- Update this path to your real image -->
   <meta property="og:image" content="https://interactivecrime.com/og/thanksgiving-mass-poisoning.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Interactive Crime — Play Free Interactive Mysteries">
-  <meta name="twitter:description" content="One hundred poisoned. The pastor is blamed—but the evidence tells a different story. Play the Thanksgiving Mass Poisoning free through Dec 1.">
+  <meta name="twitter:title" content="Case 8: The Thanksgiving Mass Poisoning — Interactive Crime">
+  <meta name="twitter:description" content="One hundred poisoned. The pastor is blamed, but the clues say otherwise. Read the case, study the evidence, and name the real culprit.">
   <meta name="twitter:image" content="https://interactivecrime.com/og/thanksgiving-mass-poisoning.jpg">
 
   <style>
-    /* -------- color system -------- */
+    /* -------- color system (match home page) -------- */
     :root{
       --bg:#0b0b0b; --text:#f1f1f1; --muted:#bfbfbf;
       --card:#151515; --border:#262626; --shadow:rgba(0,0,0,.35);
@@ -40,195 +38,504 @@
       --accent-purple:#7b1fa2;   /* unlock buttons & banner base */
       --tape:#ffd740;            /* crime-tape yellow for FREE */
       --tape-text:#111;
-      --focus:#ffe98a;           /* high-contrast focus outline */
+      --focus:#ffe98a;
     }
 
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
-
-    /* a11y: visible focus for keyboard users */
-    :focus{outline:3px solid var(--focus); outline-offset:2px}
-
-    /* -------- header / nav -------- */
-    header{background:#111;padding:20px;text-align:center;border-bottom:1px solid var(--border)}
-    header h1{margin:0;font-size:2.6rem;color:var(--accent-red);letter-spacing:.5px}
-
-    nav{display:flex;justify-content:center;gap:28px;padding:12px;background:#1a1a1a;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
-    nav a{color:var(--text);text-decoration:none;font-weight:700;opacity:.9}
-    nav a:hover{opacity:1;text-decoration:underline}
-    nav a[aria-current="page"]{text-decoration:underline}
-
-    /* -------- promo banner -------- */
-    .promo{
-      background:linear-gradient(90deg,var(--accent-purple),#532a86);
-      color:#fff;text-align:center;padding:10px 14px;border-bottom:2px solid #3a1e63;
-      font-weight:700;font-size:.95rem
+    html,body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Arial,Helvetica,sans-serif;
     }
-    .promo a{color:#ffe98a;text-decoration:underline}
+
+    :focus{outline:3px solid var(--focus);outline-offset:2px}
+
+    a{color:var(--accent-orange)}
+
+    /* -------- sticky case facts bar -------- */
+    .casefacts{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:#111;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      align-items:center;
+      padding:10px 14px;
+      font-size:.9rem;
+    }
+    .casefacts span{color:var(--muted)}
+    .casefacts strong{color:#fff}
+    .pill{
+      padding:4px 9px;
+      border-radius:999px;
+      background:#1e1e1e;
+      border:1px solid var(--border);
+    }
+    .pill--free{
+      background:var(--tape);
+      color:var(--tape-text);
+      border:1px solid #c7a600;
+      font-weight:900;
+    }
+    .casefacts .back-link{
+      text-decoration:none;
+      font-weight:700;
+      margin-right:auto;
+      display:flex;
+      align-items:center;
+      gap:6px;
+      color:#fff;
+    }
 
     /* -------- hero -------- */
     .hero{
-      /* keep your existing hero image path */
-      background:url('images/images/interactivecrime-home.jpg.jpg') center/cover no-repeat;
-      height:420px;width:100%;box-shadow:inset 0 -120px 120px var(--shadow)
+      position:relative;
+      height:320px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:flex-start;
+      padding:24px;
+      background:
+        linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,.1)),
+        url('images/thanksgiving-mass-poisoning-hero.jpg') center/cover no-repeat;
+      box-shadow:0 18px 60px var(--shadow);
+      border-bottom:1px solid var(--border);
+    }
+    .hero h1{
+      margin:0;
+      font-size:2.1rem;
+      max-width:640px;
+    }
+    .hero-tag{
+      font-size:.95rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--muted);
+      margin-bottom:6px;
     }
 
-    /* -------- intro -------- */
-    .intro{text-align:center;padding:32px 20px;max-width:980px;margin:0 auto}
-    .intro p{font-size:1.12rem;margin:0 0 16px;opacity:.95}
-    .cta{display:inline-block;margin-top:8px;padding:12px 18px;border-radius:8px;font-weight:800;text-decoration:none}
-    .cta--primary{background:var(--accent-orange);color:#fff}
-    .cta--primary:hover{filter:brightness(1.05)}
-
-    /* -------- cases grid -------- */
-    h2.section-title{text-align:center;margin:24px 0 6px;font-size:1.8rem}
-    .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;max-width:1150px;margin:18px auto;padding:0 18px 28px}
-    .case-card{
-      background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 8px 24px var(--shadow)
+    /* -------- layout -------- */
+    .page-wrap{
+      max-width:960px;
+      margin:0 auto;
+      padding:24px 18px 40px;
+      line-height:1.7;
     }
-    .case-card h2{margin:0 0 6px;font-size:1.15rem}
-    .difficulty{font-size:.9rem;color:var(--muted);margin-bottom:10px}
-    .easy{color:#90ee90}.intermediate{color:#ffcc00}.hard{color:#ff7a59}
-    .very-hard{color:#ff4500}.extreme{color:var(--accent-red);font-weight:700}
-
-    .cover-img{width:100%;border-radius:8px;margin:10px 0;border:2px solid var(--border)}
-
-    .badge{display:inline-block;font-size:.78rem;padding:3px 8px;border-radius:999px;margin-bottom:10px}
-    .badge--free{background:var(--tape);color:var(--tape-text);font-weight:900;border:1px solid #c7a600}
-    .badge--new{background:#263238;color:#b2ebf2;border:1px solid #34434a}
-
-    /* -------- buttons -------- */
-    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:8px;font-weight:800;text-decoration:none;transition:.15s ease}
-    .btn--free{background:var(--tape);color:var(--tape-text);border:1px solid #c7a600}
-    .btn--free:hover{transform:translateY(-1px);filter:saturate(1.05)}
-    .btn--unlock{background:var(--accent-purple);color:#fff;border:1px solid #532a86}
-    .btn--unlock:hover{transform:translateY(-1px);filter:brightness(1.06)}
-    .btn--investigate{background:var(--accent-red);color:#fff;border:1px solid #b32220}
-    .btn--investigate:hover{transform:translateY(-1px);filter:brightness(1.05)}
-
-    /* -------- about / footer -------- */
-    .about-contact{max-width:860px;margin:34px auto;padding:0 20px 40px;line-height:1.65}
-    .about-contact h3{color:var(--accent-orange);margin-bottom:8px}
-    footer{text-align:center;padding:22px;background:#111;color:#888;border-top:1px solid var(--border)}
-
-    /* -------- reusable case-facts bar (use on case pages) -------- */
-    .casefacts{
-      position:sticky;top:0;z-index:15;background:#111;border-bottom:1px solid var(--border);
-      display:flex;gap:16px;align-items:center;padding:10px 12px
+    h2{
+      margin-top:28px;
+      margin-bottom:10px;
+      font-size:1.4rem;
+      color:var(--accent-orange);
     }
-    .casefacts .start{
-      margin-left:auto;background:var(--tape);color:var(--tape-text);padding:8px 12px;border-radius:6px;
-      font-weight:900;text-decoration:none;border:1px solid #c7a600
+    p{margin:0 0 10px}
+
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      border:1px solid var(--border);
+      padding:18px 16px;
+      box-shadow:0 8px 24px var(--shadow);
+      margin:14px 0;
+    }
+
+    /* -------- timeline -------- */
+    .timeline{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+    .timeline li{
+      padding:8px 0;
+      border-bottom:1px dashed #333;
+    }
+    .timeline li:last-child{border-bottom:none}
+    .timeline-time{
+      font-size:.85rem;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      display:block;
+      margin-bottom:2px;
+    }
+
+    /* -------- suspects -------- */
+    .suspects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+    }
+    .suspect-name{
+      font-weight:700;
+      margin-bottom:4px;
+      font-size:1.02rem;
+    }
+    .suspect-role{
+      font-size:.86rem;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    /* -------- evidence list -------- */
+    .evidence-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+    .evidence-item{
+      margin-bottom:10px;
+      padding-bottom:8px;
+      border-bottom:1px dashed #333;
+    }
+    .evidence-label{
+      font-weight:700;
+      color:#fff;
+      display:block;
+      margin-bottom:2px;
+    }
+
+    /* -------- solve section -------- */
+    .solve-card{
+      margin-top:24px;
+      border-left:4px solid var(--accent-red);
+    }
+    .solve-options{
+      margin:12px 0;
+    }
+    .solve-options label{
+      display:block;
+      margin-bottom:6px;
+      cursor:pointer;
+    }
+    .solve-options input{
+      margin-right:6px;
+    }
+    .solve-btn{
+      margin-top:10px;
+      padding:10px 16px;
+      border-radius:8px;
+      border:none;
+      font-weight:800;
+      background:var(--accent-red);
+      color:#fff;
+      cursor:pointer;
+      transition:.15s ease;
+    }
+    .solve-btn:hover{
+      filter:brightness(1.05);
+      transform:translateY(-1px);
+    }
+
+    .result{
+      margin-top:12px;
+      font-weight:700;
+    }
+    .result.correct{color:#8bc34a}
+    .result.wrong{color:#ff7a59}
+
+    .hidden{display:none}
+
+    /* -------- solution -------- */
+    .solution-card{
+      border-left:4px solid var(--accent-purple);
+      margin-top:26px;
+    }
+    .solution-step{
+      margin-bottom:10px;
+    }
+
+    @media (max-width:600px){
+      .hero{
+        height:260px;
+        padding:16px;
+      }
+      .hero h1{font-size:1.7rem}
     }
   </style>
 </head>
 <body>
 
-  <!-- Seasonal promo banner -->
-  <div class="promo" role="note">
-    <strong>New Case:</strong> The Thanksgiving Mass Poisoning is <u>FREE</u> through Dec 1 —
-    <a href="thanksgiving-mass-poisoning.html">Play now</a>
+  <!-- Sticky case info bar -->
+  <div class="casefacts" role="navigation" aria-label="Case quick facts">
+    <a href="index.html" class="back-link">
+      <span aria-hidden="true">←</span>
+      <span>Back to cases</span>
+    </a>
+    <span class="pill"><strong>Case 8:</strong> The Thanksgiving Mass Poisoning</span>
+    <span class="pill">Difficulty: Master Investigator</span>
+    <span class="pill">Est. time: 10–15 minutes</span>
+    <span class="pill pill--free">Free through Dec 1</span>
   </div>
 
-  <header role="banner">
-    <h1>Interactive Crime</h1>
-  </header>
-
-  <nav role="navigation" aria-label="Main">
-    <a href="#" aria-current="page">Home</a>
-    <a href="#cases">Cases</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero" aria-label="Interactive Crime hero image"></div>
-
-  <section class="intro">
-    <p><strong>Dark mysteries. Twisted motives.</strong> Your detective journey starts here.</p>
-    <p><strong>What is Interactive Crime?</strong><br>
-      Interactive Crime is your gateway to immersive online detective experiences. Solve self-contained cases with real clues, witness statements, and evidence. Perfect for true-crime fans who want to test their instincts.</p>
-    <a class="cta cta--primary" href="#cases">Start Investigating Now</a>
+  <!-- Hero banner -->
+  <section class="hero" aria-label="Thanksgiving Mass Poisoning hero image">
+    <div>
+      <div class="hero-tag">Interactive Crime · Holiday Special</div>
+      <h1>One Thanksgiving service. One hundred poisoned. The wrong person is on trial.</h1>
+    </div>
   </section>
 
-  <h2 id="cases" class="section-title">Available Cases</h2>
+  <main class="page-wrap">
+    <!-- Premise -->
+    <section aria-labelledby="premise-heading">
+      <h2 id="premise-heading">The Case</h2>
+      <div class="card">
+        <p>On Thanksgiving evening, the fellowship hall of <strong>New Promise Chapel</strong> was full. Folding tables lined with turkey, stuffing, and steaming pans of gravy stretched wall to wall. Almost the entire congregation—just over a hundred people—stayed after the service to eat.</p>
+        <p>Thirty minutes after the meal began, people started to collapse.</p>
+        <p>By the time paramedics arrived, every guest who had eaten the gravy was violently ill. Dozens were hospitalized. Three remain in critical condition.</p>
+        <p>Prosecutors moved quickly. They charged <strong>Pastor Elijah Ward</strong> with orchestrating a mass poisoning, claiming he used the chaos to target one specific parishioner he secretly hated. The media branded him the “Thanksgiving Wolf.”</p>
+        <p>But when you are brought in as an outside investigator, the district attorney quietly admits something unsettling:</p>
+        <p><em>The timeline does not actually work if the pastor is the one who did it.</em></p>
+        <p>Your job is to review the scene, the witness statements, and the physical evidence and identify the <strong>real poisoner</strong>.</p>
+      </div>
+    </section>
 
-  <div class="cases">
-    <div class="case-card">
-      <span class="badge badge--new">Updated</span>
-      <h2>Case 1: The Ember Lounge Arson</h2>
-      <div class="difficulty easy">Difficulty: Rookie Detective (Easy)</div>
-      <p>Fire, betrayal, secrets. Analyze evidence and find the arsonist.</p>
-      <a class="btn btn--investigate" href="ember-lounge.html">Investigate</a>
-    </div>
+    <!-- Timeline -->
+    <section aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading">Timeline</h2>
+      <div class="card">
+        <ul class="timeline">
+          <li>
+            <span class="timeline-time">3:30 p.m.</span>
+            <span>Volunteers begin prepping food in the church kitchen. Turkey, sides, and a large pot of gravy are handled inside; pies and rolls are brought from home.</span>
+          </li>
+          <li>
+            <span class="timeline-time">4:45 p.m.</span>
+            <span>Pastor Ward finishes his Thanksgiving sermon upstairs. At the same time, the gravy is moved from the stovetop to a warming tray in the fellowship hall. Several people see it there, covered with a metal lid.</span>
+          </li>
+          <li>
+            <span class="timeline-time">5:05 p.m.</span>
+            <span>Service ends. The congregation files downstairs. Volunteers stand behind the buffet line, serving food. The gravy is uncovered and ladled out by rotating helpers.</span>
+          </li>
+          <li>
+            <span class="timeline-time">5:10–5:25 p.m.</span>
+            <span>Everyone eats. Multiple witnesses note a slightly “bitter” aftertaste in the gravy but assume it is over-seasoned.</span>
+          </li>
+          <li>
+            <span class="timeline-time">5:27 p.m.</span>
+            <span>First wave of guests collapses. 911 calls begin.</span>
+          </li>
+          <li>
+            <span class="timeline-time">5:35 p.m.</span>
+            <span>Police arrive and begin locking down the building. The gravy pot is still on the warmer with a small amount left at the bottom.</span>
+          </li>
+          <li>
+            <span class="timeline-time">Later that night</span>
+            <span>Lab tests show a concentrated dose of <strong>ethyl parathion</strong>, an agricultural insecticide, mixed into only the gravy.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <div class="case-card">
-      <h2>Case 2: The Jewelry Store Heist</h2>
-      <div class="difficulty intermediate">Difficulty: Seasoned Investigator (Intermediate)</div>
-      <p>Diamonds vanish. No forced entry. Four suspects. Who planned it?</p>
-      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/tvqqx" target="_blank" rel="noopener">Unlock Case</a>
-    </div>
+    <!-- Evidence -->
+    <section aria-labelledby="evidence-heading">
+      <h2 id="evidence-heading">Key Evidence</h2>
+      <div class="card">
+        <ul class="evidence-list">
+          <li class="evidence-item">
+            <span class="evidence-label">Evidence 1 — Access to the kitchen</span>
+            <span>The church kitchen stayed unlocked all afternoon. However, the <strong>chemical storage shed</strong> behind the church—where old pesticides and lawn supplies are kept—requires a key. Only three people officially have keys: <strong>Pastor Ward</strong>, <strong>Marla Green</strong> (church treasurer), and <strong>DeAndre Holt</strong> (volunteer custodian and cook).</span>
+          </li>
+          <li class="evidence-item">
+            <span class="evidence-label">Evidence 2 — The pastor’s alibi</span>
+            <span>Phone recordings and livestream footage confirm that Pastor Ward was on the pulpit <strong>from 4:30 p.m. until 4:58 p.m.</strong> without leaving. Several choir members say he hurried directly from the pulpit to the main entrance to greet people as they left, staying in the sanctuary foyer until guests headed downstairs at 5:05 p.m.</span>
+          </li>
+          <li class="evidence-item">
+            <span class="evidence-label">Evidence 3 — When the gravy was safe</span>
+            <span>Two volunteers, <strong>Anne Lopez</strong> and <strong>Eric Pike</strong>, tasted the gravy around <strong>4:40 p.m.</strong> while adjusting the seasoning. Both report it tasted “normal” at that time. The pot was then carried to the warmer in the fellowship hall and covered with a lid.</span>
+          </li>
+          <li class="evidence-item">
+            <span class="evidence-label">Evidence 4 — The missing gloves</span>
+            <span>In the trash near the back door, officers found a pair of disposable food-service gloves smeared with gravy. Trace analysis shows the same pesticide on the gloves. The security camera above that door has been “broken for months,” according to staff.</span>
+          </li>
+          <li class="evidence-item">
+            <span class="evidence-label">Evidence 5 — The insurance mailer</span>
+            <span>Earlier that week, an envelope from a life insurance company addressed to <strong>Lydia Price</strong> was found in the church office trash. She is a long-time congregant and the mother of <strong>Julia Price</strong>, a city health inspector. The envelope advertised large accidental-death payouts for family policy holders.</span>
+          </li>
+          <li class="evidence-item">
+            <span class="evidence-label">Evidence 6 — Financial stress</span>
+            <span>Bank records show that the church is in serious debt. However, the treasurer, <strong>Marla Green</strong>, quietly took out a personal loan in her own name after several thousand dollars went “missing” from the church building fund. She insists she did this to secretly cover bookkeeping mistakes so “no one would panic.”</span>
+          </li>
+          <li class="evidence-item">
+            <span class="evidence-label">Evidence 7 — The targeted plate</span>
+            <span>Prosecutors claim the pastor meant to kill <strong>Caleb Ward</strong>, his estranged son, who came to the dinner with a confrontational attitude. However, serving-line witnesses state that Caleb <strong>refused the gravy completely</strong>, joking that it looked “like wallpaper paste.” He still became ill later—but only mildly—from cross-contamination on his plate.</span>
+          </li>
+          <li class="evidence-item">
+            <span class="evidence-label">Evidence 8 — Who stayed behind</span>
+            <span>When everyone went upstairs for the 4:30 p.m. service, three people remained in or near the kitchen at various points: <strong>DeAndre</strong> finished cleaning knives and pans, <strong>Marla</strong> walked in to check the donation box and carry cash to the office, and <strong>Julia</strong> stepped in briefly to get coffee before joining the service.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <div class="case-card">
-      <h2>Case 3: The Vanished Wife</h2>
-      <div class="difficulty intermediate">Difficulty: Seasoned Investigator (Intermediate)</div>
-      <p>No forced entry. A single journal line points to the truth.</p>
-      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/krifwx" target="_blank" rel="noopener">Unlock Case</a>
-    </div>
+    <!-- Suspects -->
+    <section aria-labelledby="suspects-heading">
+      <h2 id="suspects-heading">Suspects</h2>
+      <div class="suspects">
+        <div class="card">
+          <div class="suspect-name">Pastor Elijah Ward</div>
+          <div class="suspect-role">Senior pastor, public face of the church</div>
+          <p>Dogged by rumors of mismanaging church funds, but no proof. The state argues he used his key to the shed to obtain pesticide and instruct someone to mix it in. He denies ever handling chemicals and insists he never left the pulpit or foyer during the critical time.</p>
+        </div>
 
-    <div class="case-card">
-      <span class="badge badge--free">FREE for a limited time</span>
-      <h2>Case 4: The Abandoned Asylum Files</h2>
-      <div class="difficulty hard">Difficulty: Veteran Detective (Hard)</div>
-      <p>Cold records, missing patients, buried secrets.</p>
-      <a class="btn btn--free" href="abandoned-asylum.html">Play Free</a>
-    </div>
+        <div class="card">
+          <div class="suspect-name">Marla Green</div>
+          <div class="suspect-role">Church treasurer and longtime member</div>
+          <p>Controls the books and has a shed key. Known as meticulous, but bank records show desperate attempts to plug holes in the church finances. She supervised the buffet line and was seen near the gravy several times, “making sure it stayed full.”</p>
+        </div>
 
-    <div class="case-card">
-      <h2>Case 5: The Wrongly Accused</h2>
-      <div class="difficulty very-hard">Difficulty: Master Investigator (Very Hard)</div>
-      <p>Airtight conviction—or a setup? Reopen the file and prove it.</p>
-      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/gpufcn" target="_blank" rel="noopener">Unlock Case</a>
-    </div>
+        <div class="card">
+          <div class="suspect-name">DeAndre Holt</div>
+          <div class="suspect-role">Volunteer custodian and cook</div>
+          <p>Helps with most church events. Has a shed key for yard work and maintenance. He helped prepare the gravy on the stove but claims he never touched it again after it was moved to the warmer. Several guests describe him as “shaken” and “apologizing nonstop” after the poisoning.</p>
+        </div>
 
-    <div class="case-card">
-      <h2>Case 6: The Car Washed Auto Theft</h2>
-      <div class="difficulty extreme">Difficulty: Extreme (Extremely Hard)</div>
-      <p>Ten cars vanish after a deluxe wash. Four insiders. Expose the ring.</p>
-      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/sounqs" target="_blank" rel="noopener">Unlock Case</a>
-    </div>
+        <div class="card">
+          <div class="suspect-name">Julia Price</div>
+          <div class="suspect-role">Health inspector and congregant</div>
+          <p>Attends irregularly, usually with her mother Lydia. She has no shed key, but her job means she knows how inspections work and how foodborne toxins behave. Witnesses say she was oddly calm during the chaos, taking notes while others panicked.</p>
+        </div>
 
-    <div class="case-card">
-      <h2>Case 7: The Hollow Manor Haunting</h2>
-      <div class="difficulty extreme">Difficulty: Halloween Special (Extreme)</div>
+        <div class="card">
+          <div class="suspect-name">Caleb Ward</div>
+          <div class="suspect-role">Pastor’s estranged son</div>
+          <p>Returned to town recently, openly critical of his father. He refused gravy but still got a mild dose from mixing food. Police briefly considered him a suspect, but he spent most of the critical prep time upstairs in the last pew, scrolling on his phone.</p>
+        </div>
+      </div>
+    </section>
 
-      <picture>
-        <source srcset="images/hallow-manor.webp" type="image/webp">
-        <img src="images/hallow-manor.png" class="cover-img" loading="lazy" alt="Hallow Manor — haunted manor exterior in fog">
-      </picture>
+    <!-- Solve it -->
+    <section aria-labelledby="solve-heading">
+      <h2 id="solve-heading">Who really poisoned the congregation?</h2>
+      <div class="card solve-card">
+        <p>Your task is simple:</p>
+        <p><strong>Choose the person who most likely introduced the pesticide into the gravy.</strong> The clues above are all you get.</p>
 
-      <p>Halloween dare. Five entered. Four returned. One vanished.</p>
-      <a class="btn btn--free" href="hollow-manor.html">Play Free</a>
-    </div>
+        <form id="solve-form" class="solve-options">
+          <label>
+            <input type="radio" name="culprit" value="ward" />
+            Pastor Elijah Ward
+          </label>
+          <label>
+            <input type="radio" name="culprit" value="marla" />
+            Marla Green, the treasurer
+          </label>
+          <label>
+            <input type="radio" name="culprit" value="deandre" />
+            DeAndre Holt, custodian and cook
+          </label>
+          <label>
+            <input type="radio" name="culprit" value="julia" />
+            Julia Price, health inspector
+          </label>
+          <label>
+            <input type="radio" name="culprit" value="caleb" />
+            Caleb Ward, the pastor’s son
+          </label>
 
-    <div class="case-card">
-      <span class="badge badge--free">FREE through Dec 1</span>
-      <h2>Case 8: The Thanksgiving Mass Poisoning</h2>
-      <div class="difficulty very-hard">Difficulty: Master Investigator (Very Hard)</div>
-      <p>One church banquet. One hundred poisoned. The pastor is blamed—but the evidence points somewhere else.</p>
-      <a class="btn btn--free" href="thanksgiving-mass-poisoning.html">Play Free</a>
-    </div>
-  </div>
+          <button type="button" id="solve-btn" class="solve-btn">Lock In Your Suspect</button>
+        </form>
 
-  <div class="about-contact" id="about">
-    <h3>About Interactive Crime</h3>
-    <p>We craft tight, replayable mysteries designed for sharp eyes and bold hunches. No filler—just evidence, contradictions, and the thrill of the reveal.</p>
+        <div id="result" class="result hidden" aria-live="polite"></div>
+        <p id="solution-link" class="hidden">
+          Scroll down to read the <a href="#solution">full solution and breakdown.</a>
+        </p>
+      </div>
+    </section>
 
-    <h3 id="contact">Contact</h3>
-    <p>Questions or need help? Email <a href="mailto:info@interactivecrime.com" style="color:var(--accent-orange);text-decoration:none;">info@interactivecrime.com</a>.</p>
-  </div>
+    <!-- Solution / Breakdown -->
+    <section aria-labelledby="solution-heading">
+      <h2 id="solution-heading">Solution</h2>
+      <div id="solution" class="card solution-card hidden">
+        <p class="solution-step"><strong>The correct culprit is: Marla Green, the treasurer.</strong></p>
 
-  <footer role="contentinfo">
-    &copy; 2025 Interactive Crime. All rights reserved.
-  </footer>
+        <p class="solution-step">
+          <strong>1. The pastor’s timeline removes him.</strong><br>
+          At first glance, Pastor Ward seems like the obvious villain. But livestream footage and multiple witnesses keep him either on the pulpit or in the foyer greeting people from <strong>4:30 p.m. until 5:05 p.m.</strong> The gravy was tasted and found normal at 4:40 p.m., then moved and covered. For him to poison it, he would need a secret window alone with the pot and access to the shed. No such gap appears in the verified timeline.
+        </p>
+
+        <p class="solution-step">
+          <strong>2. The poison had to be added after 4:40 p.m., before guests lined up.</strong><br>
+          Two volunteers tasted the gravy at 4:40 p.m. and noticed nothing unusual. Everyone falls ill shortly after eating, and only those who had gravy get violently sick. That means the pesticide was introduced <em>after</em> the final taste test—most likely just before guests came downstairs, while the pot sat covered on the warmer.
+        </p>
+
+        <p class="solution-step">
+          <strong>3. Access to the pesticide narrows the field.</strong><br>
+          The ethyl parathion came from the locked shed. Only <strong>three keys</strong> exist: Ward, Marla, and DeAndre. Julia and Caleb do not have their own keys, making it harder (though not impossible) for them to obtain the chemical unnoticed. If this were a carefully planned poisoning, the simplest path is someone who could come and go from the shed without raising questions.
+        </p>
+
+        <p class="solution-step">
+          <strong>4. DeAndre had motive to avoid blame, not to risk everything.</strong><br>
+          DeAndre helped cook the gravy and is devastated afterward, apologizing to everyone. Importantly, he had already been working in the kitchen when the gravy was still safe at 4:40 p.m. If he wanted to poison people, the easiest moment would have been <em>then</em>, while stirring. Instead, the contamination happens later, when he is cleaning and drifting in and out. He has access, but no clear benefit from a mass poisoning that could easily be pinned on him as the cook.
+        </p>
+
+        <p class="solution-step">
+          <strong>5. The financial pressure and “missing” money point to Marla.</strong><br>
+          Marla is quietly covering large shortfalls in the church budget with a personal loan. That means she has the strongest reason to fear an outside audit or a scandal that exposes her bookkeeping. A public tragedy that distracts from the finances—and pins everything on the pastor’s supposed corruption—diverts attention away from her. She also supervises the buffet line, hovering near the gravy throughout the evening.
+        </p>
+
+        <p class="solution-step">
+          <strong>6. She is perfectly positioned at the critical moment.</strong><br>
+          While everyone else is upstairs near the end of the sermon, Marla steps into the kitchen “to check the donation box” and carry cash to the office. That trip conveniently places her alone near both the back door (where the pesticide-laced gloves are later found) and the now-covered gravy pot. With her shed key, she can slip out, draw a small amount of ethyl parathion, return, don gloves, lift the lid, and stir it in before rejoining the service or the buffet.
+        </p>
+
+        <p class="solution-step">
+          <strong>7. Julia and Caleb are red herrings.</strong><br>
+          Julia’s calm behavior and the insurance mailer about her mother are meant to spook you, but the poisoning is too messy and public for a targeted insurance scam. Caleb refusing gravy also undercuts the idea that he was the true target of a plot by his father. Both add tension, but neither has as clean a combination of access, timing, and motive as Marla.
+        </p>
+
+        <p class="solution-step">
+          <strong>8. The gloves and the shed key seal it.</strong><br>
+          The used food-service gloves with traces of pesticide and gravy, dumped near the shed door with a “broken” camera, show the poisoner took deliberate steps to avoid skin contact and surveillance. Of the people with keys, Marla is the one who could be there without drawing attention—checking donations and “making sure the buffet stayed stocked.”</p>
+
+        <p class="solution-step">
+          In the end, the pastor makes a convenient monster for the headlines. But once you strip away assumptions and follow the access, the timing, and the money, <strong>the only suspect who fits every piece is Marla Green.</strong>
+        </p>
+      </div>
+    </section>
+
+    <section aria-label="Next steps">
+      <h2>Continue the investigation</h2>
+      <div class="card">
+        <p>Ready for another case? Return to the main page and tackle a different mystery.</p>
+        <p><a href="index.html">Back to Interactive Crime home</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('solve-btn');
+      const resultEl = document.getElementById('result');
+      const solutionLink = document.getElementById('solution-link');
+      const solutionCard = document.getElementById('solution');
+
+      btn.addEventListener('click', function(){
+        const selected = document.querySelector('input[name="culprit"]:checked');
+        if(!selected){
+          resultEl.textContent = "Pick the suspect you believe did it before locking in.";
+          resultEl.className = "result wrong";
+          resultEl.classList.remove('hidden');
+          return;
+        }
+
+        const value = selected.value;
+        if(value === "marla"){
+          resultEl.textContent = "Correct. The evidence points to Marla Green as the real poisoner.";
+          resultEl.className = "result correct";
+        } else {
+          resultEl.textContent = "Not quite. That suspect has suspicious pieces, but the full picture points to someone else.";
+          resultEl.className = "result wrong";
+        }
+
+        resultEl.classList.remove('hidden');
+        solutionLink.classList.remove('hidden');
+        solutionCard.classList.remove('hidden');
+      });
+    })();
+  </script>
 </body>
 </html>
