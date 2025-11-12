@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Interactive Crime — Play Free Interactive Mysteries</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Short, cinematic cases. Examine clues, pick the culprit, and solve the mystery. Play free cases and unlock premium stories on Interactive Crime." />
+  <link rel="canonical" href="https://interactivecrime.com/">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="robots" content="index,follow">
+
+  <!-- Favicon (swap path/file as needed) -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Interactive Crime — Play Free Interactive Mysteries">
+  <meta property="og:description" content="One Thanksgiving service. One hundred people poisoned. The pastor’s on trial—but the real culprit is still free. Play the Thanksgiving Mass Poisoning free through Dec 1.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://interactivecrime.com/">
+  <meta property="og:site_name" content="Interactive Crime">
+  <meta property="og:image" content="https://interactivecrime.com/og/thanksgiving-mass-poisoning.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interactive Crime — Play Free Interactive Mysteries">
+  <meta name="twitter:description" content="One hundred poisoned. The pastor is blamed—but the evidence tells a different story. Play the Thanksgiving Mass Poisoning free through Dec 1.">
+  <meta name="twitter:image" content="https://interactivecrime.com/og/thanksgiving-mass-poisoning.jpg">
+
+  <style>
+    /* -------- color system -------- */
+    :root{
+      --bg:#0b0b0b; --text:#f1f1f1; --muted:#bfbfbf;
+      --card:#151515; --border:#262626; --shadow:rgba(0,0,0,.35);
+      --accent-red:#e53935;      /* brand red */
+      --accent-orange:#e25822;   /* CTA accent */
+      --accent-purple:#7b1fa2;   /* unlock buttons & banner base */
+      --tape:#ffd740;            /* crime-tape yellow for FREE */
+      --tape-text:#111;
+      --focus:#ffe98a;           /* high-contrast focus outline */
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+
+    /* a11y: visible focus for keyboard users */
+    :focus{outline:3px solid var(--focus); outline-offset:2px}
+
+    /* -------- header / nav -------- */
+    header{background:#111;padding:20px;text-align:center;border-bottom:1px solid var(--border)}
+    header h1{margin:0;font-size:2.6rem;color:var(--accent-red);letter-spacing:.5px}
+
+    nav{display:flex;justify-content:center;gap:28px;padding:12px;background:#1a1a1a;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+    nav a{color:var(--text);text-decoration:none;font-weight:700;opacity:.9}
+    nav a:hover{opacity:1;text-decoration:underline}
+    nav a[aria-current="page"]{text-decoration:underline}
+
+    /* -------- promo banner -------- */
+    .promo{
+      background:linear-gradient(90deg,var(--accent-purple),#532a86);
+      color:#fff;text-align:center;padding:10px 14px;border-bottom:2px solid #3a1e63;
+      font-weight:700;font-size:.95rem
+    }
+    .promo a{color:#ffe98a;text-decoration:underline}
+
+    /* -------- hero -------- */
+    .hero{
+      /* keep your existing hero image path */
+      background:url('images/images/interactivecrime-home.jpg.jpg') center/cover no-repeat;
+      height:420px;width:100%;box-shadow:inset 0 -120px 120px var(--shadow)
+    }
+
+    /* -------- intro -------- */
+    .intro{text-align:center;padding:32px 20px;max-width:980px;margin:0 auto}
+    .intro p{font-size:1.12rem;margin:0 0 16px;opacity:.95}
+    .cta{display:inline-block;margin-top:8px;padding:12px 18px;border-radius:8px;font-weight:800;text-decoration:none}
+    .cta--primary{background:var(--accent-orange);color:#fff}
+    .cta--primary:hover{filter:brightness(1.05)}
+
+    /* -------- cases grid -------- */
+    h2.section-title{text-align:center;margin:24px 0 6px;font-size:1.8rem}
+    .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;max-width:1150px;margin:18px auto;padding:0 18px 28px}
+    .case-card{
+      background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 8px 24px var(--shadow)
+    }
+    .case-card h2{margin:0 0 6px;font-size:1.15rem}
+    .difficulty{font-size:.9rem;color:var(--muted);margin-bottom:10px}
+    .easy{color:#90ee90}.intermediate{color:#ffcc00}.hard{color:#ff7a59}
+    .very-hard{color:#ff4500}.extreme{color:var(--accent-red);font-weight:700}
+
+    .cover-img{width:100%;border-radius:8px;margin:10px 0;border:2px solid var(--border)}
+
+    .badge{display:inline-block;font-size:.78rem;padding:3px 8px;border-radius:999px;margin-bottom:10px}
+    .badge--free{background:var(--tape);color:var(--tape-text);font-weight:900;border:1px solid #c7a600}
+    .badge--new{background:#263238;color:#b2ebf2;border:1px solid #34434a}
+
+    /* -------- buttons -------- */
+    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:8px;font-weight:800;text-decoration:none;transition:.15s ease}
+    .btn--free{background:var(--tape);color:var(--tape-text);border:1px solid #c7a600}
+    .btn--free:hover{transform:translateY(-1px);filter:saturate(1.05)}
+    .btn--unlock{background:var(--accent-purple);color:#fff;border:1px solid #532a86}
+    .btn--unlock:hover{transform:translateY(-1px);filter:brightness(1.06)}
+    .btn--investigate{background:var(--accent-red);color:#fff;border:1px solid #b32220}
+    .btn--investigate:hover{transform:translateY(-1px);filter:brightness(1.05)}
+
+    /* -------- about / footer -------- */
+    .about-contact{max-width:860px;margin:34px auto;padding:0 20px 40px;line-height:1.65}
+    .about-contact h3{color:var(--accent-orange);margin-bottom:8px}
+    footer{text-align:center;padding:22px;background:#111;color:#888;border-top:1px solid var(--border)}
+
+    /* -------- reusable case-facts bar (use on case pages) -------- */
+    .casefacts{
+      position:sticky;top:0;z-index:15;background:#111;border-bottom:1px solid var(--border);
+      display:flex;gap:16px;align-items:center;padding:10px 12px
+    }
+    .casefacts .start{
+      margin-left:auto;background:var(--tape);color:var(--tape-text);padding:8px 12px;border-radius:6px;
+      font-weight:900;text-decoration:none;border:1px solid #c7a600
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seasonal promo banner -->
+  <div class="promo" role="note">
+    <strong>New Case:</strong> The Thanksgiving Mass Poisoning is <u>FREE</u> through Dec 1 —
+    <a href="thanksgiving-mass-poisoning.html">Play now</a>
+  </div>
+
+  <header role="banner">
+    <h1>Interactive Crime</h1>
+  </header>
+
+  <nav role="navigation" aria-label="Main">
+    <a href="#" aria-current="page">Home</a>
+    <a href="#cases">Cases</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero" aria-label="Interactive Crime hero image"></div>
+
+  <section class="intro">
+    <p><strong>Dark mysteries. Twisted motives.</strong> Your detective journey starts here.</p>
+    <p><strong>What is Interactive Crime?</strong><br>
+      Interactive Crime is your gateway to immersive online detective experiences. Solve self-contained cases with real clues, witness statements, and evidence. Perfect for true-crime fans who want to test their instincts.</p>
+    <a class="cta cta--primary" href="#cases">Start Investigating Now</a>
+  </section>
+
+  <h2 id="cases" class="section-title">Available Cases</h2>
+
+  <div class="cases">
+    <div class="case-card">
+      <span class="badge badge--new">Updated</span>
+      <h2>Case 1: The Ember Lounge Arson</h2>
+      <div class="difficulty easy">Difficulty: Rookie Detective (Easy)</div>
+      <p>Fire, betrayal, secrets. Analyze evidence and find the arsonist.</p>
+      <a class="btn btn--investigate" href="ember-lounge.html">Investigate</a>
+    </div>
+
+    <div class="case-card">
+      <h2>Case 2: The Jewelry Store Heist</h2>
+      <div class="difficulty intermediate">Difficulty: Seasoned Investigator (Intermediate)</div>
+      <p>Diamonds vanish. No forced entry. Four suspects. Who planned it?</p>
+      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/tvqqx" target="_blank" rel="noopener">Unlock Case</a>
+    </div>
+
+    <div class="case-card">
+      <h2>Case 3: The Vanished Wife</h2>
+      <div class="difficulty intermediate">Difficulty: Seasoned Investigator (Intermediate)</div>
+      <p>No forced entry. A single journal line points to the truth.</p>
+      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/krifwx" target="_blank" rel="noopener">Unlock Case</a>
+    </div>
+
+    <div class="case-card">
+      <span class="badge badge--free">FREE for a limited time</span>
+      <h2>Case 4: The Abandoned Asylum Files</h2>
+      <div class="difficulty hard">Difficulty: Veteran Detective (Hard)</div>
+      <p>Cold records, missing patients, buried secrets.</p>
+      <a class="btn btn--free" href="abandoned-asylum.html">Play Free</a>
+    </div>
+
+    <div class="case-card">
+      <h2>Case 5: The Wrongly Accused</h2>
+      <div class="difficulty very-hard">Difficulty: Master Investigator (Very Hard)</div>
+      <p>Airtight conviction—or a setup? Reopen the file and prove it.</p>
+      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/gpufcn" target="_blank" rel="noopener">Unlock Case</a>
+    </div>
+
+    <div class="case-card">
+      <h2>Case 6: The Car Washed Auto Theft</h2>
+      <div class="difficulty extreme">Difficulty: Extreme (Extremely Hard)</div>
+      <p>Ten cars vanish after a deluxe wash. Four insiders. Expose the ring.</p>
+      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/sounqs" target="_blank" rel="noopener">Unlock Case</a>
+    </div>
+
+    <div class="case-card">
+      <h2>Case 7: The Hollow Manor Haunting</h2>
+      <div class="difficulty extreme">Difficulty: Halloween Special (Extreme)</div>
+
+      <picture>
+        <source srcset="images/hallow-manor.webp" type="image/webp">
+        <img src="images/hallow-manor.png" class="cover-img" loading="lazy" alt="Hallow Manor — haunted manor exterior in fog">
+      </picture>
+
+      <p>Halloween dare. Five entered. Four returned. One vanished.</p>
+      <a class="btn btn--free" href="hollow-manor.html">Play Free</a>
+    </div>
+
+    <div class="case-card">
+      <span class="badge badge--free">FREE through Dec 1</span>
+      <h2>Case 8: The Thanksgiving Mass Poisoning</h2>
+      <div class="difficulty very-hard">Difficulty: Master Investigator (Very Hard)</div>
+      <p>One church banquet. One hundred poisoned. The pastor is blamed—but the evidence points somewhere else.</p>
+      <a class="btn btn--free" href="thanksgiving-mass-poisoning.html">Play Free</a>
+    </div>
+  </div>
+
+  <div class="about-contact" id="about">
+    <h3>About Interactive Crime</h3>
+    <p>We craft tight, replayable mysteries designed for sharp eyes and bold hunches. No filler—just evidence, contradictions, and the thrill of the reveal.</p>
+
+    <h3 id="contact">Contact</h3>
+    <p>Questions or need help? Email <a href="mailto:info@interactivecrime.com" style="color:var(--accent-orange);text-decoration:none;">info@interactivecrime.com</a>.</p>
+  </div>
+
+  <footer role="contentinfo">
+    &copy; 2025 Interactive Crime. All rights reserved.
+  </footer>
+</body>
+</html>
