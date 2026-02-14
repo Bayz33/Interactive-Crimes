@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case 9: The Valentine Massacre – Interactive Crime (MCQ)</title>
+  <meta name="description" content="For ten years, a woman has been murdered every Valentine’s Day. A single red rose is left behind. Find who the Valentine Massacre is—and prove it." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body { background-color: #0b0b0b; color: #e0e0e0; font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; }
+    header { background-color: #141414; padding: 25px; text-align: center; border-bottom: 2px solid #ba68c8; }
+    header h1 { margin: 0; font-size: 2em; color: #ba68c8; letter-spacing: 2px; }
+    nav { margin-top: 10px; }
+    nav a { margin: 0 12px; color: #e0e0e0; text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; transition: border-color 0.3s; }
+    nav a:hover { border-color: #ba68c8; }
+    section { max-width: 900px; margin: auto; padding: 30px 20px; line-height: 1.7; }
+    h2 { color: #ba68c8; border-bottom: 1px solid #ba68c8; padding-bottom: 5px; margin-top: 40px; }
+    .evidence { background-color: #1c1c1c; padding: 20px; margin-top: 20px; border-left: 6px solid #ba68c8; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+    .evidence p { margin: 10px 0; }
+    .submit-box { background: #1c1c1c; padding: 25px; margin-top: 40px; border: 1px solid #ba68c8; box-shadow: 0 0 10px rgba(0,0,0,0.6); }
+    button { background-color: #ba68c8; color: #fff; border: none; padding: 12px; margin-top: 20px; cursor: pointer; font-size: 16px; transition: background-color 0.3s; }
+    button:hover { background-color: #ce93d8; }
+    footer { background-color: #141414; padding: 20px; text-align: center; border-top: 2px solid #ba68c8; font-size: 0.9em; color: #aaa; }
+    .case-cover { width: 100%; max-width: 900px; display: block; margin: 30px auto 0; border: 2px solid #ba68c8; box-shadow: 0 0 12px rgba(186, 104, 200, 0.3); }
+    fieldset { border: 1px solid #ba68c8; border-radius: 8px; padding: 12px; margin-top: 16px; }
+    legend { padding: 0 6px; color: #ba68c8; }
+    .mcq { display: grid; gap: 10px; margin-top: 8px; }
+    .mcq label { display: flex; gap: 10px; align-items: flex-start; background: #222; border: 1px solid #333; border-radius: 8px; padding: 10px; }
+    .mcq input { margin-top: 2px; }
+    #result { margin-top: 16px; font-weight: bold; }
+    .note { color:#bbb; font-size:.95em; }
+    ul { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interactive Crime</h1>
+    <nav>
+      <a href="index.html">Overview</a>
+      <a href="#scene">Crime Scene</a>
+      <a href="#witnesses">Witnesses</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#solve">Solve</a>
+    </nav>
+  </header>
+
+  <!-- COVER IMAGE (upload your cover and match the filename) -->
+  <img src="images/images/case9-valentine-cover.png" alt="Case 9 Cover Image" class="case-cover" />
+
+  <section id="scene">
+    <h2>Case 9: The Valentine Massacre</h2>
+    <p><strong>Seasonal Special: Valentine’s</strong></p>
+    <p>For the last <strong>ten years</strong>, the city has woken up on Valentine’s Day to the same nightmare: a woman murdered between <strong>11:30 PM and 12:30 AM</strong>.</p>
+    <p>Each scene is staged. A <strong>single red rose</strong> placed on the victim’s chest. No forced entry. No robbery. No message—just a ritual.</p>
+    <p>The media calls the killer: <strong>“The Valentine Massacre.”</strong></p>
+    <p>This year, the pattern breaks. The victim is connected to the case files themselves… and someone close to the investigation is hiding something.</p>
+
+    <p>Your mission: <strong>Solve the case</strong> by answering three critical questions:</p>
+    <ul>
+      <li>Who is the Valentine Massacre?</li>
+      <li>What is their motive?</li>
+      <li>What key piece of evidence proves it?</li>
+    </ul>
+
+    <p class="note">Tip: The killer isn’t just choosing victims. They’re choosing a <em>story</em>—and controlling how the city reads it.</p>
+  </section>
+
+  <section id="crime">
+    <h2>Crime Scene Report</h2>
+    <div class="evidence">
+      <p><strong>Latest Victim:</strong> Harper Lane, 29 (Wedding Planner)</p>
+      <p><strong>Location:</strong> Apartment 3C, Rosewick Flats</p>
+      <p><strong>Time of Death:</strong> Estimated 12:07 AM, Feb 14</p>
+      <p><strong>Cause:</strong> Ligature strangulation (thin cord/rope); faint bruising pattern consistent with prior cases</p>
+      <p><strong>Signature:</strong> Single red rose placed on chest; victim posed neatly; no forced entry; phone missing</p>
+      <p><strong>Investigator Note:</strong> “Victim’s front door lock shows no tampering. Entry likely by someone she trusted—or someone with access.”</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Ten-Year Pattern Summary:</strong></p>
+      <ul>
+        <li>10 victims / 10 years / always Feb 14</li>
+        <li>Victims: women age 25–35; recently ended a relationship</li>
+        <li>Time window: 11:30 PM – 12:30 AM</li>
+        <li>No forced entry; scene staged; rose left behind</li>
+        <li>All cases assigned to the same investigative unit</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="witnesses">
+    <h2>Witness Statements</h2>
+
+    <div class="evidence">
+      <p><strong>Mila Grant (Neighbor, 3B):</strong> “Around midnight I heard the hallway door click, like someone leaving fast. Not running—just… urgent. I looked through the peephole but saw nothing.”</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Jordan Voss (Building Concierge):</strong> “A man in a dark coat signed in earlier, said he was ‘maintenance’—but I never got a work order. He didn’t give a unit number. He just… smiled.”</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Case Archivist (Records Dept.):</strong> “Someone accessed the old Valentine case files last week. That’s unusual. The log shows the files were pulled under Detective Cole’s credentials.”</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Florist Interview (Scarlet Bloom Employee):</strong> “Detective Cole has bought roses here before. Not for evidence—personal. But he always paid cash and asked for the same thing: single stems, no bouquet.”</p>
+    </div>
+  </section>
+
+  <section id="evidence">
+    <h2>Evidence Locker</h2>
+
+    <div class="evidence">
+      <p><strong>Evidence 1 – The Rose Supply:</strong> The rose left at the latest scene matches a rare supplier used by <em>Scarlet Bloom</em>. Only select clients can request those stems off-record.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Evidence 2 – Access Logs:</strong> The original 10-year case files were accessed last week under <strong>Detective Aaron Cole</strong>’s credentials. The access occurred at <strong>11:48 PM</strong>, Feb 13.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Evidence 3 – The Phone:</strong> The victim’s phone is missing. Her laptop shows a saved draft email titled: <em>“I remember you.”</em> Unsent. No recipient listed.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Evidence 4 – The Knot:</strong> Forensics confirm the ligature knot is consistent across multiple scenes. The knot style is taught in basic restraint and transport training—commonly used in law enforcement and corrections.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Evidence 5 – A Private Storage Unit:</strong> An anonymous tip reports a storage unit containing Valentine news clippings and dried roses. The unit is paid in cash. The security office provides a partial plate: <strong>8LZ-3</strong>.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Evidence 6 – The “Broken” Camera Pattern:</strong> In 6 out of the 10 cases, security cameras nearby were “malfunctioning” or facing away at the critical time window.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Evidence 7 – The First Year:</strong> The first Valentine victim (10 years ago) was <strong>Detective Cole’s wife’s sister</strong>. The case notes mention “personal conflict,” but the pages describing it are missing from the archived binder.</p>
+    </div>
+
+    <div class="evidence">
+      <p class="note"><strong>Detective’s Note (found in margin of an old report):</strong> “They all think it’s about love. It’s about control.”</p>
+    </div>
+  </section>
+
+  <section id="solve">
+    <h2>Submit Your Solution</h2>
+    <div class="submit-box">
+
+      <fieldset>
+        <legend>Who is the Valentine Massacre?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="suspect" value="cole" required/> Detective Aaron Cole (Lead Investigator)</label>
+          <label><input type="radio" name="suspect" value="monroe"/> Dr. Elise Monroe (Forensic Pathologist)</label>
+          <label><input type="radio" name="suspect" value="harper"/> Daniel Harper (Florist / Scarlet Bloom)</label>
+          <label><input type="radio" name="suspect" value="whitaker"/> Mason Whitaker (Relationship Therapist)</label>
+          <label><input type="radio" name="suspect" value="unknown"/> Unknown copycat killer</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What was their motive?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="motive" value="control" required/> Obsession with control and punishment tied to personal Valentine trauma</label>
+          <label><input type="radio" name="motive" value="money"/> Profit from selling information / blackmail</label>
+          <label><input type="radio" name="motive" value="revenge"/> Revenge against a specific victim (personal grudge)</label>
+          <label><input type="radio" name="motive" value="ideology"/> Ideological hatred of “modern dating”</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What key evidence proves it?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="evidence" value="logs" required/> Case file access logs under Cole’s credentials at 11:48 PM, Feb 13</label>
+          <label><input type="radio" name="evidence" value="knot"/> The law-enforcement style knot used in the ligature across multiple scenes</label>
+          <label><input type="radio" name="evidence" value="roses"/> Rare rose supplier traced to off-record purchases tied to Cole</label>
+          <label><input type="radio" name="evidence" value="storage"/> Storage unit tip: clippings & dried roses + partial plate 8LZ-3</label>
+        </div>
+      </fieldset>
+
+      <button id="submitBtn">Submit Answers</button>
+      <p id="result"></p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', function(){
+      const suspect = (document.querySelector('input[name="suspect"]:checked')||{}).value || '';
+      const motive  = (document.querySelector('input[name="motive"]:checked')||{}).value || '';
+      const evidence= (document.querySelector('input[name="evidence"]:checked')||{}).value || '';
+      const result  = document.getElementById('result');
+
+      // Ground truth:
+      // Suspect: Detective Cole
+      // Motive: Control/punishment tied to personal trauma
+      // Proof: Storage unit tip connects ritual collection + partial plate, strongest "proves it" item.
+      const ok = (suspect === 'cole') && (motive === 'control') && (evidence === 'storage');
+
+      if(ok){
+        result.textContent = '✅ Correct! The pattern, access, and the ritual collection tie back to Detective Cole.';
+        result.style.color = '#00e676';
+      } else {
+        result.textContent = '❌ Not quite. Re-check who controls the case narrative, who can sabotage cameras, and what evidence directly links the ritual to a person.';
+        result.style.color = '#ff5252';
+      }
+    });
+  </script>
+
+  <footer>
+    © 2026 Interactive Crime. All rights reserved.
+  </footer>
+</body>
+</html>
