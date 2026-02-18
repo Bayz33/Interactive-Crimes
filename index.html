@@ -89,10 +89,104 @@
     }
     .promo a{color:#ffe98a;text-decoration:underline}
 
-    .hero{
-      background:url('images/images/interactivecrime-home.jpg.jpg') center/cover no-repeat;
-      height:420px;width:100%;box-shadow:inset 0 -120px 120px var(--shadow)
+    /* ===== Featured Spotlight Hero (homepage-safe, no image required) ===== */
+    .hero-spotlight{
+      min-height:420px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      padding:28px 18px;
+      border-bottom:1px solid var(--border);
+      background:
+        radial-gradient(circle at top center, rgba(123,31,162,.28), transparent 60%),
+        radial-gradient(circle at 25% 35%, rgba(229,57,53,.12), transparent 55%),
+        linear-gradient(180deg, #0b0b0b 0%, #111 100%);
     }
+
+    .hero-inner{
+      width:100%;
+      max-width:1150px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:end;
+    }
+
+    .featured-card{
+      background:rgba(21,21,21,.92);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:20px;
+      box-shadow:0 8px 24px var(--shadow);
+    }
+
+    .featured-top{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-bottom:8px;
+    }
+
+    .badge{display:inline-block;font-size:.78rem;padding:3px 8px;border-radius:999px;margin-bottom:10px}
+    .badge--free{background:var(--tape);color:var(--tape-text);font-weight:900;border:1px solid #c7a600}
+    .badge--new{background:#263238;color:#b2ebf2;border:1px solid #34434a}
+    .badge--featured{background:#1f1f1f;color:#ffe98a;border:1px solid #3a1e63;font-weight:900}
+
+    .featured-title{
+      margin:6px 0 10px;
+      font-size:2rem;
+      line-height:1.15;
+    }
+
+    .featured-sub{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:1.05rem;
+      line-height:1.6;
+    }
+
+    .featured-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:8px;font-weight:800;text-decoration:none}
+    .btn--free{background:var(--tape);color:var(--tape-text);border:1px solid #c7a600}
+    .btn--unlock{background:var(--accent-purple);color:#fff;border:1px solid #532a86}
+    .btn--investigate{background:var(--accent-red);color:#fff;border:1px solid #b32220}
+
+    .btn--secondary{
+      background:transparent;
+      color:#ffe98a;
+      border:1px solid #3a1e63;
+    }
+
+    .featured-meta{
+      background:rgba(17,17,17,.85);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 8px 24px var(--shadow);
+    }
+
+    .featured-meta h3{
+      margin:0 0 10px;
+      color:#ffe98a;
+      font-size:1rem;
+      letter-spacing:.3px;
+    }
+
+    .meta-line{
+      margin:8px 0;
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.5;
+    }
+
+    .meta-line strong{ color:var(--text); }
 
     .intro{text-align:center;padding:32px 20px;max-width:980px;margin:0 auto}
     .intro p{font-size:1.12rem;margin:0 0 16px;opacity:.95}
@@ -126,17 +220,13 @@
     .very-hard{color:#ff4500}
     .extreme{color:var(--accent-red);font-weight:700}
 
-    .badge{display:inline-block;font-size:.78rem;padding:3px 8px;border-radius:999px;margin-bottom:10px}
-    .badge--free{background:var(--tape);color:var(--tape-text);font-weight:900;border:1px solid #c7a600}
-    .badge--new{background:#263238;color:#b2ebf2;border:1px solid #34434a}
-
-    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:8px;font-weight:800;text-decoration:none}
-    .btn--free{background:var(--tape);color:var(--tape-text);border:1px solid #c7a600}
-    .btn--unlock{background:var(--accent-purple);color:#fff;border:1px solid #532a86}
-    .btn--investigate{background:var(--accent-red);color:#fff;border:1px solid #b32220}
-
     .about-contact{max-width:860px;margin:34px auto;padding:0 20px 40px;line-height:1.65}
     footer{text-align:center;padding:22px;background:#111;color:#888;border-top:1px solid var(--border)}
+
+    @media (max-width: 860px){
+      .hero-inner{ grid-template-columns:1fr; }
+      .featured-title{ font-size:1.6rem; }
+    }
   </style>
 </head>
 
@@ -159,7 +249,39 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <div class="hero"></div>
+  <!-- Featured Spotlight Hero -->
+  <section class="hero-spotlight" aria-label="Featured case spotlight">
+    <div class="hero-inner">
+
+      <div class="featured-card">
+        <div class="featured-top">
+          <span class="badge badge--featured">FEATURED CASE</span>
+          <span class="difficulty extreme">Difficulty: Extreme</span>
+        </div>
+
+        <h2 class="featured-title">Case 9: The Valentine Massacre</h2>
+        <p class="featured-sub">
+          For the last ten years, a woman has been murdered every Valentine’s Day.
+          Each scene is marked with a single red rose. No forced entry. No arrests.
+          This year, you’re the investigator.
+        </p>
+
+        <div class="featured-actions">
+          <a class="btn btn--investigate" href="valentine-massacre.html">Investigate Now</a>
+          <a class="btn btn--secondary" href="#cases">Browse All Cases</a>
+        </div>
+      </div>
+
+      <aside class="featured-meta" aria-label="Featured case details">
+        <h3>Case Brief</h3>
+        <p class="meta-line"><strong>Pattern:</strong> Annual Valentine’s Day murders for 10 years.</p>
+        <p class="meta-line"><strong>Signature:</strong> A single red rose left at each scene.</p>
+        <p class="meta-line"><strong>Twist:</strong> Someone close to the investigation may be controlling the narrative.</p>
+        <p class="meta-line"><strong>Your Objective:</strong> Identify the killer, motive, and proof.</p>
+      </aside>
+
+    </div>
+  </section>
 
   <section class="intro">
     <p>
