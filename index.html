@@ -161,14 +161,21 @@
       margin-top:10px;
     }
 
-    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:8px;font-weight:800;text-decoration:none}
-    .btn--primary{background:var(--accent-orange);color:#fff;border:1px solid #b94a1c}
-    .btn--primary:hover{filter:brightness(1.05)}
-    .btn--secondary{
-      background:transparent;
-      color:#ffe98a;
-      border:1px solid #3a1e63;
+    .btn{
+      display:inline-block;
+      margin-top:10px;
+      padding:10px 14px;
+      border-radius:8px;
+      font-weight:800;
+      text-decoration:none;
+      transition:.15s ease;
+      border:1px solid transparent;
     }
+
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+
+    .btn--primary{background:var(--accent-orange);color:#fff;border-color:#b94a1c}
+    .btn--secondary{background:transparent;color:#ffe98a;border-color:#3a1e63}
 
     .hero-side{
       background:rgba(17,17,17,.85);
@@ -194,7 +201,7 @@
 
     .side-line strong{ color:var(--text); }
 
-    /* ===== New: How It Works block (visible upgrade) ===== */
+    /* ===== How It Works ===== */
     .how{
       max-width:1150px;
       margin:18px auto 0;
@@ -231,7 +238,15 @@
 
     .intro{text-align:center;padding:26px 20px;max-width:980px;margin:0 auto}
     .intro p{font-size:1.12rem;margin:0 0 16px;opacity:.95}
-    .cta{display:inline-block;margin-top:8px;padding:12px 18px;border-radius:8px;font-weight:800;text-decoration:none}
+
+    .cta{
+      display:inline-block;
+      margin-top:8px;
+      padding:12px 18px;
+      border-radius:8px;
+      font-weight:800;
+      text-decoration:none
+    }
     .cta--primary{background:var(--accent-red);color:#fff;border:1px solid #b32220}
     .cta--primary:hover{filter:brightness(1.05)}
 
@@ -332,7 +347,7 @@
     </div>
   </section>
 
-  <!-- New How It Works Section -->
+  <!-- How It Works -->
   <section class="how" id="about" aria-label="How Interactive Crime works">
     <h2 class="section-title">How It Works</h2>
 
@@ -375,14 +390,14 @@
       <h2>Case 2: The Jewelry Store Heist</h2>
       <div class="difficulty intermediate">Difficulty: Seasoned Investigator (Intermediate)</div>
       <p>Diamonds vanish. No forced entry. Four suspects. Who planned it?</p>
-      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/tvqqx" target="_blank" rel="noopener">Unlock Case</a>
+      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/tvqqx" target="_blank" rel="noopener">Unlock for $5</a>
     </div>
 
     <div class="case-card">
       <h2>Case 3: The Vanished Wife</h2>
       <div class="difficulty intermediate">Difficulty: Seasoned Investigator (Intermediate)</div>
       <p>No forced entry. A single journal line points to the truth.</p>
-      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/krifwx" target="_blank" rel="noopener">Unlock Case</a>
+      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/krifwx" target="_blank" rel="noopener">Unlock for $5</a>
     </div>
 
     <div class="case-card">
@@ -397,14 +412,14 @@
       <h2>Case 5: The Wrongly Accused</h2>
       <div class="difficulty very-hard">Difficulty: Master Investigator (Very Hard)</div>
       <p>Airtight conviction—or a setup? Reopen the file and prove it.</p>
-      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/gpufcn" target="_blank" rel="noopener">Unlock Case</a>
+      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/gpufcn" target="_blank" rel="noopener">Unlock for $5</a>
     </div>
 
     <div class="case-card">
       <h2>Case 6: The Car Washed Auto Theft</h2>
       <div class="difficulty extreme">Difficulty: Extreme (Extremely Hard)</div>
       <p>Ten cars vanish after a deluxe wash. Four insiders. Expose the ring.</p>
-      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/sounqs" target="_blank" rel="noopener">Unlock Case</a>
+      <a class="btn btn--unlock" href="https://interactivecrime.gumroad.com/l/sounqs" target="_blank" rel="noopener">Unlock for $5</a>
     </div>
 
   </div>
