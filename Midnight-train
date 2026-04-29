@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case 7: The Midnight Train Disappearance – Interactive Crime (MCQ)</title>
+  <meta name="description" content="A passenger vanishes from a locked train cabin at midnight. No witnesses. No escape. Can you solve The Midnight Train Disappearance?" />
+
+  <style>
+    body { margin: 0; font-family: 'Courier New', Courier, monospace; background-color: #0a0a0a; color: #e0e0e0; }
+    header { background-color: #141414; padding: 20px; text-align: center; border-bottom: 2px solid #e53935; }
+    header h1 { color: #e53935; margin: 0; }
+    nav a { color: #e0e0e0; margin: 0 12px; text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
+    nav a:hover { border-bottom: 2px solid #e53935; }
+    .container { max-width: 900px; margin: auto; padding: 20px; }
+    .cover { width: 100%; margin-top: 20px; border: 2px solid #e53935; }
+    h2 { color: #e53935; border-bottom: 1px solid #e53935; padding-bottom: 5px; }
+    .evidence { background-color: #1c1c1c; padding: 15px; margin-top: 20px; border-left: 5px solid #e53935; }
+    .submit-box { background-color: #1c1c1c; padding: 20px; margin-top: 30px; border: 1px solid #e53935; }
+    fieldset { border: 1px solid #e53935; border-radius: 8px; padding: 12px; margin-top: 16px; }
+    legend { padding: 0 6px; color: #e53935; }
+    .mcq { display: grid; gap: 10px; margin-top: 8px; }
+    .mcq label { display: flex; gap: 10px; align-items: flex-start; background: #2a2a2a; border: 1px solid #555; border-radius: 8px; padding: 10px; }
+    .mcq input { margin-top: 2px; }
+    #result { margin-top: 16px; font-weight: bold; }
+    button { margin-top: 20px; background-color: #e53935; color: white; border: none; padding: 12px 20px; font-size: 16px; cursor: pointer; }
+    button:hover { background-color: #ff4a43; }
+    footer { background-color: #141414; text-align: center; padding: 20px; color: #aaa; margin-top: 40px; border-top: 2px solid #e53935; }
+    .hint { color:#bbb; font-style: italic; margin-top:6px; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Interactive Crime</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#scene">Crime Scene</a>
+    <a href="#witnesses">Witnesses</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#solve">Solve</a>
+  </nav>
+</header>
+
+<div class="container">
+  <img src="images/images/midnight-train-cover.jpg" alt="The Midnight Train Disappearance Cover" class="cover"/>
+
+  <section id="scene">
+    <h2>Case 7: The Midnight Train Disappearance</h2>
+    <p><strong>VETERAN DETECTIVE</strong></p>
+
+    <p>At exactly midnight, passenger <strong>Elliot Crane</strong> vanished from a private cabin aboard the night train traveling through Blackridge Pass.</p>
+
+    <p>The cabin door was locked from the inside. The window was sealed. No one saw him leave. His suitcase remained untouched. His phone was found on the floor with no signal activity after <strong>11:58 PM</strong>.</p>
+
+    <p>Your mission: <strong>Solve the case</strong> by answering three questions:</p>
+
+    <ul>
+      <li>Who caused Elliot Crane’s disappearance?</li>
+      <li>What method was used?</li>
+      <li>What evidence exposes the truth?</li>
+    </ul>
+  </section>
+
+  <section id="witnesses">
+    <h2>Witness Statements</h2>
+
+    <div class="evidence">
+      <p><strong>Mara Vance — Train Attendant:</strong> “I brought Mr. Crane tea around 11:45. He looked nervous and kept checking his watch. I never went back after that.”</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Derek Holt — Businessman:</strong> “I was in the cabin next door. I heard arguing shortly before midnight. It sounded like Crane was talking to someone.”</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Lena Cross — Passenger:</strong> “I walked the hallway because I couldn’t sleep. I passed his cabin, but I didn’t see anyone enter or leave.”</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Noah Reed — Conductor:</strong> “All exterior doors were locked while the train was moving. Nobody could have gotten off without authorization.”</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Victor Hale — Engineer:</strong> “There was a short system reset at midnight. Only lasted about two minutes. I assumed it was a power flicker.”</p>
+    </div>
+  </section>
+
+  <section id="evidence">
+    <h2>Evidence Collected</h2>
+
+    <div class="evidence">
+      <p><strong>Cabin Door:</strong> Locked from the inside when staff forced it open at 12:07 AM.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Window Seal:</strong> The window could only open four inches, making escape impossible.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Burn Mark:</strong> A small electrical burn was found near the inside door handle.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Security Footage:</strong> Hallway cameras went dark from <strong>12:00 AM to 12:02 AM</strong>.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Emergency Hatch Log:</strong> A manual override was triggered at exactly <strong>12:01 AM</strong>.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Conductor Access Panel:</strong> The override requires a conductor key and cannot be activated by passengers.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Elliot’s Phone:</strong> Last active signal was at <strong>11:58 PM</strong>. The phone was later found inside the cabin.</p>
+    </div>
+
+    <div class="evidence">
+      <p><strong>Cabin Floor:</strong> Scuff marks led from the bed toward the service-side wall panel.</p>
+    </div>
+  </section>
+
+  <section id="solve">
+    <h2>Submit Your Solution</h2>
+
+    <div class="submit-box">
+
+      <fieldset>
+        <legend>Who caused Elliot Crane’s disappearance?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="culprit" value="Mara Vance" required/> Mara Vance — Train Attendant</label>
+          <label><input type="radio" name="culprit" value="Derek Holt" /> Derek Holt — Businessman</label>
+          <label><input type="radio" name="culprit" value="Lena Cross" /> Lena Cross — Passenger</label>
+          <label><input type="radio" name="culprit" value="Noah Reed" /> Noah Reed — Conductor</label>
+          <label><input type="radio" name="culprit" value="Victor Hale" /> Victor Hale — Engineer</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What method was used?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="method" value="stun-hatch" required/> Elliot was stunned, the cameras were cut, and he was removed through the emergency hatch.</label>
+          <label><input type="radio" name="method" value="window" /> Elliot escaped through the cabin window and staged his disappearance.</label>
+          <label><input type="radio" name="method" value="fake-ticket" /> A fake passenger switched places with him before midnight.</label>
+          <label><input type="radio" name="method" value="tea-poison" /> He was poisoned by tea and hidden in a luggage cart.</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What evidence exposes the truth?</legend>
+        <div class="mcq">
+          <label><input type="radio" name="evidence" value="hatch-log" required/> The emergency hatch log showing a manual override at 12:01 AM.</label>
+          <label><input type="radio" name="evidence" value="phone" /> Elliot’s phone losing signal at 11:58 PM.</label>
+          <label><input type="radio" name="evidence" value="tea" /> Mara serving tea before midnight.</label>
+          <label><input type="radio" name="evidence" value="argument" /> Derek hearing an argument through the cabin wall.</label>
+        </div>
+      </fieldset>
+
+      <button id="submitBtn">Submit Answers</button>
+      <p id="result"></p>
+      <p class="hint">Hint: Ask yourself who could cut cameras, access the hatch, and explain the locked-room illusion.</p>
+
+    </div>
+  </section>
+</div>
+
+<script>
+  document.getElementById('submitBtn').addEventListener('click', function(){
+    const culprit = (document.querySelector('input[name="culprit"]:checked')||{}).value || '';
+    const method = (document.querySelector('input[name="method"]:checked')||{}).value || '';
+    const evidence = (document.querySelector('input[name="evidence"]:checked')||{}).value || '';
+    const result = document.getElementById('result');
+
+    if (!culprit || !method || !evidence) {
+      result.textContent = 'Please answer all three questions before submitting.';
+      result.style.color = '#ff5252';
+      return;
+    }
+
+    const culpritOK = culprit === 'Noah Reed';
+    const methodOK = method === 'stun-hatch';
+    const evidenceOK = evidence === 'hatch-log';
+
+    if (culpritOK && methodOK && evidenceOK) {
+      result.textContent = '✅ Correct! Noah Reed used his conductor access to cut the cameras, trigger the emergency hatch, and create the locked-room illusion.';
+      result.style.color = '#00e676';
+    } else {
+      result.textContent = '❌ Not quite. Re-check the camera blackout, the emergency hatch log, and who had conductor-level access.';
+      result.style.color = '#ff5252';
+    }
+  });
+</script>
+
+<footer>
+  © 2024 Interactive Crime. All rights reserved.
+</footer>
+
+<p style="text-align:center;margin-top:40px;">
+  Explore more <a href="https://interactivecrime.com/">interactive detective stories online</a> at Interactive Crime.
+</p>
+
+</body>
+</html>
