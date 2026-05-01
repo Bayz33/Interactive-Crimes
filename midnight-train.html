@@ -4,29 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Case 7: The Midnight Train Disappearance – Interactive Crime (MCQ)</title>
-  <meta name="description" content="A passenger vanishes from a locked train cabin at midnight. No witnesses. No escape. Can you solve The Midnight Train Disappearance?" />
 
   <style>
     body { margin: 0; font-family: 'Courier New', Courier, monospace; background-color: #0a0a0a; color: #e0e0e0; }
     header { background-color: #141414; padding: 20px; text-align: center; border-bottom: 2px solid #e53935; }
     header h1 { color: #e53935; margin: 0; }
-    nav a { color: #e0e0e0; margin: 0 12px; text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
-    nav a:hover { border-bottom: 2px solid #e53935; }
+    nav a { color: #e0e0e0; margin: 0 12px; text-decoration: none; font-weight: bold; }
     .container { max-width: 900px; margin: auto; padding: 20px; }
     .cover { width: 100%; margin-top: 20px; border: 2px solid #e53935; }
-    h2 { color: #e53935; border-bottom: 1px solid #e53935; padding-bottom: 5px; }
+    h2 { color: #e53935; }
     .evidence { background-color: #1c1c1c; padding: 15px; margin-top: 20px; border-left: 5px solid #e53935; }
     .submit-box { background-color: #1c1c1c; padding: 20px; margin-top: 30px; border: 1px solid #e53935; }
-    fieldset { border: 1px solid #e53935; border-radius: 8px; padding: 12px; margin-top: 16px; }
-    legend { padding: 0 6px; color: #e53935; }
-    .mcq { display: grid; gap: 10px; margin-top: 8px; }
-    .mcq label { display: flex; gap: 10px; align-items: flex-start; background: #2a2a2a; border: 1px solid #555; border-radius: 8px; padding: 10px; }
-    .mcq input { margin-top: 2px; }
+    fieldset { border: 1px solid #e53935; margin-top: 16px; }
+    .mcq label { display: block; margin-top: 8px; }
+    button { margin-top: 20px; background-color: #e53935; color: white; border: none; padding: 12px 20px; cursor: pointer; }
     #result { margin-top: 16px; font-weight: bold; }
-    button { margin-top: 20px; background-color: #e53935; color: white; border: none; padding: 12px 20px; font-size: 16px; cursor: pointer; }
-    button:hover { background-color: #ff4a43; }
-    footer { background-color: #141414; text-align: center; padding: 20px; color: #aaa; margin-top: 40px; border-top: 2px solid #e53935; }
-    .hint { color:#bbb; font-style: italic; margin-top:6px; }
   </style>
 </head>
 
@@ -34,60 +26,70 @@
 
 <header>
   <h1>Interactive Crime</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#scene">Crime Scene</a>
-    <a href="#witnesses">Witnesses</a>
-    <a href="#evidence">Evidence</a>
-    <a href="#solve">Solve</a>
-  </nav>
 </header>
 
 <div class="container">
+
   <img src="https://interactivecrime.com/images/images/midnight-train.png" class="cover"/>
 
-  <section id="scene">
-    <h2>Case 7: The Midnight Train Disappearance</h2>
-    <p><strong>VETERAN DETECTIVE</strong></p>
-    <p>A passenger vanishes from a locked train cabin at midnight. No witnesses. No escape.</p>
-  </section>
+  <h2>Case 7: The Midnight Train Disappearance</h2>
+  <p><strong>VETERAN DETECTIVE</strong></p>
 
-  <section id="solve">
-    <h2>Submit Your Solution</h2>
+  <p>At exactly midnight, passenger <strong>Elliot Crane</strong> vanished from a locked train cabin.</p>
 
-    <div class="submit-box">
+  <h2>Witness Statements</h2>
 
-      <fieldset>
-        <legend>Who caused the disappearance?</legend>
-        <div class="mcq">
-          <label><input type="radio" name="culprit" value="Mara Vance" required/> Mara Vance</label>
-          <label><input type="radio" name="culprit" value="Derek Holt" /> Derek Holt</label>
-          <label><input type="radio" name="culprit" value="Lena Cross" /> Lena Cross</label>
-          <label><input type="radio" name="culprit" value="Noah Reed" /> Noah Reed</label>
-        </div>
-      </fieldset>
+  <div class="evidence">
+    <p><strong>Mara Vance:</strong> Served tea at 11:45.</p>
+  </div>
 
-      <fieldset>
-        <legend>What method was used?</legend>
-        <div class="mcq">
-          <label><input type="radio" name="method" value="stun-hatch" required/> Stunned and removed through emergency hatch</label>
-          <label><input type="radio" name="method" value="window" /> Escaped through window</label>
-        </div>
-      </fieldset>
+  <div class="evidence">
+    <p><strong>Derek Holt:</strong> Heard arguing.</p>
+  </div>
 
-      <fieldset>
-        <legend>What proves it?</legend>
-        <div class="mcq">
-          <label><input type="radio" name="evidence" value="hatch-log" required/> Emergency hatch log</label>
-          <label><input type="radio" name="evidence" value="phone" /> Phone signal</label>
-        </div>
-      </fieldset>
+  <div class="evidence">
+    <p><strong>Lena Cross:</strong> Walked hallway.</p>
+  </div>
 
-      <button id="submitBtn">Submit Answers</button>
-      <p id="result"></p>
+  <div class="evidence">
+    <p><strong>Noah Reed:</strong> Conductor.</p>
+  </div>
 
-    </div>
-  </section>
+  <h2>Evidence</h2>
+
+  <div class="evidence">Burn mark near door</div>
+  <div class="evidence">Camera blackout at midnight</div>
+  <div class="evidence">Emergency hatch triggered</div>
+
+  <h2>Solve</h2>
+
+  <div class="submit-box">
+
+    <fieldset>
+      <legend>Who did it?</legend>
+      <label><input type="radio" name="culprit" value="Mara Vance"> Mara</label>
+      <label><input type="radio" name="culprit" value="Derek Holt"> Derek</label>
+      <label><input type="radio" name="culprit" value="Lena Cross"> Lena</label>
+      <label><input type="radio" name="culprit" value="Noah Reed"> Noah</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Method?</legend>
+      <label><input type="radio" name="method" value="stun-hatch"> Hatch removal</label>
+      <label><input type="radio" name="method" value="window"> Window escape</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Evidence?</legend>
+      <label><input type="radio" name="evidence" value="hatch-log"> Hatch log</label>
+      <label><input type="radio" name="evidence" value="phone"> Phone</label>
+    </fieldset>
+
+    <button id="submitBtn">Submit Answers</button>
+    <p id="result"></p>
+
+  </div>
+
 </div>
 
 <script>
@@ -100,35 +102,31 @@ document.getElementById('submitBtn').addEventListener('click', function(){
   const result = document.getElementById('result');
 
   if (!culprit || !method || !evidence) {
-    result.textContent = 'Please answer all questions.';
+    result.textContent = 'Answer all questions.';
     result.style.color = '#ff5252';
     return;
   }
 
   if (culprit === 'Noah Reed' && method === 'stun-hatch' && evidence === 'hatch-log') {
     result.innerHTML = `
-      <span style="color:#00e676; font-weight:bold;">
-        Correct! You solved the case.
+      <span style="color:#00e676;">
+        ✅ Correct! You solved the case.
       </span>
       <br><br>
       <strong>Congrats, Detective.</strong>
       <br><br>
       <a href="https://interactivecrime.gumroad.com/l/fbmvzh" target="_blank"
-      style="display:inline-block; padding:12px 18px; background:#ffd740; color:#111; font-weight:900; border-radius:8px; text-decoration:none;">
+      style="padding:12px 18px; background:#ffd740; color:#111; font-weight:bold; border-radius:8px; text-decoration:none;">
       Unlock 3 Cases for $10
       </a>
     `;
   } else {
-    result.textContent = 'Not quite. Try again.';
+    result.textContent = '❌ Not quite. Try again.';
     result.style.color = '#ff5252';
   }
 
 });
 </script>
-
-<footer>
-  © 2024 Interactive Crime
-</footer>
 
 </body>
 </html>
