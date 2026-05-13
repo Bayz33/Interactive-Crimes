@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case 6: The Car Washed Auto Theft – Interactive Crime (MCQ)</title>
+  <meta name="description" content="Ten cars in ten months vanish after a deluxe wash. Five witnesses. Seven suspects. Four culprits. Can you crack the ring?" />
+  <style>
+    body { margin: 0; font-family: 'Courier New', Courier, monospace; background-color: #0a0a0a; color: #e0e0e0; }
+    header { background-color: #141414; padding: 20px; text-align: center; border-bottom: 2px solid #e53935; }
+    header h1 { color: #e53935; margin: 0; }
+    nav a { color: #e0e0e0; margin: 0 12px; text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
+    nav a:hover { border-bottom: 2px solid #e53935; }
+    .container { max-width: 900px; margin: auto; padding: 20px; }
+    .cover { width: 100%; margin-top: 20px; border: 2px solid #e53935; }
+    h2 { color: #e53935; border-bottom: 1px solid #e53935; padding-bottom: 5px; }
+    .evidence { background-color: #1c1c1c; padding: 15px; margin-top: 20px; border-left: 5px solid #e53935; }
+    .submit-box { background-color: #1c1c1c; padding: 20px; margin-top: 30px; border: 1px solid #e53935; }
+    /* MCQ styling */
+    fieldset { border: 1px solid #e53935; border-radius: 8px; padding: 12px; margin-top: 16px; }
+    legend { padding: 0 6px; color: #e53935; }
+    .mcq { display: grid; gap: 10px; margin-top: 8px; }
+    .mcq label { display: flex; gap: 10px; align-items: flex-start; background: #2a2a2a; border: 1px solid #555; border-radius: 8px; padding: 10px; }
+    .mcq input { margin-top: 2px; }
+    #result { margin-top: 16px; font-weight: bold; }
+    button { margin-top: 20px; background-color: #e53935; color: white; border: none; padding: 12px 20px; font-size: 16px; cursor: pointer; }
+    button:hover { background-color: #ff4a43; }
+    footer { background-color: #141414; text-align: center; padding: 20px; color: #aaa; margin-top: 40px; border-top: 2px solid #e53935; }
+    .hint { color:#bbb; font-style: italic; margin-top:6px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Interactive Crime</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#scene">Crime Scene</a>
+    <a href="#witnesses">Witnesses</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#solve">Solve</a>
+  </nav>
+</header>
+
+<div class="container">
+  <img src="images/images/Case6-cover.jpg" alt="Case 6 Cover" class="cover"/>
+
+  <section id="scene">
+    <h2>Case 6: The Car Washed Auto Theft</h2>
+    <p><strong>EXTREMELY HARD</strong></p>
+    <p>Over ten months, high-value vehicles vanished minutes after a deluxe wash at <strong>Cascade Suds</strong>. Insurance flagged a pattern, but no one could prove collusion. Five witnesses, seven suspects—and <strong>four culprits</strong> working together.</p>
+    <p>Your mission: <strong>Solve the case</strong> by answering three questions:</p>
+    <ul>
+      <li>Which <strong>four</strong> people are in on it? (choose exactly 4)</li>
+      <li>What is the <strong>primary method</strong> used?</li>
+      <li>What <strong>decisive evidence</strong> links the ring?</li>
+    </ul>
+  </section>
+
+  <section id="witnesses">
+    <h2>Witness Statements</h2>
+    <div class="evidence"><p><strong>Tanya Wells (Customer):</strong> “Attendant waved me to <em>Lane 2</em> near the staff gate. I noticed a blue wristband.”</p></div>
+    <div class="evidence"><p><strong>Marco Ruiz (Cashier):</strong> “Supervisor handled a cash-only deluxe wash. Said the receipt printer was jammed.”</p></div>
+    <div class="evidence"><p><strong>Asha Patel (Neighbor):</strong> “Saw an unmarked flatbed idling by the alley on two Thursdays. Driver kept a hoodie up.”</p></div>
+    <div class="evidence"><p><strong>Officer Len Hart:</strong> “LPR trail dies under the Harbor Pkwy underpass each time. Looks like a tow assist or plate swap.”</p></div>
+    <div class="evidence"><p><strong>Darryl Cho (KeyCoder Tech):</strong> “A guy called ‘Nico’ subcontracted me twice at closing. Paid cash to program fobs curbside.”</p></div>
+  </section>
+
+  <section id="evidence">
+    <h2>Evidence Collected</h2>
+    <div class="evidence"><p><strong>CCTV – Exit Lane #2 (April):</strong> SUV exits via staff gate; temp paper plate; attendant with blue wristband.</p></div>
+    <div class="evidence"><p><strong>Valet Tag Log:</strong> Tags 431–438 issued sequentially, but <strong>#435 appears twice</strong> months apart.</p></div>
+    <div class="evidence"><p><strong>Tow Yard Gate Log:</strong> After-hours entries match theft nights. Guest code <strong>7713</strong> used by “<em>H. Petrov</em>.”</p></div>
+    <div class="evidence"><p><strong>LPR Hit – Harbor Pkwy:</strong> Stolen sedan seen 17 min post-wash, <em>following</em> an unmarked flatbed.</p></div>
+    <div class="evidence"><p><strong>Timecards – Detail Crew:</strong> <em>J. Kim</em> early clock-outs on four theft nights despite closing duties pending.</p></div>
+    <div class="evidence"><p><strong>KeyCoder Invoice #7713:</strong> Mobile key van billed on two theft days; customer name “<em>Nico</em>,” paid cash.</p></div>
+    <div class="evidence"><p><strong>Unmarked Flatbed Photo:</strong> Same dented fender across three months; plate frame removed.</p></div>
+    <div class="evidence"><p><strong>Shift Sheet – Supervisors:</strong> <em>N. Alvarez</em> swapped to closing on six theft nights citing “staffing gaps.”</p></div>
+  </section>
+
+  <section id="solve">
+    <h2>Submit Your Solution</h2>
+    <div class="submit-box">
+      <!-- MULTIPLE CHOICE VERSION -->
+      <fieldset>
+        <legend>Who are the four culprits? <span class="hint">(choose exactly 4)</span></legend>
+        <div class="mcq">
+          <label><input type="checkbox" name="culprit" value="Nico Alvarez" /> Nico Alvarez — Shift Supervisor</label>
+          <label><input type="checkbox" name="culprit" value="Jade Kim" /> Jade Kim — Detail Lead</label>
+          <label><input type="checkbox" name="culprit" value="Leon ‘Hook’ Petrov" /> Leon “Hook” Petrov — Tow Driver (contract)</label>
+          <label><input type="checkbox" name="culprit" value="Marla Quinn" /> Marla Quinn — Mobile Key Tech</label>
+          <label><input type="checkbox" name="culprit" value="Eric Soto" /> Eric Soto — Rookie Attendant</label>
+          <label><input type="checkbox" name="culprit" value="Priya Nand" /> Priya Nand — Assistant Manager</label>
+          <label><input type="checkbox" name="culprit" value="Gus Marin" /> Gus Marin — Security Guard (temp)</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Primary method</legend>
+        <div class="mcq">
+          <label><input type="radio" name="method" value="key-tow" required/> On-site key programming + unmarked flatbed tow</label>
+          <label><input type="radio" name="method" value="relay" /> Relay-attack from customer lot, no staff collusion</label>
+          <label><input type="radio" name="method" value="vin-clone" /> VIN cloning at auction with fake seller IDs</label>
+          <label><input type="radio" name="method" value="swap" /> In-tunnel car swap using duplicate keys left in visor</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Decisive linking evidence</legend>
+        <div class="mcq">
+          <label><input type="radio" name="evidence" value="tag435" required/> Duplicate <strong>Valet Tag #435</strong> appearing across months</label>
+          <label><input type="radio" name="evidence" value="anon-tip" /> Anonymous tip email</label>
+          <label><input type="radio" name="evidence" value="yelp" /> Customer Yelp review</label>
+          <label><input type="radio" name="evidence" value="fuel" /> Fuel receipts showing higher prices on Thursdays</label>
+        </div>
+      </fieldset>
+
+      <button id="submitBtn">Submit Answers</button>
+      <p id="result"></p>
+      <p class="hint">Hint: Cross-reference <em>7713</em>, early clock-outs, and who controls keys/access.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+  // Helper: get selected checkbox values
+  function getSelected(name) {
+    return Array.from(document.querySelectorAll('input[name="'+name+'"]:checked')).map(el => el.value);
+  }
+
+  // Compare arrays ignoring order
+  function sameSet(a, b) {
+    if (a.length !== b.length) return false;
+    const A = a.map(x => x.toLowerCase()).sort();
+    const B = b.map(x => x.toLowerCase()).sort();
+    return A.every((v, i) => v === B[i]);
+  }
+
+  document.getElementById('submitBtn').addEventListener('click', function(){
+    const culprits = getSelected('culprit');
+    const method   = (document.querySelector('input[name="method"]:checked')||{}).value || '';
+    const evidence = (document.querySelector('input[name="evidence"]:checked')||{}).value || '';
+    const result   = document.getElementById('result');
+
+    // Require exactly 4 culprits
+    if (culprits.length !== 4) {
+      result.textContent = 'Please select exactly four culprits.';
+      result.style.color = '#ff5252';
+      return;
+    }
+
+    // Ground truth (extremely hard case)
+    const correctCulprits = ['Nico Alvarez','Jade Kim','Leon ‘Hook’ Petrov','Marla Quinn'];
+    const methodOK = method === 'key-tow';
+    const evidenceOK = evidence === 'tag435';
+
+    const allOK = sameSet(culprits, correctCulprits) && methodOK && evidenceOK;
+
+    if (allOK) {
+      result.textContent = '✅ Correct! The ring is exposed and the tow yard is raided.';
+      result.style.color = '#00e676';
+    } else {
+      result.textContent = '❌ Not quite. Re-check Valet Tag #435 anomalies, KeyCoder #7713, and tow gate logs.';
+      result.style.color = '#ff5252';
+    }
+  });
+</script>
+
+<footer>
+  © 2024 Interactive Crime. All rights reserved.
+</footer>
+<p style="text-align:center;margin-top:40px;">
+  Explore more <a href="https://interactivecrime.com/">interactive detective stories online</a> at Interactive Crime.
+</p>
+
+</body>
+</html>
