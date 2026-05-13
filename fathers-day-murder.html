@@ -3,36 +3,148 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Case 6: The Car Washed Auto Theft – Interactive Crime (MCQ)</title>
-  <meta name="description" content="Ten cars in ten months vanish after a deluxe wash. Five witnesses. Seven suspects. Four culprits. Can you crack the ring?" />
+  <title>Case 10: The Father’s Day Murder – Interactive Crime (MCQ)</title>
+  <meta name="description" content="A wealthy father is murdered during a Father’s Day barbecue. Everyone wanted something. One person wanted him dead." />
+
   <style>
-    body { margin: 0; font-family: 'Courier New', Courier, monospace; background-color: #0a0a0a; color: #e0e0e0; }
-    header { background-color: #141414; padding: 20px; text-align: center; border-bottom: 2px solid #e53935; }
-    header h1 { color: #e53935; margin: 0; }
-    nav a { color: #e0e0e0; margin: 0 12px; text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
-    nav a:hover { border-bottom: 2px solid #e53935; }
-    .container { max-width: 900px; margin: auto; padding: 20px; }
-    .cover { width: 100%; margin-top: 20px; border: 2px solid #e53935; }
-    h2 { color: #e53935; border-bottom: 1px solid #e53935; padding-bottom: 5px; }
-    .evidence { background-color: #1c1c1c; padding: 15px; margin-top: 20px; border-left: 5px solid #e53935; }
-    .submit-box { background-color: #1c1c1c; padding: 20px; margin-top: 30px; border: 1px solid #e53935; }
-    /* MCQ styling */
-    fieldset { border: 1px solid #e53935; border-radius: 8px; padding: 12px; margin-top: 16px; }
-    legend { padding: 0 6px; color: #e53935; }
-    .mcq { display: grid; gap: 10px; margin-top: 8px; }
-    .mcq label { display: flex; gap: 10px; align-items: flex-start; background: #2a2a2a; border: 1px solid #555; border-radius: 8px; padding: 10px; }
-    .mcq input { margin-top: 2px; }
-    #result { margin-top: 16px; font-weight: bold; }
-    button { margin-top: 20px; background-color: #e53935; color: white; border: none; padding: 12px 20px; font-size: 16px; cursor: pointer; }
-    button:hover { background-color: #ff4a43; }
-    footer { background-color: #141414; text-align: center; padding: 20px; color: #aaa; margin-top: 40px; border-top: 2px solid #e53935; }
-    .hint { color:#bbb; font-style: italic; margin-top:6px; }
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #081018;
+      color: #e0e0e0;
+    }
+
+    header {
+      background-color: #101820;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #4fc3f7;
+    }
+
+    header h1 {
+      color: #4fc3f7;
+      margin: 0;
+    }
+
+    nav a {
+      color: #e0e0e0;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid #4fc3f7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .cover {
+      width: 100%;
+      margin-top: 20px;
+      border: 2px solid #4fc3f7;
+      box-shadow: 0 0 15px rgba(79,195,247,.25);
+    }
+
+    h2 {
+      color: #4fc3f7;
+      border-bottom: 1px solid #4fc3f7;
+      padding-bottom: 5px;
+    }
+
+    .evidence {
+      background-color: #16222c;
+      padding: 15px;
+      margin-top: 20px;
+      border-left: 5px solid #4fc3f7;
+    }
+
+    .submit-box {
+      background-color: #16222c;
+      padding: 20px;
+      margin-top: 30px;
+      border: 1px solid #4fc3f7;
+    }
+
+    fieldset {
+      border: 1px solid #4fc3f7;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 16px;
+    }
+
+    legend {
+      padding: 0 6px;
+      color: #4fc3f7;
+    }
+
+    .mcq {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .mcq label {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      background: #22313d;
+      border: 1px solid #3d5568;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .mcq input {
+      margin-top: 2px;
+    }
+
+    #result {
+      margin-top: 16px;
+      font-weight: bold;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #4fc3f7;
+      color: #081018;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #81d4fa;
+    }
+
+    footer {
+      background-color: #101820;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      margin-top: 40px;
+      border-top: 2px solid #4fc3f7;
+    }
+
+    .hint {
+      color:#bbb;
+      font-style: italic;
+      margin-top:6px;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Interactive Crime</h1>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="#scene">Crime Scene</a>
@@ -43,134 +155,220 @@
 </header>
 
 <div class="container">
-  <img src="images/images/Case6-cover.jpg" alt="Case 6 Cover" class="cover"/>
+
+  <img src="images/images/case10-fathers-day-cover.png"
+       alt="Father's Day Murder Cover"
+       class="cover"/>
 
   <section id="scene">
-    <h2>Case 6: The Car Washed Auto Theft</h2>
-    <p><strong>EXTREMELY HARD</strong></p>
-    <p>Over ten months, high-value vehicles vanished minutes after a deluxe wash at <strong>Cascade Suds</strong>. Insurance flagged a pattern, but no one could prove collusion. Five witnesses, seven suspects—and <strong>four culprits</strong> working together.</p>
-    <p>Your mission: <strong>Solve the case</strong> by answering three questions:</p>
+    <h2>Case 10: The Father’s Day Murder</h2>
+
+    <p><strong>VERY HARD</strong></p>
+
+    <p>
+      During a Father’s Day barbecue at the luxurious
+      <strong>Hollow Creek Estate</strong>, wealthy businessman
+      <strong>Richard Lawson</strong> collapsed face-first beside the grill.
+    </p>
+
+    <p>
+      At first, investigators believed it was a heart attack —
+      until toxicology found a deadly sedative mixed into his whiskey.
+    </p>
+
+    <p>
+      Every family member had a motive:
+      inheritance disputes, hidden affairs, and years of resentment.
+      But only one person had the perfect opportunity.
+    </p>
+
+    <p>Your mission:</p>
+
     <ul>
-      <li>Which <strong>four</strong> people are in on it? (choose exactly 4)</li>
-      <li>What is the <strong>primary method</strong> used?</li>
-      <li>What <strong>decisive evidence</strong> links the ring?</li>
+      <li>Who murdered Richard Lawson?</li>
+      <li>What was the motive?</li>
+      <li>What key evidence proves it?</li>
     </ul>
   </section>
 
   <section id="witnesses">
     <h2>Witness Statements</h2>
-    <div class="evidence"><p><strong>Tanya Wells (Customer):</strong> “Attendant waved me to <em>Lane 2</em> near the staff gate. I noticed a blue wristband.”</p></div>
-    <div class="evidence"><p><strong>Marco Ruiz (Cashier):</strong> “Supervisor handled a cash-only deluxe wash. Said the receipt printer was jammed.”</p></div>
-    <div class="evidence"><p><strong>Asha Patel (Neighbor):</strong> “Saw an unmarked flatbed idling by the alley on two Thursdays. Driver kept a hoodie up.”</p></div>
-    <div class="evidence"><p><strong>Officer Len Hart:</strong> “LPR trail dies under the Harbor Pkwy underpass each time. Looks like a tow assist or plate swap.”</p></div>
-    <div class="evidence"><p><strong>Darryl Cho (KeyCoder Tech):</strong> “A guy called ‘Nico’ subcontracted me twice at closing. Paid cash to program fobs curbside.”</p></div>
+
+    <div class="evidence">
+      <p>
+        <strong>Emily Lawson (Daughter):</strong>
+        “Dad barely touched alcohol lately. But someone handed him a whiskey right before dinner.”
+      </p>
+    </div>
+
+    <div class="evidence">
+      <p>
+        <strong>Trevor Mills (Neighbor):</strong>
+        “I saw Richard arguing with his mother-in-law near the patio about money.”
+      </p>
+    </div>
+
+    <div class="evidence">
+      <p>
+        <strong>Sarah Lawson (Wife):</strong>
+        “My mother hated Richard, but she stayed inside most of the evening.”
+      </p>
+    </div>
+
+    <div class="evidence">
+      <p>
+        <strong>Daniel Pierce (Family Friend):</strong>
+        “Richard received a Father’s Day card with no name on it. He looked disturbed after reading it.”
+      </p>
+    </div>
+
+    <div class="evidence">
+      <p>
+        <strong>Grill Chef:</strong>
+        “Only family members were near the drink table before dinner.”
+      </p>
+    </div>
   </section>
 
   <section id="evidence">
     <h2>Evidence Collected</h2>
-    <div class="evidence"><p><strong>CCTV – Exit Lane #2 (April):</strong> SUV exits via staff gate; temp paper plate; attendant with blue wristband.</p></div>
-    <div class="evidence"><p><strong>Valet Tag Log:</strong> Tags 431–438 issued sequentially, but <strong>#435 appears twice</strong> months apart.</p></div>
-    <div class="evidence"><p><strong>Tow Yard Gate Log:</strong> After-hours entries match theft nights. Guest code <strong>7713</strong> used by “<em>H. Petrov</em>.”</p></div>
-    <div class="evidence"><p><strong>LPR Hit – Harbor Pkwy:</strong> Stolen sedan seen 17 min post-wash, <em>following</em> an unmarked flatbed.</p></div>
-    <div class="evidence"><p><strong>Timecards – Detail Crew:</strong> <em>J. Kim</em> early clock-outs on four theft nights despite closing duties pending.</p></div>
-    <div class="evidence"><p><strong>KeyCoder Invoice #7713:</strong> Mobile key van billed on two theft days; customer name “<em>Nico</em>,” paid cash.</p></div>
-    <div class="evidence"><p><strong>Unmarked Flatbed Photo:</strong> Same dented fender across three months; plate frame removed.</p></div>
-    <div class="evidence"><p><strong>Shift Sheet – Supervisors:</strong> <em>N. Alvarez</em> swapped to closing on six theft nights citing “staffing gaps.”</p></div>
+
+    <div class="evidence">
+      <p>
+        <strong>Toxicology Report:</strong>
+        A strong veterinary sedative was found in Richard’s whiskey glass.
+      </p>
+    </div>
+
+    <div class="evidence">
+      <p>
+        <strong>Security Camera:</strong>
+        Footage shows Richard’s mother-in-law near the drink table minutes before the toast.
+      </p>
+    </div>
+
+    <div class="evidence">
+      <p>
+        <strong>Father’s Day Card:</strong>
+        The unsigned card read:
+        <em>“You ruined this family long before today.”</em>
+      </p>
+    </div>
+
+    <div class="evidence">
+      <p>
+        <strong>Financial Records:</strong>
+        Richard recently cut his mother-in-law out of his estate after discovering stolen money.
+      </p>
+    </div>
+
+    <div class="evidence">
+      <p>
+        <strong>Kitchen Trash:</strong>
+        Investigators found an empty veterinary sedative bottle wrapped in barbecue napkins.
+      </p>
+    </div>
   </section>
 
   <section id="solve">
     <h2>Submit Your Solution</h2>
+
     <div class="submit-box">
-      <!-- MULTIPLE CHOICE VERSION -->
+
       <fieldset>
-        <legend>Who are the four culprits? <span class="hint">(choose exactly 4)</span></legend>
+        <legend>Who murdered Richard Lawson?</legend>
+
         <div class="mcq">
-          <label><input type="checkbox" name="culprit" value="Nico Alvarez" /> Nico Alvarez — Shift Supervisor</label>
-          <label><input type="checkbox" name="culprit" value="Jade Kim" /> Jade Kim — Detail Lead</label>
-          <label><input type="checkbox" name="culprit" value="Leon ‘Hook’ Petrov" /> Leon “Hook” Petrov — Tow Driver (contract)</label>
-          <label><input type="checkbox" name="culprit" value="Marla Quinn" /> Marla Quinn — Mobile Key Tech</label>
-          <label><input type="checkbox" name="culprit" value="Eric Soto" /> Eric Soto — Rookie Attendant</label>
-          <label><input type="checkbox" name="culprit" value="Priya Nand" /> Priya Nand — Assistant Manager</label>
-          <label><input type="checkbox" name="culprit" value="Gus Marin" /> Gus Marin — Security Guard (temp)</label>
+          <label><input type="radio" name="killer" value="wife" required/> Sarah Lawson — Wife</label>
+
+          <label><input type="radio" name="killer" value="daughter"/> Emily Lawson — Daughter</label>
+
+          <label><input type="radio" name="killer" value="mother"/> Helen Brooks — Mother-in-law</label>
+
+          <label><input type="radio" name="killer" value="chef"/> Marcus Reed — Grill Chef</label>
+
+          <label><input type="radio" name="killer" value="friend"/> Daniel Pierce — Family Friend</label>
         </div>
       </fieldset>
 
       <fieldset>
-        <legend>Primary method</legend>
+        <legend>Motive</legend>
+
         <div class="mcq">
-          <label><input type="radio" name="method" value="key-tow" required/> On-site key programming + unmarked flatbed tow</label>
-          <label><input type="radio" name="method" value="relay" /> Relay-attack from customer lot, no staff collusion</label>
-          <label><input type="radio" name="method" value="vin-clone" /> VIN cloning at auction with fake seller IDs</label>
-          <label><input type="radio" name="method" value="swap" /> In-tunnel car swap using duplicate keys left in visor</label>
+          <label><input type="radio" name="motive" value="money" required/> Revenge after being removed from the inheritance</label>
+
+          <label><input type="radio" name="motive" value="affair"/> Jealousy over an affair</label>
+
+          <label><input type="radio" name="motive" value="custody"/> Custody dispute</label>
+
+          <label><input type="radio" name="motive" value="insurance"/> Insurance payout</label>
         </div>
       </fieldset>
 
       <fieldset>
-        <legend>Decisive linking evidence</legend>
+        <legend>Key Evidence</legend>
+
         <div class="mcq">
-          <label><input type="radio" name="evidence" value="tag435" required/> Duplicate <strong>Valet Tag #435</strong> appearing across months</label>
-          <label><input type="radio" name="evidence" value="anon-tip" /> Anonymous tip email</label>
-          <label><input type="radio" name="evidence" value="yelp" /> Customer Yelp review</label>
-          <label><input type="radio" name="evidence" value="fuel" /> Fuel receipts showing higher prices on Thursdays</label>
+          <label><input type="radio" name="proof" value="camera" required/> Security footage placing her near the drinks</label>
+
+          <label><input type="radio" name="proof" value="card"/> The anonymous Father’s Day card</label>
+
+          <label><input type="radio" name="proof" value="bottle"/> Sedative bottle hidden in barbecue trash</label>
+
+          <label><input type="radio" name="proof" value="argument"/> Witnesses hearing the patio argument</label>
         </div>
       </fieldset>
 
       <button id="submitBtn">Submit Answers</button>
+
       <p id="result"></p>
-      <p class="hint">Hint: Cross-reference <em>7713</em>, early clock-outs, and who controls keys/access.</p>
+
+      <p class="hint">
+        Hint: Focus on who had access to the drink table and who lost the most financially.
+      </p>
+
     </div>
   </section>
+
 </div>
 
 <script>
-  // Helper: get selected checkbox values
-  function getSelected(name) {
-    return Array.from(document.querySelectorAll('input[name="'+name+'"]:checked')).map(el => el.value);
-  }
-
-  // Compare arrays ignoring order
-  function sameSet(a, b) {
-    if (a.length !== b.length) return false;
-    const A = a.map(x => x.toLowerCase()).sort();
-    const B = b.map(x => x.toLowerCase()).sort();
-    return A.every((v, i) => v === B[i]);
-  }
-
   document.getElementById('submitBtn').addEventListener('click', function(){
-    const culprits = getSelected('culprit');
-    const method   = (document.querySelector('input[name="method"]:checked')||{}).value || '';
-    const evidence = (document.querySelector('input[name="evidence"]:checked')||{}).value || '';
-    const result   = document.getElementById('result');
 
-    // Require exactly 4 culprits
-    if (culprits.length !== 4) {
-      result.textContent = 'Please select exactly four culprits.';
-      result.style.color = '#ff5252';
-      return;
-    }
+    const killer = (document.querySelector('input[name="killer"]:checked')||{}).value || '';
+    const motive = (document.querySelector('input[name="motive"]:checked')||{}).value || '';
+    const proof = (document.querySelector('input[name="proof"]:checked')||{}).value || '';
 
-    // Ground truth (extremely hard case)
-    const correctCulprits = ['Nico Alvarez','Jade Kim','Leon ‘Hook’ Petrov','Marla Quinn'];
-    const methodOK = method === 'key-tow';
-    const evidenceOK = evidence === 'tag435';
+    const result = document.getElementById('result');
 
-    const allOK = sameSet(culprits, correctCulprits) && methodOK && evidenceOK;
+    const correct =
+      killer === 'mother' &&
+      motive === 'money' &&
+      proof === 'bottle';
 
-    if (allOK) {
-      result.textContent = '✅ Correct! The ring is exposed and the tow yard is raided.';
+    if(correct){
+      result.textContent =
+        '✅ Correct! Helen Brooks poisoned Richard after being cut out of the inheritance.';
       result.style.color = '#00e676';
     } else {
-      result.textContent = '❌ Not quite. Re-check Valet Tag #435 anomalies, KeyCoder #7713, and tow gate logs.';
+      result.textContent =
+        '❌ Not quite. Re-check the inheritance records and who approached the drinks table.';
       result.style.color = '#ff5252';
     }
+
   });
 </script>
 
 <footer>
-  © 2024 Interactive Crime. All rights reserved.
+  © 2026 Interactive Crime. All rights reserved.
 </footer>
+
 <p style="text-align:center;margin-top:40px;">
-  Explore more <a href="https://interactivecrime.com/">interactive detective stories online</a> at Interactive Crime.
+  Explore more
+  <a href="https://interactivecrime.com/" style="color:#4fc3f7;">
+    interactive detective stories online
+  </a>
+  at Interactive Crime.
 </p>
 
 </body>
