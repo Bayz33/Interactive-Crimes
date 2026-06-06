@@ -34,7 +34,7 @@
     header{background:#111;padding:20px;text-align:center;border-bottom:1px solid var(--border)}
     header h1{margin:0;font-size:2.6rem;color:var(--accent-red)}
 
-    nav{display:flex;justify-content:center;gap:28px;padding:12px;background:#1a1a1a;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+    nav{display:flex;justify-content:center;gap:28px;padding:12px;background:#1a1a1a;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;flex-wrap:wrap}
     nav a{color:var(--text);text-decoration:none;font-weight:700;opacity:.9}
     nav a:hover{opacity:1;text-decoration:underline}
 
@@ -59,7 +59,7 @@
       grid-template-columns:1.25fr .75fr;gap:22px;align-items:end;
     }
 
-    .hero-card,.hero-side,.bundle-box,.email-box,.how-card,.case-card{
+    .hero-card,.hero-side,.bundle-box,.email-box,.challenge-box,.how-card,.case-card{
       background:rgba(21,21,21,.94);
       border:1px solid var(--border);
       border-radius:14px;
@@ -97,7 +97,7 @@
 
     h2.section-title{text-align:center;margin:28px 0 8px;font-size:1.8rem}
 
-    .bundle-wrap,.email-wrap,.how{
+    .bundle-wrap,.email-wrap,.challenge-wrap,.how{
       max-width:1150px;margin:22px auto;padding:0 18px;
     }
 
@@ -121,6 +121,59 @@
 
     .email-box h2{margin:0 0 8px;color:#fff}
     .email-box p{margin:0 auto 14px;color:var(--muted);max-width:700px;line-height:1.6}
+
+    .challenge-box{
+      padding:24px;
+      text-align:center;
+      border:2px solid var(--accent-orange);
+      background:
+        radial-gradient(circle at top center, rgba(229,57,53,.18), transparent 60%),
+        #151515;
+    }
+
+    .challenge-box h2{
+      margin:0 0 8px;
+      color:#ffd740;
+      font-size:1.7rem;
+    }
+
+    .challenge-box p{
+      margin:8px auto;
+      color:var(--muted);
+      max-width:760px;
+      line-height:1.6;
+    }
+
+    .challenge-question{
+      margin:18px auto;
+      padding:16px;
+      max-width:760px;
+      background:#0f0f0f;
+      border:1px solid var(--border);
+      border-left:5px solid var(--accent-red);
+      border-radius:10px;
+      text-align:left;
+    }
+
+    .challenge-question strong{
+      color:#fff;
+    }
+
+    .challenge-options{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .challenge-option{
+      background:#202020;
+      border:1px solid #333;
+      border-radius:8px;
+      padding:10px;
+      color:#e0e0e0;
+      font-weight:700;
+    }
 
     .small-note{font-size:.82rem;color:#888;margin-top:10px}
 
@@ -181,6 +234,7 @@
   <nav>
     <a href="#" aria-current="page">Home</a>
     <a href="#cases">Cases</a>
+    <a href="#challenge">Challenge</a>
     <a href="#bundle">Bundle</a>
     <a href="#detective-list">Email List</a>
     <a href="#contact">Contact</a>
@@ -204,7 +258,7 @@
         <div class="hero-actions">
           <a class="btn btn--primary" href="#cases">Browse Cases</a>
           <a class="btn btn--investigate" href="https://interactivecrime.gumroad.com/l/qglyni" target="_blank" rel="noopener">New Case: Father's Day Murder</a>
-          <a class="btn btn--bundle" href="#bundle">Get 3 Cases for $10</a>
+          <a class="btn btn--bundle" href="#challenge">Weekly Detective Challenge</a>
         </div>
       </div>
 
@@ -212,10 +266,52 @@
         <h3>Your Role</h3>
         <p class="side-line"><strong>Investigate:</strong> Evidence, witness statements, timelines.</p>
         <p class="side-line"><strong>Decide:</strong> Pick the culprit and key proof.</p>
-        <p class="side-line"><strong>Replay:</strong> Try again and spot what you missed.</p>
-        <p class="side-line"><strong>New case:</strong> The Father's Day Murder.</p>
+        <p class="side-line"><strong>Challenge:</strong> Answer weekly mystery questions.</p>
+        <p class="side-line"><strong>Win:</strong> Correct answers can receive a free case.</p>
       </aside>
 
+    </div>
+  </section>
+
+  <section class="challenge-wrap" id="challenge">
+    <div class="challenge-box">
+      <span class="badge badge--new">NEW WEEKLY EVENT</span>
+      <h2>Weekly Detective Challenge</h2>
+      <p>
+        Every Sunday, Interactive Crime will post a new detective question.
+        Study the clue, choose your answer, and comment on the official Facebook post.
+      </p>
+
+      <div class="challenge-question">
+        <p><strong>This Sunday’s Question:</strong></p>
+        <p>
+          A father is murdered during a family barbecue. Everyone had a motive,
+          but only one person had the perfect opportunity.
+        </p>
+
+        <div class="challenge-options">
+          <div class="challenge-option">A) The Wife</div>
+          <div class="challenge-option">B) The Son</div>
+          <div class="challenge-option">C) The Daughter</div>
+          <div class="challenge-option">D) The Mother-in-Law</div>
+        </div>
+      </div>
+
+      <p>
+        Think you know the answer? Comment your guess on the Facebook post.
+        Correct answers can receive a free Interactive Crime case.
+      </p>
+
+      <a class="btn btn--investigate"
+         href="PASTE_FACEBOOK_POST_LINK_HERE"
+         target="_blank"
+         rel="noopener">
+        Answer on Facebook
+      </a>
+
+      <div class="small-note">
+        Replace the button link with your official Facebook challenge post link.
+      </div>
     </div>
   </section>
 
@@ -235,10 +331,9 @@
 
   <section class="email-wrap" id="detective-list">
     <div class="email-box">
-      <h2>Get The Father's Day Murder Early & Free</h2>
+      <h2>Join the Detective List</h2>
       <p>
-        Join the Interactive Crime Detective List and receive exclusive early access to The Father's Day Murder before its public release.
-        Subscribers get the case free before anyone else.
+        Get new case alerts, limited-time free cases, bundle updates, and mystery drops from Interactive Crime.
       </p>
 
       <a class="btn btn--bundle" 
